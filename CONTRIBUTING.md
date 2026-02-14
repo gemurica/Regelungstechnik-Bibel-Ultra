@@ -12,6 +12,7 @@ Zusammenarbeit mit klarer Urheberschaft.
 1. Repo forken und einen Branch erstellen (`feature/...`, `fix/...`, `docs/...`).
 2. Aenderungen committen (klare Commit-Nachrichten).
 3. Pull Request gegen `main` erstellen und kurz beschreiben:
+   - Welches Kapitel ist betroffen?
    - Was wurde geaendert?
    - Warum ist die Aenderung sinnvoll?
    - Welche Dateien/Abschnitte sind betroffen?
