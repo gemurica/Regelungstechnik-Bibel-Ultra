@@ -1,243 +1,235 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Einführung}{7}{}%
-\contentsline {subsection}{\numberline {1.1}Steuerung und Regelung}{7}{}%
-\contentsline {subsection}{\numberline {1.2}Grundstruktur des Regelkreises}{7}{}%
-\contentsline {subsubsection}{\numberline {1.2.1}Hinweis zu Vorzeichen (1.2.1)}{7}{}%
-\contentsline {subsubsection}{\numberline {1.2.2}Vorzeichenkonvention}{8}{}%
-\contentsline {subsubsection}{\numberline {1.2.3}Vorzeichenänderung im Umlauf z.B. \(y = - G\cdot x\)}{8}{}%
-\contentsline {subsection}{\numberline {1.3}Beispiele technischer Regelungen}{8}{}%
-\contentsline {subsubsection}{\numberline {1.3.1}Tiefenregelung eines Unterwasserfahrzeuges}{11}{}%
-\contentsline {subsubsection}{\numberline {1.3.2}Regelung von Windkraftanlagen}{11}{}%
-\contentsline {subsubsection}{\numberline {1.3.3}Kraftregelung beim Fräsen}{11}{}%
-\contentsline {subsubsection}{\numberline {1.3.4}Regelung eines Bioreaktors}{11}{}%
-\contentsline {subsubsection}{\numberline {1.3.5}Regelung einer Dampfmaschine}{11}{}%
-\contentsline {section}{\numberline {2}Modellbildung}{12}{}%
-\contentsline {subsection}{\numberline {2.1}Allgemeines}{12}{}%
-\contentsline {subsection}{\numberline {2.2}Einführung in Differentialgleichungen}{12}{}%
-\contentsline {subsection}{\numberline {2.3}Darstellung von Differentialgleichungen im Zustandsraum}{13}{}%
-\contentsline {subsection}{\numberline {2.4}Darstellung von Differentialgleichungen im Wirkungsplan}{14}{}%
-\contentsline {subsection}{\numberline {2.5}Aufstellen von Differentialgleichungen}{14}{}%
-\contentsline {subsection}{\numberline {2.6}Beispiele für Modellbildung}{14}{}%
-\contentsline {subsubsection}{\numberline {2.6.1}Zerlegung in Teilsysteme}{14}{}%
-\contentsline {subsubsection}{\numberline {2.6.2}Rückwirkungen}{14}{}%
-\contentsline {subsubsection}{\numberline {2.6.3}Zusammenfassen von Teilsystemen im Wirkungsplan}{14}{}%
-\contentsline {subsubsection}{\numberline {2.6.4}Modellierung von Regelungen}{14}{}%
-\contentsline {subsection}{\numberline {2.7}Das Gesetz der Sparsamkeit}{14}{}%
-\contentsline {subsection}{\numberline {2.8}Einheiten}{14}{}%
-\contentsline {section}{\numberline {3}Autonome Systeme}{15}{}%
-\contentsline {subsection}{\numberline {3.1}Arbeitspunkte und Ruhelagen}{15}{}%
-\contentsline {subsection}{\numberline {3.2}Stabilität}{15}{}%
-\contentsline {subsection}{\numberline {3.3}Linearisierung}{15}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Linearisierung einer Funktion}{15}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Linearisierung einer Differentialgleichung}{15}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Linearisierung im Kennlinienfeld}{15}{}%
-\contentsline {subsection}{\numberline {3.4}Charakteristisches Polynom}{15}{}%
-\contentsline {subsection}{\numberline {3.5}Linearisierungstheorem}{15}{}%
-\contentsline {subsection}{\numberline {3.6}Analyse im Zustandsraum}{15}{}%
-\contentsline {section}{\numberline {4}Verhalten bei allgemeiner Anregung}{16}{}%
-\contentsline {subsection}{\numberline {4.1}Homogene und partikuläre Lösung}{16}{}%
-\contentsline {subsection}{\numberline {4.2}Übergangsfunktion}{16}{}%
-\contentsline {subsection}{\numberline {4.3}Faltung}{16}{}%
-\contentsline {subsection}{\numberline {4.4}Laplace-Transformation}{16}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Laplace-Transformation von Zeitfunktionen}{16}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}Laplace-Transformation von Operationen}{16}{}%
-\contentsline {subsubsection}{\numberline {4.4.3}Bestimmung des Zeitverlaufes linearer Systeme}{16}{}%
-\contentsline {subsubsection}{\numberline {4.4.4}Beispiele für Laplace Transformationen}{16}{}%
-\contentsline {paragraph}{\(f(t)=t^2\)}{16}{}%
-\contentsline {subsection}{\numberline {4.5}Übertragungsfunktion \(G(s)\)}{16}{}%
-\contentsline {subsection}{\numberline {4.6}Grenzwertsätze}{17}{}%
-\contentsline {section}{\numberline {5}Verhalten bei sinusförmiger Anregung}{18}{}%
-\contentsline {subsection}{\numberline {5.1}Frequenzgang}{18}{}%
-\contentsline {subsection}{\numberline {5.2}Ortskurve}{18}{}%
-\contentsline {subsection}{\numberline {5.3}Bode-Diagramm}{18}{}%
-\contentsline {subsection}{\numberline {5.4}Fourier-Transformation}{18}{}%
-\contentsline {subsection}{\numberline {5.5}Filter}{18}{}%
-\contentsline {section}{\numberline {6}Verschaltungen von Systemen}{19}{}%
-\contentsline {subsection}{\numberline {6.1}Zusammenfassen von Teilsystemen}{19}{}%
-\contentsline {subsection}{\numberline {6.2}Zerlegung in einfache Elemente}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.1}Pol-Nullstellen im Bodediagramm}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}Lösungsweg: Frequenzgang aus Bodediagramm}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}TPR 5 – Ansätze}{20}{}%
-\contentsline {subsection}{\numberline {6.3}Zerlegung nicht-minimalphasiger Systeme}{22}{}%
-\contentsline {section}{\numberline {7}Typische Übertragungsglieder}{23}{}%
-\contentsline {subsection}{\numberline {7.1}Übersicht}{23}{}%
-\contentsline {subsection}{\numberline {7.2}Grundlegende Reglertypen}{23}{}%
-\contentsline {subsubsection}{\numberline {7.2.1}P-Element}{23}{}%
-\contentsline {subsubsection}{\numberline {7.2.2}I-Element}{23}{}%
-\contentsline {subsubsection}{\numberline {7.2.3}D-Element}{23}{}%
-\contentsline {subsubsection}{\numberline {7.2.4}PI, PD und PID}{23}{}%
-\contentsline {subsection}{\numberline {7.3}Verzögerungsglieder}{23}{}%
-\contentsline {subsubsection}{\numberline {7.3.1}PT\(_1\)}{23}{}%
-\contentsline {subsubsection}{\numberline {7.3.2}PT\(_2\)}{23}{}%
-\contentsline {subsubsection}{\numberline {7.3.3}PT\(_n\)}{23}{}%
-\contentsline {subsection}{\numberline {7.4}Kombinationen}{23}{}%
-\contentsline {subsubsection}{\numberline {7.4.1}IT\(_1\)}{23}{}%
-\contentsline {subsubsection}{\numberline {7.4.2}DT\(_1\)}{23}{}%
-\contentsline {subsubsection}{\numberline {7.4.3}PIT}{23}{}%
-\contentsline {subsubsection}{\numberline {7.4.4}PPT\(_1\) und PDT\(_1\)}{23}{}%
-\contentsline {subsection}{\numberline {7.5}Nicht-minimalphasige Systeme}{23}{}%
-\contentsline {subsubsection}{\numberline {7.5.1}PA\(_1\)}{23}{}%
-\contentsline {subsubsection}{\numberline {7.5.2}PT\(_t\), PT\(_1\)T\(_t\)}{23}{}%
-\contentsline {section}{\numberline {8}Verhalten bei Sinusförmiger Anregung}{23}{}%
-\contentsline {subsection}{\numberline {8.1}Frequenzgang}{23}{}%
-\contentsline {subsubsection}{\numberline {8.1.1}Übertragung sinusförmiger Signale \(u(t) = sin(\omega t)\)}{23}{}%
-\contentsline {paragraph}{1. Bedingungen prüfen:}{23}{}%
-\contentsline {paragraph}{2. Koeffizienten ermitteln:}{24}{}%
-\contentsline {paragraph}{2.1. \(\omega \) bestimmen}{24}{}%
-\contentsline {paragraph}{2.2. \(|G(j\omega )|\) bestimmen}{24}{}%
-\contentsline {paragraph}{2.3. \( \angle G(j\omega )\) bestimmen}{24}{}%
-\contentsline {subsection}{\numberline {8.2}Nicht-parametrische Identifikation}{24}{}%
-\contentsline {subsection}{\numberline {8.3}Parametrische Identifikation}{24}{}%
-\contentsline {subsubsection}{\numberline {8.3.1}Überanpassung}{24}{}%
-\contentsline {subsubsection}{\numberline {8.3.2}Graphische Parameteridentifikation}{24}{}%
-\contentsline {subsubsection}{\numberline {8.3.3}Methode der kleinsten Fehlerquadrate}{24}{}%
-\contentsline {section}{\numberline {9}6. Thema}{25}{}%
-\contentsline {section}{\numberline {10}7. Thema}{26}{}%
-\contentsline {section}{\numberline {11}8. Thema}{27}{}%
-\contentsline {section}{\numberline {12}Stabilitätsprüfung}{28}{}%
-\contentsline {subsection}{\numberline {12.1}Problemstellung}{28}{}%
-\contentsline {subsection}{\numberline {12.2}Algebraische Stabilitätskriterien}{28}{}%
-\contentsline {subsubsection}{\numberline {12.2.1}Grundidee}{28}{}%
-\contentsline {subsubsection}{\numberline {12.2.2}Stabilitätskriterien nach Routh und Hurwitz}{28}{}%
+\contentsline {section}{Vorwort}{2}{}%
+\contentsline {section}{\numberline {1}Einführung}{9}{}%
+\contentsline {subsection}{\numberline {1.1}Steuerung und Regelung}{9}{}%
+\contentsline {subsection}{\numberline {1.2}Grundstruktur des Regelkreises}{9}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Hinweis zu Vorzeichen (1.2.1)}{9}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Vorzeichenkonvention}{10}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Vorzeichenänderung im Umlauf z.B. \(y = - G\cdot x\)}{10}{}%
+\contentsline {subsection}{\numberline {1.3}Beispiele technischer Regelungen}{10}{}%
+\contentsline {subsubsection}{\numberline {1.3.1}Tiefenregelung eines Unterwasserfahrzeuges}{13}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Regelung von Windkraftanlagen}{13}{}%
+\contentsline {subsubsection}{\numberline {1.3.3}Kraftregelung beim Fräsen}{13}{}%
+\contentsline {subsubsection}{\numberline {1.3.4}Regelung eines Bioreaktors}{13}{}%
+\contentsline {subsubsection}{\numberline {1.3.5}Regelung einer Dampfmaschine}{13}{}%
+\contentsline {section}{\numberline {2}Modellbildung}{14}{}%
+\contentsline {subsection}{\numberline {2.1}Allgemeines}{14}{}%
+\contentsline {subsection}{\numberline {2.2}Einführung in Differentialgleichungen}{14}{}%
+\contentsline {subsection}{\numberline {2.3}Darstellung von Differentialgleichungen im Zustandsraum}{15}{}%
+\contentsline {subsection}{\numberline {2.4}Darstellung von Differentialgleichungen im Wirkungsplan}{16}{}%
+\contentsline {subsection}{\numberline {2.5}Aufstellen von Differentialgleichungen}{16}{}%
+\contentsline {subsection}{\numberline {2.6}Beispiele für Modellbildung}{16}{}%
+\contentsline {subsubsection}{\numberline {2.6.1}Zerlegung in Teilsysteme}{16}{}%
+\contentsline {subsubsection}{\numberline {2.6.2}Rückwirkungen}{16}{}%
+\contentsline {subsubsection}{\numberline {2.6.3}Zusammenfassen von Teilsystemen im Wirkungsplan}{16}{}%
+\contentsline {subsubsection}{\numberline {2.6.4}Modellierung von Regelungen}{16}{}%
+\contentsline {subsection}{\numberline {2.7}Das Gesetz der Sparsamkeit}{16}{}%
+\contentsline {subsection}{\numberline {2.8}Einheiten}{16}{}%
+\contentsline {section}{\numberline {3}Autonome Systeme}{17}{}%
+\contentsline {subsection}{\numberline {3.1}Arbeitspunkte und Ruhelagen}{17}{}%
+\contentsline {subsection}{\numberline {3.2}Stabilität}{17}{}%
+\contentsline {subsection}{\numberline {3.3}Linearisierung}{17}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Linearisierung einer Funktion}{17}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Linearisierung einer Differentialgleichung}{17}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Linearisierung im Kennlinienfeld}{17}{}%
+\contentsline {subsection}{\numberline {3.4}Charakteristisches Polynom}{17}{}%
+\contentsline {subsection}{\numberline {3.5}Linearisierungstheorem}{17}{}%
+\contentsline {subsection}{\numberline {3.6}Analyse im Zustandsraum}{17}{}%
+\contentsline {section}{\numberline {4}Verhalten bei allgemeiner Anregung}{18}{}%
+\contentsline {subsection}{\numberline {4.1}Homogene und partikuläre Lösung}{18}{}%
+\contentsline {subsection}{\numberline {4.2}Übergangsfunktion}{18}{}%
+\contentsline {subsection}{\numberline {4.3}Faltung}{18}{}%
+\contentsline {subsection}{\numberline {4.4}Laplace-Transformation}{18}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Laplace-Transformation von Zeitfunktionen}{18}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Laplace-Transformation von Operationen}{18}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Bestimmung des Zeitverlaufes linearer Systeme}{18}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}Beispiele für Laplace Transformationen}{18}{}%
+\contentsline {paragraph}{\(f(t)=t^2\)}{18}{}%
+\contentsline {subsection}{\numberline {4.5}Übertragungsfunktion \(G(s)\)}{18}{}%
+\contentsline {subsection}{\numberline {4.6}Grenzwertsätze}{19}{}%
+\contentsline {section}{\numberline {5}Verhalten bei sinusförmiger Anregung}{20}{}%
+\contentsline {subsection}{\numberline {5.1}Frequenzgang}{20}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Übertragung sinusförmiger Signale \(u(t) = sin(\omega t)\)}{20}{}%
+\contentsline {paragraph}{1. Bedingungen prüfen:}{20}{}%
+\contentsline {paragraph}{2. Koeffizienten ermitteln:}{20}{}%
+\contentsline {paragraph}{2.1. \(\omega \) bestimmen}{20}{}%
+\contentsline {paragraph}{2.2. \(|G(j\omega )|\) bestimmen}{20}{}%
+\contentsline {paragraph}{2.3. \( \angle G(j\omega )\) bestimmen}{21}{}%
+\contentsline {subsection}{\numberline {5.2}Ortskurve}{21}{}%
+\contentsline {subsection}{\numberline {5.3}Bode-Diagramm}{21}{}%
+\contentsline {subsection}{\numberline {5.4}Fourier-Transformation}{21}{}%
+\contentsline {subsection}{\numberline {5.5}Filter}{21}{}%
+\contentsline {section}{\numberline {6}Verschaltungen von Systemen}{22}{}%
+\contentsline {subsection}{\numberline {6.1}Zusammenfassen von Teilsystemen}{22}{}%
+\contentsline {subsection}{\numberline {6.2}Zerlegung in einfache Elemente}{22}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Pol-Nullstellen im Bodediagramm}{22}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Lösungsweg: Frequenzgang aus Bodediagramm}{22}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}TPR 5 – Ansätze}{23}{}%
+\contentsline {subsection}{\numberline {6.3}Zerlegung nicht-minimalphasiger Systeme}{25}{}%
+\contentsline {section}{\numberline {7}Typische Übertragungsglieder}{26}{}%
+\contentsline {subsection}{\numberline {7.1}Übersicht}{26}{}%
+\contentsline {subsection}{\numberline {7.2}Grundlegende Reglertypen}{26}{}%
+\contentsline {subsubsection}{\numberline {7.2.1}P-Element}{26}{}%
+\contentsline {subsubsection}{\numberline {7.2.2}I-Element}{26}{}%
+\contentsline {subsubsection}{\numberline {7.2.3}D-Element}{26}{}%
+\contentsline {subsubsection}{\numberline {7.2.4}PI, PD und PID}{26}{}%
+\contentsline {subsection}{\numberline {7.3}Verzögerungsglieder}{26}{}%
+\contentsline {subsubsection}{\numberline {7.3.1}PT\(_1\)}{26}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}PT\(_2\)}{26}{}%
+\contentsline {subsubsection}{\numberline {7.3.3}PT\(_n\)}{26}{}%
+\contentsline {subsection}{\numberline {7.4}Kombinationen}{26}{}%
+\contentsline {subsubsection}{\numberline {7.4.1}IT\(_1\)}{26}{}%
+\contentsline {subsubsection}{\numberline {7.4.2}DT\(_1\)}{26}{}%
+\contentsline {subsubsection}{\numberline {7.4.3}PIT}{26}{}%
+\contentsline {subsubsection}{\numberline {7.4.4}PPT\(_1\) und PDT\(_1\)}{26}{}%
+\contentsline {subsection}{\numberline {7.5}Nicht-minimalphasige Systeme}{26}{}%
+\contentsline {subsubsection}{\numberline {7.5.1}PA\(_1\)}{26}{}%
+\contentsline {subsubsection}{\numberline {7.5.2}PT\(_t\), PT\(_1\)T\(_t\)}{26}{}%
+\contentsline {subsection}{\numberline {7.6}Nicht-parametrische Identifikation}{26}{}%
+\contentsline {subsection}{\numberline {7.7}Parametrische Identifikation}{26}{}%
+\contentsline {subsubsection}{\numberline {7.7.1}Überanpassung}{26}{}%
+\contentsline {subsubsection}{\numberline {7.7.2}Graphische Parameteridentifikation}{26}{}%
+\contentsline {subsubsection}{\numberline {7.7.3}Methode der kleinsten Fehlerquadrate}{26}{}%
+\contentsline {section}{\numberline {8}Identifikation linearer Regelkreisglieder}{27}{}%
+\contentsline {subsection}{\numberline {8.1}Allgemeines}{27}{}%
+\contentsline {section}{\numberline {9}Stabilitätsprüfung}{28}{}%
+\contentsline {subsection}{\numberline {9.1}Problemstellung}{28}{}%
+\contentsline {subsection}{\numberline {9.2}Algebraische Stabilitätskriterien}{28}{}%
+\contentsline {subsubsection}{\numberline {9.2.1}Grundidee}{28}{}%
+\contentsline {subsubsection}{\numberline {9.2.2}Stabilitätskriterien nach Routh und Hurwitz}{28}{}%
 \contentsline {paragraph}{Vorlagen für Routh-Probefunktionen (bis \(n=4\)).}{29}{}%
-\contentsline {subsubsection}{\numberline {12.2.3}Beispiele}{29}{}%
-\contentsline {subsection}{\numberline {12.3}Nyquist-Kriterium}{29}{}%
-\contentsline {subsubsection}{\numberline {12.3.1}Vollständiges Nyquist-Kriterium}{30}{}%
-\contentsline {subsubsection}{\numberline {12.3.2}Beispiele}{30}{}%
-\contentsline {subsubsection}{\numberline {12.3.3}Anwendung bei Polen am Stabilitätsrand}{30}{}%
-\contentsline {subsubsection}{\numberline {12.3.4}Vereinfachtes Nyquist-Kriterium}{30}{}%
-\contentsline {subsubsection}{\numberline {12.3.5}Amplituden- und Phasenreserve}{30}{}%
-\contentsline {subsection}{\numberline {12.4}Sonderfälle}{30}{}%
-\contentsline {subsubsection}{\numberline {12.4.1}Pol-Nullstellen-Kürzungen}{30}{}%
-\contentsline {subsubsection}{\numberline {12.4.2}Unstetige Polstellen}{30}{}%
-\contentsline {section}{\numberline {13}Einführung in den Reglerentwurf}{31}{}%
-\contentsline {subsection}{\numberline {13.1}Ziele und Lösungsansätze}{31}{}%
-\contentsline {subsubsection}{\numberline {13.1.1}Motivation}{31}{}%
-\contentsline {subsubsection}{\numberline {13.1.2}Gütemaße und Kennwerte}{31}{}%
-\contentsline {subsubsection}{\numberline {13.1.3}Ansätze des Reglerentwurfs}{31}{}%
-\contentsline {subsection}{\numberline {13.2}Statischer Reglerentwurf}{31}{}%
-\contentsline {subsection}{\numberline {13.3}Abwägungen bei der Reglerverstärkung}{31}{}%
-\contentsline {subsubsection}{\numberline {13.3.1}Vorteile hoher Verstärkungen}{31}{}%
-\contentsline {subsubsection}{\numberline {13.3.2}Nachteile hoher Verstärkungen}{31}{}%
-\contentsline {subsection}{\numberline {13.4}Einstellregeln}{31}{}%
-\contentsline {subsubsection}{\numberline {13.4.1}Einstellung mittels \(T_u\)--\(T_g\)-Ersatzmodell}{31}{}%
-\contentsline {subsubsection}{\numberline {13.4.2}Einstellung mittels Schwingversuch}{31}{}%
-\contentsline {section}{\numberline {14}Grundlegende modellbasierte Reglerentwurfsverfahren}{32}{}%
-\contentsline {subsection}{\numberline {14.1}Frequenzkennlinienverfahren}{32}{}%
-\contentsline {subsubsection}{\numberline {14.1.1}Grundidee}{32}{}%
-\contentsline {subsubsection}{\numberline {14.1.2}Hohe Verstärkung bei niedrigen Frequenzen}{32}{}%
-\contentsline {subsubsection}{\numberline {14.1.3}Übergangsbereich}{32}{}%
-\contentsline {subsubsection}{\numberline {14.1.4}Niedrige Verstärkung bei hohen Frequenzen}{32}{}%
-\contentsline {subsection}{\numberline {14.2}Betragskriterium und Symmetrisches Kriterium}{32}{}%
-\contentsline {subsection}{\numberline {14.3}Polvorgabe}{32}{}%
-\contentsline {subsubsection}{\numberline {14.3.1}Polvorgabe für Ausgangsrückführungen}{32}{}%
-\contentsline {subsubsection}{\numberline {14.3.2}Polvorgabe für Zustandsrückführungen}{32}{}%
-\contentsline {subsubsection}{\numberline {14.3.3}Steuerbarkeit}{32}{}%
-\contentsline {subsection}{\numberline {14.4}Beobachterentwurf}{32}{}%
-\contentsline {subsubsection}{\numberline {14.4.1}Zustandsschätzung}{32}{}%
-\contentsline {subsubsection}{\numberline {14.4.2}Luenberger-Beobachter}{32}{}%
-\contentsline {subsubsection}{\numberline {14.4.3}Beobachtbarkeit und Dualität}{32}{}%
-\contentsline {subsubsection}{\numberline {14.4.4}Beispiel}{32}{}%
-\contentsline {subsection}{\numberline {14.5}Wurzelortskurven}{32}{}%
-\contentsline {subsubsection}{\numberline {14.5.1}Grundidee}{32}{}%
-\contentsline {subsubsection}{\numberline {14.5.2}Konstruktionsregeln}{32}{}%
-\contentsline {subsubsection}{\numberline {14.5.3}Beispiel}{32}{}%
-\contentsline {section}{\numberline {15}Vermaschte Regelkreise}{33}{}%
-\contentsline {subsection}{\numberline {15.1}Erweiterung des Einfachregelkreises}{33}{}%
-\contentsline {subsection}{\numberline {15.2}Vorsteuerung}{33}{}%
-\contentsline {subsection}{\numberline {15.3}Führungsgrößenfilter}{33}{}%
-\contentsline {subsection}{\numberline {15.4}Störgrößenaufschaltung}{33}{}%
-\contentsline {subsection}{\numberline {15.5}Kaskadenregelung}{33}{}%
-\contentsline {subsection}{\numberline {15.6}Hilfsstellgröße}{33}{}%
-\contentsline {section}{\numberline {16}Mehrgrößenregelung}{34}{}%
-\contentsline {subsection}{\numberline {16.1}Zentrale vs. dezentrale Regelung}{34}{}%
-\contentsline {subsection}{\numberline {16.2}Eigenschaften von Mehrgrößensystemen}{34}{}%
-\contentsline {subsubsection}{\numberline {16.2.1}Verschaltungen von Mehrgrößensystemen}{34}{}%
-\contentsline {subsubsection}{\numberline {16.2.2}Querkopplungen}{34}{}%
-\contentsline {subsubsection}{\numberline {16.2.3}Polstellen von Mehrgrößensystemen}{34}{}%
-\contentsline {subsubsection}{\numberline {16.2.4}Richtungsabhängige Verstärkung}{34}{}%
-\contentsline {subsection}{\numberline {16.3}Verfahren der dezentralen Regelung}{34}{}%
-\contentsline {subsubsection}{\numberline {16.3.1}Relative Gain Array}{34}{}%
-\contentsline {subsubsection}{\numberline {16.3.2}MIMO-Nyquist und Diagonaldominanz}{34}{}%
-\contentsline {subsection}{\numberline {16.4}Verfahren der zentralen Regelung}{34}{}%
-\contentsline {subsubsection}{\numberline {16.4.1}Zentrale Regelung im Zustandsraum}{34}{}%
-\contentsline {subsubsection}{\numberline {16.4.2}Entkopplungsregler}{34}{}%
-\contentsline {section}{\numberline {17}Zeitdiskrete Systeme}{35}{}%
-\contentsline {subsection}{\numberline {17.1}Abtastregelungen}{35}{}%
-\contentsline {subsubsection}{\numberline {17.1.1}Definitionen}{35}{}%
-\contentsline {subsubsection}{\numberline {17.1.2}Abtaster und Halteglied}{35}{}%
-\contentsline {subsubsection}{\numberline {17.1.3}Aliasing}{35}{}%
-\contentsline {subsubsection}{\numberline {17.1.4}Verschaltung zu hybriden Systemen}{35}{}%
-\contentsline {subsection}{\numberline {17.2}Einführung in Differenzengleichungen}{35}{}%
-\contentsline {subsection}{\numberline {17.3}Autonome zeitdiskrete Systeme}{35}{}%
-\contentsline {subsection}{\numberline {17.4}Umrechnen von Differenzen- und Differentialgleichungen}{35}{}%
-\contentsline {subsubsection}{\numberline {17.4.1}Rückwärtsdifferenzen}{35}{}%
-\contentsline {subsubsection}{\numberline {17.4.2}Analytische Lösung}{35}{}%
-\contentsline {subsection}{\numberline {17.5}Quasikontinuierlicher Reglerentwurf}{35}{}%
-\contentsline {subsection}{\numberline {17.6}Zeitdiskreter Bildbereich}{35}{}%
-\contentsline {subsubsection}{\numberline {17.6.1}\(Z\)-Transformation}{35}{}%
-\contentsline {subsubsection}{\numberline {17.6.2}Zeitdiskrete Übertragungsfunktion}{35}{}%
-\contentsline {subsubsection}{\numberline {17.6.3}Zeitdiskreter Frequenzgang}{35}{}%
-\contentsline {subsubsection}{\numberline {17.6.4}Zeitdiskrete Modelle zeitkontinuierlicher Systeme}{35}{}%
-\contentsline {subsection}{\numberline {17.7}Bilineare Transformation}{35}{}%
-\contentsline {subsection}{\numberline {17.8}Klassischer zeitdiskreter Reglerentwurf}{35}{}%
-\contentsline {subsection}{\numberline {17.9}Regler mit endlicher Einstellzeit}{35}{}%
-\contentsline {subsubsection}{\numberline {17.9.1}Entwurf}{35}{}%
-\contentsline {subsubsection}{\numberline {17.9.2}Stabilität}{35}{}%
-\contentsline {subsubsection}{\numberline {17.9.3}Beispiel}{35}{}%
-\contentsline {section}{\numberline {18}Kalmanfilter}{36}{}%
-\contentsline {subsection}{\numberline {18.1}Allgemeines}{36}{}%
-\contentsline {subsection}{\numberline {18.2}Herleitung}{36}{}%
-\contentsline {subsection}{\numberline {18.3}Auslegung und Beispiel}{36}{}%
-\contentsline {subsection}{\numberline {18.4}Limitierungen und Erweiterungen}{36}{}%
-\contentsline {subsubsection}{\numberline {18.4.1}Allgemein}{36}{}%
-\contentsline {section}{\numberline {19}Zustandsraum}{36}{}%
-\contentsline {subsection}{\numberline {19.1}Zustandsregelung}{36}{}%
-\contentsline {subsection}{\numberline {19.2}Zustandsregler \(\mathbf {k}^T = [k_1 \hskip 1em\relax k_2]\) bestimmen.}{36}{}%
-\contentsline {section}{\numberline {20}Steuerbarkeitskriterium von Kalman}{37}{}%
-\contentsline {section}{\numberline {21}Partialbruchzerlegung}{37}{}%
-\contentsline {subsection}{\numberline {21.1}Einführung}{37}{}%
-\contentsline {subsection}{\numberline {21.2}Beispiel: \(\frac {1 - s}{(s + 1)^2(s^2 + 1)}\)}{38}{}%
-\contentsline {section}{\numberline {22}Informationen über Ortskurven}{38}{}%
-\contentsline {section}{\numberline {23}Informationen über Übergangsfunktionen \(h(t)\)}{38}{}%
-\contentsline {subsection}{\numberline {23.1}Stationäre Genauigkeit}{38}{}%
-\contentsline {section}{\numberline {24}Berechnung maximal zulässige Totzeit \(T_t\)}{39}{}%
-\contentsline {section}{\numberline {25}Durchtrittsfrequenz \(\omega _d\)}{39}{}%
-\contentsline {subsection}{\numberline {25.1}Ansprechverhalten}{39}{}%
-\contentsline {section}{\numberline {26}Einstellung nach \(T_u\)--\(T_g\) (Chien, Hrones, Reswick)}{39}{}%
-\contentsline {section}{\numberline {27}Gewichts- und Übergangsfunktion aus \(G_s(s)\)}{40}{}%
-\contentsline {subsection}{\numberline {27.1}Zusammenhänge:}{40}{}%
-\contentsline {subsection}{\numberline {27.2}Gewichtsfunktion \(g(t)\)}{40}{}%
-\contentsline {subsubsection}{\numberline {27.2.1} \(G(s)\) ist gegeben, Gewichtsfunktion \(g(t)\) bestimmen.}{40}{}%
-\contentsline {subsection}{\numberline {27.3}Übergangsfunktion \(h(t)\)}{41}{}%
-\contentsline {section}{\numberline {28}Merksatz / Intuition (Bode: Zeitbereich \& Frequenzbereich)}{41}{}%
-\contentsline {subsection}{\numberline {28.1}Intuition}{41}{}%
-\contentsline {section}{\numberline {29}Laplace Transformation}{41}{}%
-\contentsline {subsection}{\numberline {29.1}Korrespondenztafel}{41}{}%
-\contentsline {section}{\numberline {30}Berechnung der inversen Laplace-Transformation}{41}{}%
-\contentsline {section}{\numberline {31}Mathematische Grundlagen}{41}{}%
-\contentsline {subsection}{\numberline {31.1}Determinante einer 2x2 \& 3x3-Matrix}{41}{}%
-\contentsline {subsubsection}{\numberline {31.1.1}2x2}{41}{}%
-\contentsline {subsubsection}{\numberline {31.1.2}3x3}{42}{}%
-\contentsline {subsection}{\numberline {31.2}Integral einer Exponentialfunktion (\(\lambda >0\))}{42}{}%
-\contentsline {subsection}{\numberline {31.3}Betrag von \(e^{-j \frac {\pi }{2} \omega }\), \(e^{j \theta }\)}{43}{}%
-\contentsline {subsubsection}{\numberline {31.3.1}Berechnung des Betrags}{43}{}%
-\contentsline {subsubsection}{\numberline {31.3.2}Berechnung des Betrags}{43}{}%
-\contentsline {subsection}{\numberline {31.4} \(G(s)\) ist gegeben, Differentialgleichung bestimmen.}{43}{}%
-\contentsline {section}{\numberline {32}Shannon-/Nyquist-Abtasttheorem (für \(T_{\min }\)) }{45}{}%
-\contentsline {section}{\numberline {33}Inverse einer Matrix}{45}{}%
-\contentsline {subsection}{\numberline {33.1}Allgemein}{45}{}%
-\contentsline {subsection}{\numberline {33.2}Inverse einer \(2 \times 2\)-Matrix}{45}{}%
-\contentsline {subsection}{\numberline {33.3}Hinweis (Regelungstechnik)}{46}{}%
-\contentsline {section}{\numberline {34}Stationäre Genauigkeit}{46}{}%
-\contentsline {subsection}{\numberline {34.1}Stationäre Genauigkeit im geschlossenen Regelkreis}{46}{}%
-\contentsline {section}{\numberline {35}Integrierender Anteil und integrierendes Verhalten}{46}{}%
-\contentsline {section}{\numberline {36}Grafische Darstellung der Übergangsfunktion \(h(t)\) des \(IT_1\) Gliedes}{46}{}%
-\contentsline {subsection}{\numberline {36.1}Erläuterung der Terme}{46}{}%
-\contentsline {subsection}{\numberline {36.2}Werte bestimmen}{47}{}%
-\contentsline {section}{\numberline {37}Korrekturtabellen und Skalierung}{47}{}%
-\contentsline {subsection}{\numberline {37.1}Korrekturtabelle (log/Phase)}{47}{}%
-\contentsline {subsection}{\numberline {37.2}Korrekturtabelle in mm}{48}{}%
-\contentsline {subsection}{\numberline {37.3}Skalierung (Diagramm rechts)}{48}{}%
-\contentsline {section}{\numberline {38}Was noch hinzugefügt werden muss}{48}{}%
-\contentsline {subsection}{\numberline {38.1}}{48}{}%
+\contentsline {subsubsection}{\numberline {9.2.3}Beispiele}{29}{}%
+\contentsline {subsection}{\numberline {9.3}Nyquist-Kriterium}{29}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Vollständiges Nyquist-Kriterium}{30}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Beispiele}{30}{}%
+\contentsline {subsubsection}{\numberline {9.3.3}Anwendung bei Polen am Stabilitätsrand}{30}{}%
+\contentsline {subsubsection}{\numberline {9.3.4}Vereinfachtes Nyquist-Kriterium}{30}{}%
+\contentsline {subsubsection}{\numberline {9.3.5}Amplituden- und Phasenreserve}{30}{}%
+\contentsline {subsection}{\numberline {9.4}Sonderfälle}{30}{}%
+\contentsline {subsubsection}{\numberline {9.4.1}Pol-Nullstellen-Kürzungen}{30}{}%
+\contentsline {subsubsection}{\numberline {9.4.2}Unstetige Polstellen}{30}{}%
+\contentsline {section}{\numberline {10}Einführung in den Reglerentwurf}{31}{}%
+\contentsline {subsection}{\numberline {10.1}Ziele und Lösungsansätze}{31}{}%
+\contentsline {subsubsection}{\numberline {10.1.1}Motivation}{31}{}%
+\contentsline {subsubsection}{\numberline {10.1.2}Gütemaße und Kennwerte}{31}{}%
+\contentsline {subsubsection}{\numberline {10.1.3}Ansätze des Reglerentwurfs}{31}{}%
+\contentsline {subsection}{\numberline {10.2}Statischer Reglerentwurf}{31}{}%
+\contentsline {subsection}{\numberline {10.3}Abwägungen bei der Reglerverstärkung}{31}{}%
+\contentsline {subsubsection}{\numberline {10.3.1}Vorteile hoher Verstärkungen}{31}{}%
+\contentsline {subsubsection}{\numberline {10.3.2}Nachteile hoher Verstärkungen}{31}{}%
+\contentsline {subsection}{\numberline {10.4}Einstellregeln}{31}{}%
+\contentsline {subsubsection}{\numberline {10.4.1}Einstellung mittels \(T_u\)--\(T_g\)-Ersatzmodell}{31}{}%
+\contentsline {subsubsection}{\numberline {10.4.2}Einstellung mittels Schwingversuch}{31}{}%
+\contentsline {section}{\numberline {11}Grundlegende modellbasierte Reglerentwurfsverfahren}{32}{}%
+\contentsline {subsection}{\numberline {11.1}Frequenzkennlinienverfahren}{32}{}%
+\contentsline {subsubsection}{\numberline {11.1.1}Grundidee}{32}{}%
+\contentsline {subsubsection}{\numberline {11.1.2}Hohe Verstärkung bei niedrigen Frequenzen}{32}{}%
+\contentsline {subsubsection}{\numberline {11.1.3}Übergangsbereich}{32}{}%
+\contentsline {subsubsection}{\numberline {11.1.4}Niedrige Verstärkung bei hohen Frequenzen}{32}{}%
+\contentsline {subsection}{\numberline {11.2}Betragskriterium und Symmetrisches Kriterium}{32}{}%
+\contentsline {subsection}{\numberline {11.3}Polvorgabe}{32}{}%
+\contentsline {subsubsection}{\numberline {11.3.1}Polvorgabe für Ausgangsrückführungen}{32}{}%
+\contentsline {subsubsection}{\numberline {11.3.2}Polvorgabe für Zustandsrückführungen}{32}{}%
+\contentsline {subsubsection}{\numberline {11.3.3}Steuerbarkeit}{32}{}%
+\contentsline {subsection}{\numberline {11.4}Beobachterentwurf}{32}{}%
+\contentsline {subsubsection}{\numberline {11.4.1}Zustandsschätzung}{32}{}%
+\contentsline {subsubsection}{\numberline {11.4.2}Luenberger-Beobachter}{32}{}%
+\contentsline {subsubsection}{\numberline {11.4.3}Beobachtbarkeit und Dualität}{32}{}%
+\contentsline {subsubsection}{\numberline {11.4.4}Beispiel}{32}{}%
+\contentsline {subsection}{\numberline {11.5}Wurzelortskurven}{32}{}%
+\contentsline {subsubsection}{\numberline {11.5.1}Grundidee}{32}{}%
+\contentsline {subsubsection}{\numberline {11.5.2}Konstruktionsregeln}{32}{}%
+\contentsline {subsubsection}{\numberline {11.5.3}Beispiel}{32}{}%
+\contentsline {section}{\numberline {12}Vermaschte Regelkreise}{33}{}%
+\contentsline {subsection}{\numberline {12.1}Erweiterung des Einfachregelkreises}{33}{}%
+\contentsline {subsection}{\numberline {12.2}Vorsteuerung}{33}{}%
+\contentsline {subsection}{\numberline {12.3}Führungsgrößenfilter}{33}{}%
+\contentsline {subsection}{\numberline {12.4}Störgrößenaufschaltung}{33}{}%
+\contentsline {subsection}{\numberline {12.5}Kaskadenregelung}{33}{}%
+\contentsline {subsection}{\numberline {12.6}Hilfsstellgröße}{33}{}%
+\contentsline {section}{\numberline {13}Mehrgrößenregelung}{34}{}%
+\contentsline {subsection}{\numberline {13.1}Zentrale vs. dezentrale Regelung}{34}{}%
+\contentsline {subsection}{\numberline {13.2}Eigenschaften von Mehrgrößensystemen}{34}{}%
+\contentsline {subsubsection}{\numberline {13.2.1}Verschaltungen von Mehrgrößensystemen}{34}{}%
+\contentsline {subsubsection}{\numberline {13.2.2}Querkopplungen}{34}{}%
+\contentsline {subsubsection}{\numberline {13.2.3}Polstellen von Mehrgrößensystemen}{34}{}%
+\contentsline {subsubsection}{\numberline {13.2.4}Richtungsabhängige Verstärkung}{34}{}%
+\contentsline {subsection}{\numberline {13.3}Verfahren der dezentralen Regelung}{34}{}%
+\contentsline {subsubsection}{\numberline {13.3.1}Relative Gain Array}{34}{}%
+\contentsline {subsubsection}{\numberline {13.3.2}MIMO-Nyquist und Diagonaldominanz}{34}{}%
+\contentsline {subsection}{\numberline {13.4}Verfahren der zentralen Regelung}{34}{}%
+\contentsline {subsubsection}{\numberline {13.4.1}Zentrale Regelung im Zustandsraum}{34}{}%
+\contentsline {subsubsection}{\numberline {13.4.2}Entkopplungsregler}{34}{}%
+\contentsline {section}{\numberline {14}Zeitdiskrete Systeme}{35}{}%
+\contentsline {subsection}{\numberline {14.1}Abtastregelungen}{35}{}%
+\contentsline {subsubsection}{\numberline {14.1.1}Definitionen}{35}{}%
+\contentsline {subsubsection}{\numberline {14.1.2}Abtaster und Halteglied}{35}{}%
+\contentsline {subsubsection}{\numberline {14.1.3}Aliasing}{35}{}%
+\contentsline {subsubsection}{\numberline {14.1.4}Verschaltung zu hybriden Systemen}{35}{}%
+\contentsline {subsection}{\numberline {14.2}Einführung in Differenzengleichungen}{35}{}%
+\contentsline {subsection}{\numberline {14.3}Autonome zeitdiskrete Systeme}{35}{}%
+\contentsline {subsection}{\numberline {14.4}Umrechnen von Differenzen- und Differentialgleichungen}{35}{}%
+\contentsline {subsubsection}{\numberline {14.4.1}Rückwärtsdifferenzen}{35}{}%
+\contentsline {subsubsection}{\numberline {14.4.2}Analytische Lösung}{35}{}%
+\contentsline {subsection}{\numberline {14.5}Quasikontinuierlicher Reglerentwurf}{35}{}%
+\contentsline {subsection}{\numberline {14.6}Zeitdiskreter Bildbereich}{35}{}%
+\contentsline {subsubsection}{\numberline {14.6.1}\(Z\)-Transformation}{35}{}%
+\contentsline {subsubsection}{\numberline {14.6.2}Zeitdiskrete Übertragungsfunktion}{35}{}%
+\contentsline {subsubsection}{\numberline {14.6.3}Zeitdiskreter Frequenzgang}{35}{}%
+\contentsline {subsubsection}{\numberline {14.6.4}Zeitdiskrete Modelle zeitkontinuierlicher Systeme}{35}{}%
+\contentsline {subsection}{\numberline {14.7}Bilineare Transformation}{35}{}%
+\contentsline {subsection}{\numberline {14.8}Klassischer zeitdiskreter Reglerentwurf}{35}{}%
+\contentsline {subsection}{\numberline {14.9}Regler mit endlicher Einstellzeit}{35}{}%
+\contentsline {subsubsection}{\numberline {14.9.1}Entwurf}{35}{}%
+\contentsline {subsubsection}{\numberline {14.9.2}Stabilität}{35}{}%
+\contentsline {subsubsection}{\numberline {14.9.3}Beispiel}{35}{}%
+\contentsline {section}{\numberline {15}Kalmanfilter}{36}{}%
+\contentsline {subsection}{\numberline {15.1}Allgemeines}{36}{}%
+\contentsline {subsection}{\numberline {15.2}Herleitung}{36}{}%
+\contentsline {subsection}{\numberline {15.3}Auslegung und Beispiel}{36}{}%
+\contentsline {subsection}{\numberline {15.4}Limitierungen und Erweiterungen}{36}{}%
+\contentsline {subsubsection}{\numberline {15.4.1}Allgemein}{36}{}%
+\contentsline {section}{\numberline {16}Zustandsraum}{36}{}%
+\contentsline {subsection}{\numberline {16.1}Zustandsregelung}{36}{}%
+\contentsline {subsection}{\numberline {16.2}Zustandsregler \(\mathbf {k}^T = [k_1 \hskip 1em\relax k_2]\) bestimmen.}{36}{}%
+\contentsline {section}{\numberline {17}Steuerbarkeitskriterium von Kalman}{37}{}%
+\contentsline {section}{\numberline {18}Partialbruchzerlegung}{37}{}%
+\contentsline {subsection}{\numberline {18.1}Einführung}{37}{}%
+\contentsline {subsection}{\numberline {18.2}Beispiel: \(\frac {1 - s}{(s + 1)^2(s^2 + 1)}\)}{38}{}%
+\contentsline {section}{\numberline {19}Informationen über Ortskurven}{38}{}%
+\contentsline {section}{\numberline {20}Informationen über Übergangsfunktionen \(h(t)\)}{38}{}%
+\contentsline {subsection}{\numberline {20.1}Stationäre Genauigkeit}{38}{}%
+\contentsline {section}{\numberline {21}Berechnung maximal zulässige Totzeit \(T_t\)}{39}{}%
+\contentsline {section}{\numberline {22}Durchtrittsfrequenz \(\omega _d\)}{39}{}%
+\contentsline {subsection}{\numberline {22.1}Ansprechverhalten}{39}{}%
+\contentsline {section}{\numberline {23}Einstellung nach \(T_u\)--\(T_g\) (Chien, Hrones, Reswick)}{39}{}%
+\contentsline {section}{\numberline {24}Gewichts- und Übergangsfunktion aus \(G_s(s)\)}{40}{}%
+\contentsline {subsection}{\numberline {24.1}Zusammenhänge:}{40}{}%
+\contentsline {subsection}{\numberline {24.2}Gewichtsfunktion \(g(t)\)}{40}{}%
+\contentsline {subsubsection}{\numberline {24.2.1} \(G(s)\) ist gegeben, Gewichtsfunktion \(g(t)\) bestimmen.}{40}{}%
+\contentsline {subsection}{\numberline {24.3}Übergangsfunktion \(h(t)\)}{41}{}%
+\contentsline {section}{\numberline {25}Merksatz / Intuition (Bode: Zeitbereich \& Frequenzbereich)}{41}{}%
+\contentsline {subsection}{\numberline {25.1}Intuition}{41}{}%
+\contentsline {section}{\numberline {26}Mathematische Grundlagen}{41}{}%
+\contentsline {subsection}{\numberline {26.1}Determinante einer 2x2 \& 3x3-Matrix}{41}{}%
+\contentsline {subsubsection}{\numberline {26.1.1}2x2}{41}{}%
+\contentsline {subsubsection}{\numberline {26.1.2}3x3}{41}{}%
+\contentsline {subsection}{\numberline {26.2}Integral einer Exponentialfunktion (\(\lambda >0\))}{42}{}%
+\contentsline {subsection}{\numberline {26.3}Betrag von \(e^{-j \frac {\pi }{2} \omega }\), \(e^{j \theta }\)}{43}{}%
+\contentsline {subsubsection}{\numberline {26.3.1}Berechnung des Betrags}{43}{}%
+\contentsline {subsubsection}{\numberline {26.3.2}Berechnung des Betrags}{43}{}%
+\contentsline {subsection}{\numberline {26.4} \(G(s)\) ist gegeben, Differentialgleichung bestimmen.}{43}{}%
+\contentsline {section}{\numberline {27}Shannon-/Nyquist-Abtasttheorem (für \(T_{\min }\)) }{44}{}%
+\contentsline {section}{\numberline {28}Inverse einer Matrix}{44}{}%
+\contentsline {subsection}{\numberline {28.1}Allgemein}{44}{}%
+\contentsline {subsection}{\numberline {28.2}Inverse einer \(2 \times 2\)-Matrix}{44}{}%
+\contentsline {section}{\numberline {29}Stationäre Genauigkeit}{45}{}%
+\contentsline {subsection}{\numberline {29.1}Stationäre Genauigkeit im geschlossenen Regelkreis}{45}{}%
+\contentsline {section}{\numberline {30}Integrierender Anteil und integrierendes Verhalten}{45}{}%
+\contentsline {section}{\numberline {31}Grafische Darstellung der Übergangsfunktion \(h(t)\) des \(IT_1\) Gliedes}{45}{}%
+\contentsline {subsection}{\numberline {31.1}Erläuterung der Terme}{45}{}%
+\contentsline {subsection}{\numberline {31.2}Werte bestimmen}{45}{}%
+\contentsline {section}{\numberline {32}Korrekturtabellen und Skalierung}{46}{}%
+\contentsline {subsection}{\numberline {32.1}Korrekturtabelle (log/Phase)}{46}{}%
+\contentsline {subsection}{\numberline {32.2}Korrekturtabelle in mm}{47}{}%
+\contentsline {subsection}{\numberline {32.3}Skalierung (Diagramm rechts)}{47}{}%

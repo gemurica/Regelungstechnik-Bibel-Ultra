@@ -30,14 +30,54 @@
 \geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
 
 \title{RT-Bibel Ultra}
-\author{mariuskaffka }
-\date{February 2025}
+\author{GER}
+\date{Februar 2026}
 
 \begin{document}
 \maketitle
-\tableofcontents
+\clearpage
 
-\newpage
+\section*{Vorwort}
+\addcontentsline{toc}{section}{Vorwort}
+Liebe Regelungstechniker
+
+\vspace{0.8em}
+\noindent Dies ist mein neue Auflage der RT-Bibel für Regelungstechnik basierend auf dem Umdruck zur Vorlesung Regelungstechnik 47. Auflage. 
+Außerdem stütze ich mich hier auf die Arbeit von Anonymer Wauwau und der originalen RT-Bibel.
+
+\vspace{0.8em}
+\noindent Dieses Werk soll als Lernhilfe und Nachschlagewerk ergänzend zum Umdruck dienen. Hier findet ihr Lösungswege und -vorschläge zu den Themenbereichen der Klausur basierend auf Altklausuren und dem Treffpunkt.
+Deswegen ist der Aufbau nach den Themenbereichen des Umdrucks aufgebaut, um so Erläuterungen zu bestimmten Definitionen und Beispielen in Zusammenhang mit den Aufgabenstellungen der Altklausuren zu bringen.
+
+\vspace{0.8em}
+\noindent Ich wünsche euch viel Erfolg beim Lernen und drücke euch allen die Daumen, dass ihr besteht!
+
+\vspace{0.8em}
+\noindent Euer GER
+\section*{Hinweise}
+\noindent Diese aktuelle Version ist noch \textbf{NICHT} vollständig. 
+
+\vspace{0.8em}
+\noindent Mein Ziel ist es, dieses Dokument zum ultimativen Nachschlagewerk für die Klausur zu machen. Deswegen bitte ich euch um eure Hilfe und Unterstützung dies umzusetzen.
+
+\vspace{0.8em}
+\noindent Fügt bitte so viele Hinweise, Lösungsansätze und Korrekturen hinzu. Außerdem könnt ihr hier https://github.com/gemurica/Regelungstechnik-Bibel-Ultra/issues ebenfalls Fehler oder Anmerkungen machen. Der Code für dieses Dokument ist öffentlich verfügbar und wer die Möglichkeit hat, kann gerne auf GitHub Ergänzungen direkt Pushen und somit direkt in diese Datei hinzufügen.
+
+\vspace{0.8em}
+\noindent Somit kann diese Bibel auch nach der nächsten Klausur von euch weiter verbessert werden.
+\begin{itemize}
+	\item Die Inhalte ab Kapitel 15 Kalmanfilter sind noch meine aus meiner ursprünglichen Formelsammlung und dementsprechend noch nicht den richtigen Kapiteln hinzugefügt.
+	\item Alte Bilder aus "RT-Bibel | Neues Testament" habe ich bisher auch noch nicht hinzugefügt.
+	\item Ich werde noch alle restlichen Hinweise aus dem Umdruck hinzufügen, bisher habe ich nur die aus Kapitel 1 \& 2. 
+	\item Besonders Begriffe für den Index mit Verweis auf die Seite im Umdruck sowie eine kleine Erläuterung sind wünschenswert, weil manche Begriffe im Index des Umdrucks nicht zu finden sind und somit das Lösen von Aufgaben erschweren.
+	\item Hier https://github.com/gemurica/Regelungstechnik-Bibel-Ultra/blob/main/main.pdf findet ihr immer die aktuelleste Version.
+\end{itemize}
+
+
+\clearpage
+
+\tableofcontents
+\clearpage
 
 \section{Einführung}
 \subsection{Steuerung und Regelung}
@@ -49,28 +89,28 @@
 \end{figure}
 \subsubsection{Hinweis zu Vorzeichen (1.2.1)}
 \noindent \textbf{Falsches Vorzeichen im Wirkungsplan \(\rightarrow\) 1 Punkt Abzug! }\\ Daher ist es empfehlenswert, auch wenn keine Koeffizienten an den Übertragungsblöcken notwendig sind, die DGLs vollständig zu linearisieren, um alle Vorzeichen korrekt zu ermitteln.
+\begin{defbar}
 \subsubsection*{Signale und Systeme}
 \index{Signale und Systeme}
-\begin{defbar}
 Ein Signal ist eine (physikalische) Größe, deren Wert einen Informationsgehalt besitzt. Ein Signal heißt dynamisch, wenn sich der Wert des Signals über die Zeit ändern kann. Ein System \(\Sigma\) ist eine durch eine Systemgrenze von der Umgebung abgegrenzte Einheit, die über Signale mit der Umgebung Informationen austauschen kann. Ein dynamisches System nutzt dabei dynamische Signale und man unterscheidet aufgrund des Ursache‑Wirkungs‑Prinzips zwischen Eingangssignalen \(u(t)\), die auf das System einwirken, und Ausgangssignalen \(y(t)\), die die Reaktion des Systems auf die Eingangssignale darstellen.\footnote{Quelle: Umdruck S. 5}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Bezeichnungen für Systeme}
 \index{Bezeichnungen für Systeme}
-\begin{defbar}
 Die folgenden Bezeichnungen werden in der Regelungstechnik weitestgehend synonym verwendet: System, Glied, Übertragungssystem, dynamisches System, Übertragungsblock, Regelkreisglied, Übertragungsglied, Regelkreiselement, Übertragungselement.\footnote{Quelle: Umdruck S. 6}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Definition der Signale und Systeme im Regelkreis}
 \index{Signale und Systeme im Regelkreis}
-\begin{defbar}
 Die Regelgröße \(y\) ist die Ausgangsgröße der Regelstrecke, die auf einem Wert gehalten werden soll. Die Führungsgröße \(w\) (Sollwert) ist eine von außen zugeführte Größe. Die Stellgröße \(u\) ist die Ausgangsgröße des Reglers. Störgröße \(z\) wirkt von außen auf die Regelstrecke. Die Messgröße \(y_m\) wird vom Messglied bereitgestellt. Messrauschen \(n\) wirkt auf die Messgröße. Die Regelstrecke ist das zu regelnde System. Der Regler vergleicht Mess‑ und Führungsgröße. Das Messglied stellt die Messung bereit.\footnote{Quelle: Umdruck S. 8}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Offener und geschlossener Regelkreis}
 \index{Offener Regelkreis}
 \index{Geschlossener Regelkreis}
-\begin{defbar}
 Das Übertragungsverhalten in Bild 1‑6 mit Rückführung wird als geschlossener Regelkreis bezeichnet. Das Übertragungsverhalten in Bild 1‑7 ohne Rückführung wird als offener Regelkreis bezeichnet.\footnote{Quelle: Umdruck S. 9}
 \end{defbar}
 \subsubsection{Vorzeichenkonvention}\index{Vorzeichenkonvention}
@@ -277,45 +317,45 @@ Hinter Kasten von \(G\) einen Umkehrpunkt!
 \clearpage
 \section{Modellbildung}
 \subsection{Allgemeines}
+\begin{defbar}
 \subsubsection*{Modell}
 \index{Modell}
-\begin{defbar}
 Ein Modell ist eine Beschreibung, die nur einen Teil der Eigenschaften des Originals wiedergibt. Ein richtig gewähltes Modell zeichnet sich dadurch aus, dass es alle wichtigen Eigenschaften des Originals widerspiegelt und gleichzeitig auf überflüssige Eigenschaften verzichtet.\footnote{Quelle: Umdruck S. 20}
 \end{defbar}
 \subsection{Einführung in Differentialgleichungen}
+\begin{defbar}
 \subsubsection*{Systemordnung}
 \index{Systemordnung}
-\begin{defbar}
 Die Ordnung des Systems entspricht \(n\) und somit der höchsten Ableitung der Ausgangsgröße.\footnote{Quelle: Umdruck S. 22}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Anfangsbedingungen}
 \index{Anfangsbedingungen}
-\begin{defbar}
 Die Bedingungen \(y^{(n-1)}(t_0)=0,\dots,\dot{y}(t_0)=0, y(t_0)=0\) heißen Anfangsbedingungen einer Differentialgleichung \(n\)-ter Ordnung zum Zeitpunkt \(t_0\).\footnote{Quelle: Umdruck S. 23}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Zeitinvariante Systeme}
 \index{Zeitinvariante Systeme}
-\begin{defbar}
 Ist \(f\) nicht explizit von der Zeit abhängig, d.\,h. \(y^{(n)}(t)=f\!\bigl(y^{(n-1)}(t),\dots,u(t)\bigr)\), so heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene System zeitinvariant.\footnote{Quelle: Umdruck S. 24}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Lineare Systeme}
 \index{Lineare Systeme}
-\begin{defbar}
 Ist \(f\) eine lineare Funktion, so heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene System linear. Andernfalls heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene System nichtlinear.\footnote{Quelle: Umdruck S. 25}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{LTI-Systeme}
 \index{LTI-System}
-\begin{defbar}
 Ist ein System linear und zeitinvariant, d.\,h. es kann durch eine lineare gewöhnliche Differentialgleichung mit konstanten Koeffizienten beschrieben werden, so nennt man das System auch LTI‑System (Linear Time Invariant).\footnote{Quelle: Umdruck S. 26}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Relativer Grad}
 \index{Relativer Grad}
-\begin{defbar}
 Der relative Grad eines LTI‑Systems ist \(r=n-m\) und beschreibt damit die Differenz zwischen höchster auftretender Ableitung der Ausgangsgröße und höchster auftauchender Ableitung der Eingangsgröße.\footnote{Quelle: Umdruck S. 26}
 \begin{itemize}
     \item \(n\): höchste Ableitung der Ausgangsgröße \(y(t)\)
@@ -324,9 +364,9 @@ Der relative Grad eines LTI‑Systems ist \(r=n-m\) und beschreibt damit die Dif
 \end{itemize}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Kausale Systeme}
 \index{Kausale Systeme}\index{akausale Systeme}
-\begin{defbar}
 Ist \(r \ge 0\), d.\,h. die höchste auftretende Ableitung der Ausgangsgröße ist mindestens so groß wie die höchste auftretende Ableitung nach der Eingangsgröße, so heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene LTI‑System kausal. Andernfalls heißt es akausal.\footnote{Quelle: Umdruck S. 27}
 \begin{itemize}
 	\item akausal sind: \(r<0\) (d.\,h. \(m>n\)), z.\,B.
@@ -338,22 +378,22 @@ Ist \(r \ge 0\), d.\,h. die höchste auftretende Ableitung der Ausgangsgröße i
 \end{itemize}
 \end{defbar}
 \subsection{Darstellung von Differentialgleichungen im Zustandsraum}
+\begin{defbar}
 \subsubsection*{Zustandsraumdarstellung}
 \index{Zustandsraumdarstellung}
-\begin{defbar}
 Die Darstellung \(\dot{x}=f(x,u,t)\) und \(y=g(x,u,t)\) mit \(x\in\mathbb{R}^n\), \(u\in\mathbb{R}^p\), \(y\in\mathbb{R}^q\) und entsprechenden vektorwertigen Funktionen \(f\) und \(g\) heißt Zustandsraumdarstellung.\footnote{Quelle: Umdruck S. 29}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{SISO und MIMO}
 \index{SISO-System}
 \index{MIMO-System}
-\begin{defbar}
 Ein System mit einer skalaren Eingangsgröße und einer skalaren Ausgangsgröße wird auch als SISO‑System (Single Input Single Output) bezeichnet. Systeme mit mehreren Ein‑ oder Ausgangsgrößen heißen MIMO‑Systeme (Multiple Input Multiple Output).\footnote{Quelle: Umdruck S. 30}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Regelungsnormalform}
 \index{Regelungsnormalform}
-\begin{defbar}
 Die Darstellungsform von Differentialgleichungen im Zustandsraum gemäß Gl.\,(2.25) bzw. Gl.\,(2.26) heißt Regelungsnormalform.\footnote{Quelle: Umdruck S. 32}
 \end{defbar}
 \subsection{Darstellung von Differentialgleichungen im Wirkungsplan}
@@ -364,29 +404,29 @@ Die Darstellungsform von Differentialgleichungen im Zustandsraum gemäß Gl.\,(2
 \subsubsection{Zusammenfassen von Teilsystemen im Wirkungsplan}
 \subsubsection{Modellierung von Regelungen}
 \subsection{Das Gesetz der Sparsamkeit}
+\begin{defbar}
 \subsubsection*{Minimale Realisierung}
 \index{Minimale Realisierung}
-\begin{defbar}
 Eine Differentialgleichung, die mit der minimal möglichen Ordnung auskommt, um das Übertragungsverhalten \(u \mapsto y\) zu beschreiben, wird minimale Realisierung genannt.\footnote{Quelle: Umdruck S. 48}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Gesetz der Sparsamkeit}
 \index{Gesetz der Sparsamkeit}
-\begin{defbar}
 Innerhalb einer Menge von wissenschaftlichen Erklärungen sollten solche Erklärungen bevorzugt werden, die mit weniger Variablen oder Elementen auskommen (lex parsimonae).\footnote{Quelle: Umdruck S. 48}
 \end{defbar}
 \subsection{Einheiten}
+\begin{defbar}
 \subsubsection*{Zeitkonstanten und Frequenzen}
 \index{Zeitkonstante}
 \index{Eckkreisfrequenz}
-\begin{defbar}
 In der Differentialgleichung \(T\dot{y}(t)+y(t)=0\) bezeichnet man \(T\) als Zeitkonstante des Systems. Schreibt man \(\dot{y}+\omega y=0\), so ist \(\omega\) eine Frequenz, die Eckkreisfrequenz genannt wird.\footnote{Quelle: Umdruck S. 49}
 \end{defbar}
 
+\begin{defbar}
 \subsubsection*{Notation von Absolut- und Abweichungsgrößen}
 \index{Absolutgrößen}
 \index{Abweichungsgrößen}
-\begin{defbar}
 Normalerweise werden alle Signale mit Kleinbuchstaben geschrieben. Treten in der Beschreibung sowohl Absolut‑ als auch Abweichungsgrößen auf, werden Absolutgrößen mit Großbuchstaben und Abweichungsgrößen mit Kleinbuchstaben geschrieben.\footnote{Quelle: Umdruck S. 50}
 \end{defbar}
 
@@ -487,69 +527,6 @@ Die Polstellen  \(\lambda_i\) müssen in der linken offenen \(s\)-Halbebene lieg
 \clearpage
 \section{Verhalten bei sinusförmiger Anregung}
 \subsection{Frequenzgang}
-\subsection{Ortskurve}
-\subsection{Bode-Diagramm}
-\subsection{Fourier-Transformation}
-\subsection{Filter}
-
-\clearpage
-\section{Verschaltungen von Systemen}
-\subsection{Zusammenfassen von Teilsystemen}
-\subsection{Zerlegung in einfache Elemente}
-\subsubsection{Pol-Nullstellen im Bodediagramm}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\linewidth]{images/Pol-Nullstellen im Bodediagramm.png}
-    \caption{Pol-Nullstellen im Bodediagramm.}
-\end{figure}
-
-\subsubsection{Lösungsweg: Frequenzgang aus Bodediagramm}
-\begin{enumerate}
-    \item Knickfrequenzen und Steigungen im Bode-Diagramm ablesen.
-    \item Nullstellen/Polstellen als Faktoren ansetzen:
-    \[
-    G_{n}(s)=1\pm \frac{1}{|s_n|}s,\qquad
-    G_{p}(s)=\frac{1}{1\pm \frac{1}{|s_p|}s}
-    \]
-    \item Vorzeichen nach Lage wählen:
-    \begin{itemize}
-        \item \(\Re(s_n)>0 \Rightarrow 1-\frac{1}{|s_n|}s\), \(\Re(s_n)<0 \Rightarrow 1+\frac{1}{|s_n|}s\)
-        \item \(\Re(s_p)<0 \Rightarrow \frac{1}{1+\frac{1}{|s_p|}s}\), \(\Re(s_p)>0 \Rightarrow \frac{1}{1-\frac{1}{|s_p|}s}\)
-    \end{itemize}
-    \item Gesamtübertragungsfunktion:
-    \[
-    G(s)=K\cdot \prod \hat{G}_{n}\cdot \prod \hat{G}_{p}
-    \]
-\end{enumerate}
-
-\subsubsection{TPR 5 – Ansätze}
-\includepdf[pages=1,scale=0.9]{images/TPR 5 - Appetizer und Zusatzaufgaben.pdf}
-
-\subsection{Zerlegung nicht-minimalphasiger Systeme}
-
-\clearpage
-\section{Typische Übertragungsglieder}
-\subsection{Übersicht}
-\subsection{Grundlegende Reglertypen}
-\subsubsection{P-Element}
-\subsubsection{I-Element}
-\subsubsection{D-Element}
-\subsubsection{PI, PD und PID}
-\subsection{Verzögerungsglieder}
-\subsubsection{PT\(_1\)}
-\subsubsection{PT\(_2\)}
-\subsubsection{PT\(_n\)}
-\subsection{Kombinationen}
-\subsubsection{IT\(_1\)}
-\subsubsection{DT\(_1\)}
-\subsubsection{PIT}
-\subsubsection{PPT\(_1\) und PDT\(_1\)}
-\subsection{Nicht-minimalphasige Systeme}
-\subsubsection{PA\(_1\)}
-\subsubsection{PT\(_t\), PT\(_1\)T\(_t\)}
-
-\section{Verhalten bei Sinusförmiger Anregung}
-\subsection{Frequenzgang}
 \subsubsection{Übertragung sinusförmiger Signale \(u(t) = sin(\omega t)\)}
 \index{Systemantwort}
 \index{Frequenzgang@$G(j\omega)$}
@@ -612,6 +589,67 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 	\item Bodediagramm: Phasenverschiebung bei \(\omega\) ablesen.
 	\item Ortskurve: Winkel bei \(\omega\) messen.
 \end{enumerate}
+\subsection{Ortskurve}
+\subsection{Bode-Diagramm}
+\subsection{Fourier-Transformation}
+\subsection{Filter}
+
+\clearpage
+\section{Verschaltungen von Systemen}
+\subsection{Zusammenfassen von Teilsystemen}
+\subsection{Zerlegung in einfache Elemente}
+\subsubsection{Pol-Nullstellen im Bodediagramm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/Pol-Nullstellen im Bodediagramm.png}
+    \caption{Pol-Nullstellen im Bodediagramm.}
+\end{figure}
+
+\subsubsection{Lösungsweg: Frequenzgang aus Bodediagramm}
+\begin{enumerate}
+    \item Knickfrequenzen und Steigungen im Bode-Diagramm ablesen.
+    \item Nullstellen/Polstellen als Faktoren ansetzen:
+    \[
+    G_{n}(s)=1\pm \frac{1}{|s_n|}s,\qquad
+    G_{p}(s)=\frac{1}{1\pm \frac{1}{|s_p|}s}
+    \]
+    \item Vorzeichen nach Lage wählen:
+    \begin{itemize}
+        \item \(\Re(s_n)>0 \Rightarrow 1-\frac{1}{|s_n|}s\), \(\Re(s_n)<0 \Rightarrow 1+\frac{1}{|s_n|}s\)
+        \item \(\Re(s_p)<0 \Rightarrow \frac{1}{1+\frac{1}{|s_p|}s}\), \(\Re(s_p)>0 \Rightarrow \frac{1}{1-\frac{1}{|s_p|}s}\)
+    \end{itemize}
+    \item Gesamtübertragungsfunktion:
+    \[
+    G(s)=K\cdot \prod \hat{G}_{n}\cdot \prod \hat{G}_{p}
+    \]
+\end{enumerate}
+
+\subsubsection{TPR 5 – Ansätze}
+\includepdf[pages=1,scale=0.9]{images/TPR 5 - Appetizer und Zusatzaufgaben.pdf}
+
+\subsection{Zerlegung nicht-minimalphasiger Systeme}
+
+\clearpage
+\section{Typische Übertragungsglieder}
+\subsection{Übersicht}
+\subsection{Grundlegende Reglertypen}
+\subsubsection{P-Element}
+\subsubsection{I-Element}
+\subsubsection{D-Element}
+\subsubsection{PI, PD und PID}
+\subsection{Verzögerungsglieder}
+\subsubsection{PT\(_1\)}
+\subsubsection{PT\(_2\)}
+\subsubsection{PT\(_n\)}
+\subsection{Kombinationen}
+\subsubsection{IT\(_1\)}
+\subsubsection{DT\(_1\)}
+\subsubsection{PIT}
+\subsubsection{PPT\(_1\) und PDT\(_1\)}
+\subsection{Nicht-minimalphasige Systeme}
+\subsubsection{PA\(_1\)}
+\subsubsection{PT\(_t\), PT\(_1\)T\(_t\)}
+
 \subsection{Nicht-parametrische Identifikation}
 \subsection{Parametrische Identifikation}
 \subsubsection{Überanpassung}
@@ -619,18 +657,14 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 \subsubsection{Methode der kleinsten Fehlerquadrate}
 
 \clearpage
-\section{6. Thema}
-
-\clearpage
-\section{7. Thema}
-
-\clearpage
-\section{8. Thema}
+\section{Identifikation linearer Regelkreisglieder}
+\subsection{Allgemeines}
 
 \clearpage
 \section{Stabilitätsprüfung}
 
 \subsection{Problemstellung}
+\begin{defbar}
 \begin{quote}
 \textbf{Stabilitätskriterien}
 
@@ -652,6 +686,7 @@ Alle Kriterien sind gleichbedeutend.
     \item Gewichtsfunktion \(g(t)=\dot{h}(t)\) konvergiert gegen null und ist für LTI-System absolut integrierbar.
 \end{enumerate}
 \end{quote}
+\end{defbar}
 \subsection{Algebraische Stabilitätskriterien}
 \subsubsection{Grundidee}
 Für die Bestimmung der Stabilitätseigenschaften wird nicht die genaue Position der Wurzel, bzw. der Polstelle \(\lambda_i\) benötigt, \textbf{sondern es reicht die Kenntnis des Vorzeichens} der Wurzel bzw. der Polstelle \(\lambda_i\) aus.
@@ -1117,11 +1152,6 @@ und somit:
     \item Periodendauer \(T=\tfrac{2\pi}{\omega_D}\) mit \(\omega_D = \omega_0\sqrt{1-D^2}\): \emph{Wie schnell schwingt das Signal?}
 \end{itemize}
 
-\section{Laplace Transformation}
-\subsection{Korrespondenztafel}
-
-\section{Berechnung der inversen Laplace-Transformation}
-
 \section{Mathematische Grundlagen}
 
 \subsection{Determinante einer 2x2 \& 3x3-Matrix}
@@ -1316,14 +1346,6 @@ d & -b \\
 \qquad \text{für } ad - bc \neq 0
 \]
 
-\subsection{Hinweis (Regelungstechnik)}
-\begin{itemize}
-    \item In der Regelungstechnik treten häufig \(2 \times 2\)-Inverse bei
-    Zustandsrückführung, Beobachtern und statischer Entkopplung auf.
-    \item Für größere Matrizen wird meist numerisch invertiert oder mit
-    Gauß-Elimination gearbeitet.
-\end{itemize}
-
 \section{Stationäre Genauigkeit}
 \subsection{Stationäre Genauigkeit im geschlossenen Regelkreis}
 Die Führungsübertragungsfunktion des geschlossenen Standard-Regelkreises ist genau dann stationär genau, wenn\footnotemark
@@ -1425,9 +1447,6 @@ Addition aus einer Geraden \(m(t-n)\) und Exponentialfunktion \(a\,e^{-\lambda t
 1\,lg-Einheit & \(= 40\,\text{mm}\) \\
 360\(^\circ\) & \(= 72\,\text{mm}\) \\
 \end{tabular}
-
-\section{Was noch hinzugefügt werden muss}
-\subsection{}
 
 % \newpage
 % \input{DefinitionsTabellen}
