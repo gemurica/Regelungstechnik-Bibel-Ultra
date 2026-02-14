@@ -1,0 +1,44 @@
+\section{Definitionsverzeichnis (Tabelle)}
+\label{sec:definitions-tabellen}
+
+\DTLloaddb{defs}{definitions.csv}
+
+\subsection{Nach Seite sortiert}
+\DTLsort{pageSort}{defs}
+
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{|r|p{0.78\linewidth}|}
+\hline
+\textbf{Seite} & \textbf{Überschrift / Inhalt der Hervorhebung}\\
+\hline
+\endfirsthead
+\hline
+\textbf{Seite} & \textbf{Überschrift / Inhalt der Hervorhebung}\\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\DTLforeach{defs}{\p=page,\t=title}{\p & \t\\\hline}
+\end{longtable}
+
+\subsection{Nach Überschrift sortiert}
+\DTLsort{title}{defs}
+
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{|p{0.78\linewidth}|r|}
+\hline
+\textbf{Überschrift / Inhalt der Hervorhebung} & \textbf{Seite}\\
+\hline
+\endfirsthead
+\hline
+\textbf{Überschrift / Inhalt der Hervorhebung} & \textbf{Seite}\\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\DTLforeach{defs}{\p=page,\t=title}{\t & \p\\\hline}
+\end{longtable}

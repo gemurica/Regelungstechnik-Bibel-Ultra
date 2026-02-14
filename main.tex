@@ -1,0 +1,1437 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage{placeins}
+\usepackage{tikz}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{makeidx}
+\usepackage{longtable}
+\usepackage{datatool}
+\usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\usepackage{framed}
+\makeindex
+\newcommand{\inputDefinitionsNoIndex}{%
+    \begingroup
+    \let\index\relax
+    \input{Definitionsverzeichnis}%
+    \endgroup
+}
+\newenvironment{defbar}{\begin{leftbar}\noindent}{\end{leftbar}}
+% \AtBeginDocument{\inputDefinitionsNoIndex} % (temporär deaktiviert für schnellere Kompilierung)
+
+\everymath{\displaystyle}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+\title{RT Bibel Erweiterung}
+\author{mariuskaffka }
+\date{February 2025}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Einführung}
+\subsection{Steuerung und Regelung}
+\subsection{Grundstruktur des Regelkreises}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/Bildschirmfoto 2026-02-12 um 22.00.15.png}
+    \caption{Symbole der Grundstruktur des Regelkreises.}
+\end{figure}
+\subsubsection{Hinweis zu Vorzeichen (1.2.1)}
+\noindent \textbf{Falsches Vorzeichen im Wirkungsplan \(\rightarrow\) 1 Punkt Abzug! }\\ Daher ist es empfehlenswert, auch wenn keine Koeffizienten an den Übertragungsblöcken notwendig sind, die DGLs vollständig zu linearisieren, um alle Vorzeichen korrekt zu ermitteln.
+\subsubsection*{Signale und Systeme}
+\index{Signale und Systeme}
+\begin{defbar}
+Ein Signal ist eine (physikalische) Größe, deren Wert einen Informationsgehalt besitzt. Ein Signal heißt dynamisch, wenn sich der Wert des Signals über die Zeit ändern kann. Ein System \(\Sigma\) ist eine durch eine Systemgrenze von der Umgebung abgegrenzte Einheit, die über Signale mit der Umgebung Informationen austauschen kann. Ein dynamisches System nutzt dabei dynamische Signale und man unterscheidet aufgrund des Ursache‑Wirkungs‑Prinzips zwischen Eingangssignalen \(u(t)\), die auf das System einwirken, und Ausgangssignalen \(y(t)\), die die Reaktion des Systems auf die Eingangssignale darstellen.\footnote{Quelle: Umdruck S. 5}
+\end{defbar}
+
+\subsubsection*{Bezeichnungen für Systeme}
+\index{Bezeichnungen für Systeme}
+\begin{defbar}
+Die folgenden Bezeichnungen werden in der Regelungstechnik weitestgehend synonym verwendet: System, Glied, Übertragungssystem, dynamisches System, Übertragungsblock, Regelkreisglied, Übertragungsglied, Regelkreiselement, Übertragungselement.\footnote{Quelle: Umdruck S. 6}
+\end{defbar}
+
+\subsubsection*{Definition der Signale und Systeme im Regelkreis}
+\index{Signale und Systeme im Regelkreis}
+\begin{defbar}
+Die Regelgröße \(y\) ist die Ausgangsgröße der Regelstrecke, die auf einem Wert gehalten werden soll. Die Führungsgröße \(w\) (Sollwert) ist eine von außen zugeführte Größe. Die Stellgröße \(u\) ist die Ausgangsgröße des Reglers. Störgröße \(z\) wirkt von außen auf die Regelstrecke. Die Messgröße \(y_m\) wird vom Messglied bereitgestellt. Messrauschen \(n\) wirkt auf die Messgröße. Die Regelstrecke ist das zu regelnde System. Der Regler vergleicht Mess‑ und Führungsgröße. Das Messglied stellt die Messung bereit.\footnote{Quelle: Umdruck S. 8}
+\end{defbar}
+
+\subsubsection*{Offener und geschlossener Regelkreis}
+\index{Offener Regelkreis}
+\index{Geschlossener Regelkreis}
+\begin{defbar}
+Das Übertragungsverhalten in Bild 1‑6 mit Rückführung wird als geschlossener Regelkreis bezeichnet. Das Übertragungsverhalten in Bild 1‑7 ohne Rückführung wird als offener Regelkreis bezeichnet.\footnote{Quelle: Umdruck S. 9}
+\end{defbar}
+\subsubsection{Vorzeichenkonvention}\index{Vorzeichenkonvention}
+\index{Vorzeichenkonvention!|see{Umdruck (S.123)}}
+\index{Relativer Grad}
+\index{Relativer Grad!Umdruck (S. 26)}
+Umlauf \(-1\) \(\rightarrow\) Minus an die Führungsgröße, z.B.  \(w= v_{soll}, t_{soll}, etc\).
+\\ Umlauf \(+1\) \(\rightarrow\) Minus an die Regelgröße (Ausgang), z.B.  \(y = v, t, etc\).
+\subsubsection{Vorzeichenänderung im Umlauf z.B. \(y = - G\cdot x\)}
+Hinter Kasten von \(G\) einen Umkehrpunkt!
+
+\subsection{Beispiele technischer Regelungen}
+
+\subsubsection*{Relevante Bilanzen und Gleichungen ausgewählter Fachgebiete}
+\textbf{Mechanik}
+\begin{itemize}
+    \item Bilanzen:
+    \begin{itemize}
+        \item Dynamisches Kräftegleichgewicht (2. Newtonsches Gesetz):
+        \[
+        M\cdot \ddot{x} = \sum F_i
+        \]
+        \begin{itemize}
+            \item \(M\): Masse
+            \item \(x\): Weg/Ort, \(\ddot{x}\): Beschleunigung
+            \item \(F_i\): Kräfte
+        \end{itemize}
+        \item Drallsatz:
+        \[
+        J\cdot \ddot{\Phi} = \sum M_i
+        \]
+        \begin{itemize}
+            \item \(J\): Trägheitsmoment
+            \item \(\Phi\): Winkel, \(\ddot{\Phi}\): Winkelbeschleunigung
+            \item \(M_i\): Momente
+        \end{itemize}
+    \end{itemize}
+    \item Bauteile:
+    \begin{itemize}
+        \item Hookesche Feder:
+        \[
+        F_{F,\text{translatorisch}} = C\cdot X
+        \qquad
+        M_{F,\text{rotatorisch}} = C\cdot \Phi
+        \]
+        \begin{itemize}
+            \item \(C\): Federkonstante
+            \item \(X\): Auslenkung (translatorisch), \(\Phi\): Winkel (rotatorisch)
+            \item \(F_F\): Federkraft, \(M_F\): Federmoment
+        \end{itemize}
+        \item Dämpfer:
+        \[
+        F_{D,\text{translatorisch}} = D\cdot \dot{x}
+        \qquad
+        M_{D,\text{rotatorisch}} = D\cdot \dot{\Phi}
+        \]
+        \begin{itemize}
+            \item \(D\): Dämpfungskoeffizient
+            \item \(\dot{x}\): Geschwindigkeit, \(\dot{\Phi}\): Winkelgeschwindigkeit
+            \item \(F_D\): Dämpferkraft, \(M_D\): Dämpfermoment
+        \end{itemize}
+    \end{itemize}
+    \item Kinematik:
+    \begin{itemize}
+        \item Zusammenhang von Ort, Geschwindigkeit und Beschleunigung:
+        \[
+        a=\dot{v}=\ddot{x}
+        \quad\text{bzw.}\quad
+        x=\int v\,\mathrm{d}t=\int\!\!\left(\int a\,\mathrm{d}t\right)\mathrm{d}t
+        \]
+        \begin{itemize}
+            \item \(x\): Ort, \(v\): Geschwindigkeit, \(a\): Beschleunigung
+        \end{itemize}
+        \item Zusammenhang zwischen Winkel und Kreisfrequenz:
+        \[
+        \omega=\dot{\varphi}
+        \quad\text{bzw.}\quad
+        \varphi=\int \omega\,\mathrm{d}t
+        \]
+        \begin{itemize}
+            \item \(\varphi\): Winkel, \(\omega\): Kreisfrequenz
+        \end{itemize}
+    \end{itemize}
+    \item Übersetzungsverhältnis:
+    \[
+    i=\frac{n_{An}}{n_{Ab}}=\frac{\omega_{An}}{\omega_{Ab}}
+    =\frac{d_{Ab}}{d_{An}}=\frac{z_{Ab}}{z_{An}}=\frac{M_{Ab}}{M_{An}}
+    \]
+    \begin{itemize}
+        \item \(n\): Drehzahl, \(\omega\): Winkelgeschwindigkeit
+        \item \(d\): Durchmesser, \(z\): Zähnezahl
+        \item \(M\): Moment, Indizes \(An/Ab\): Antrieb/Abtrieb
+    \end{itemize}
+    \item Leistung:
+    \[
+    P=\omega\cdot M
+    \]
+    \begin{itemize}
+        \item \(P\): Leistung, \(\omega\): Winkelgeschwindigkeit, \(M\): Moment
+    \end{itemize}
+\end{itemize}
+
+\textbf{Thermodynamik}
+\begin{itemize}
+    \item Bilanz:
+    \begin{itemize}
+        \item Energiebilanz:
+        \[
+        \frac{\mathrm{d}U}{\mathrm{d}t}=\sum \dot{H}_i+\sum \dot{Q}_j+\sum P_k
+        \]
+        \begin{itemize}
+            \item \(U\): innere Energie
+            \item \(\dot{H}_i\): Enthalpieströme, \(\dot{Q}_j\): Wärmeströme
+            \item \(P_k\): Leistungen
+        \end{itemize}
+    \end{itemize}
+    \item Stoffgesetze:
+    \begin{itemize}
+        \item Enthalpiestrom:
+        \[
+        \dot{H}=\dot{M}\cdot c_p\cdot \Delta T
+        \]
+        \begin{itemize}
+            \item \(\dot{H}\): Enthalpiestrom, \(\dot{M}\): Massenstrom
+            \item \(c_p\): spezifische Wärmekapazität (p), \(\Delta T\): Temperaturänderung
+        \end{itemize}
+        \item Innere Energie:
+        \[
+        U=M\cdot c_v\cdot \Delta T
+        \]
+        \begin{itemize}
+            \item \(U\): innere Energie, \(M\): Masse
+            \item \(c_v\): spezifische Wärmekapazität (v), \(\Delta T\): Temperaturänderung
+        \end{itemize}
+        \item Ideales Gasgesetz:
+        \[
+        P\cdot V=M\cdot R\cdot T
+        \]
+        \begin{itemize}
+            \item \(P\): Druck, \(V\): Volumen, \(R\): Gaskonstante, \(T\): Temperatur
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\textbf{Elektrotechnik}
+\begin{itemize}
+    \item Bilanzen:
+    \begin{itemize}
+        \item Erste Kirchhoffsche Regel (Knotenregel):
+        \[
+        0=\sum I_i
+        \]
+        \begin{itemize}
+            \item \(I_i\): Ströme
+        \end{itemize}
+        \item Zweite Kirchhoffsche Regel (Maschenregel):
+        \[
+        0=\sum U_i
+        \]
+        \begin{itemize}
+            \item \(U_i\): Spannungen
+        \end{itemize}
+    \end{itemize}
+    \item Bauteile:
+    \begin{itemize}
+        \item Widerstand:
+        \[
+        U=R\cdot I
+        \]
+        \begin{itemize}
+            \item \(U\): Spannung, \(R\): Widerstand, \(I\): Strom
+        \end{itemize}
+        \item Kondensator:
+        \[
+        I_C=C\cdot \frac{\mathrm{d}U}{\mathrm{d}t}
+        \]
+        \begin{itemize}
+            \item \(I_C\): Kondensatorstrom, \(C\): Kapazität
+            \item \(U\): Spannung
+        \end{itemize}
+        \item Spule:
+        \[
+        U_L=L\cdot \frac{\mathrm{d}I}{\mathrm{d}t}
+        \]
+        \begin{itemize}
+            \item \(U_L\): Spulenspannung, \(L\): Induktivität
+            \item \(I\): Strom
+        \end{itemize}
+    \end{itemize}
+    \item Leistung:
+    \[
+    P=U\cdot I
+    \]
+    \begin{itemize}
+        \item \(P\): Leistung, \(U\): Spannung, \(I\): Strom
+    \end{itemize}
+\end{itemize}
+\subsubsection{Tiefenregelung eines Unterwasserfahrzeuges}
+\subsubsection{Regelung von Windkraftanlagen}
+\subsubsection{Kraftregelung beim Fräsen}
+\subsubsection{Regelung eines Bioreaktors}
+\subsubsection{Regelung einer Dampfmaschine}
+
+\clearpage
+\section{Modellbildung}
+\subsection{Allgemeines}
+\subsubsection*{Modell}
+\index{Modell}
+\begin{defbar}
+Ein Modell ist eine Beschreibung, die nur einen Teil der Eigenschaften des Originals wiedergibt. Ein richtig gewähltes Modell zeichnet sich dadurch aus, dass es alle wichtigen Eigenschaften des Originals widerspiegelt und gleichzeitig auf überflüssige Eigenschaften verzichtet.\footnote{Quelle: Umdruck S. 20}
+\end{defbar}
+\subsection{Einführung in Differentialgleichungen}
+\subsubsection*{Systemordnung}
+\index{Systemordnung}
+\begin{defbar}
+Die Ordnung des Systems entspricht \(n\) und somit der höchsten Ableitung der Ausgangsgröße.\footnote{Quelle: Umdruck S. 22}
+\end{defbar}
+
+\subsubsection*{Anfangsbedingungen}
+\index{Anfangsbedingungen}
+\begin{defbar}
+Die Bedingungen \(y^{(n-1)}(t_0)=0,\dots,\dot{y}(t_0)=0, y(t_0)=0\) heißen Anfangsbedingungen einer Differentialgleichung \(n\)-ter Ordnung zum Zeitpunkt \(t_0\).\footnote{Quelle: Umdruck S. 23}
+\end{defbar}
+
+\subsubsection*{Zeitinvariante Systeme}
+\index{Zeitinvariante Systeme}
+\begin{defbar}
+Ist \(f\) nicht explizit von der Zeit abhängig, d.\,h. \(y^{(n)}(t)=f\!\bigl(y^{(n-1)}(t),\dots,u(t)\bigr)\), so heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene System zeitinvariant.\footnote{Quelle: Umdruck S. 24}
+\end{defbar}
+
+\subsubsection*{Lineare Systeme}
+\index{Lineare Systeme}
+\begin{defbar}
+Ist \(f\) eine lineare Funktion, so heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene System linear. Andernfalls heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene System nichtlinear.\footnote{Quelle: Umdruck S. 25}
+\end{defbar}
+
+\subsubsection*{LTI-Systeme}
+\index{LTI-System}
+\begin{defbar}
+Ist ein System linear und zeitinvariant, d.\,h. es kann durch eine lineare gewöhnliche Differentialgleichung mit konstanten Koeffizienten beschrieben werden, so nennt man das System auch LTI‑System (Linear Time Invariant).\footnote{Quelle: Umdruck S. 26}
+\end{defbar}
+
+\subsubsection*{Relativer Grad}
+\index{Relativer Grad}
+\begin{defbar}
+Der relative Grad eines LTI‑Systems ist \(r=n-m\) und beschreibt damit die Differenz zwischen höchster auftretender Ableitung der Ausgangsgröße und höchster auftauchender Ableitung der Eingangsgröße.\footnote{Quelle: Umdruck S. 26}
+\begin{itemize}
+    \item \(n\): höchste Ableitung der Ausgangsgröße \(y(t)\)
+    \item \(m\): höchste Ableitung der Eingangsgröße \(u(t)\)
+    \item akausal sind: \(r<0\) (d.\,h. \(m>n\)), z.\,B.
+\end{itemize}
+\end{defbar}
+
+\subsubsection*{Kausale Systeme}
+\index{Kausale Systeme}\index{akausale Systeme}
+\begin{defbar}
+Ist \(r \ge 0\), d.\,h. die höchste auftretende Ableitung der Ausgangsgröße ist mindestens so groß wie die höchste auftretende Ableitung nach der Eingangsgröße, so heißt die Differentialgleichung und das durch die Differentialgleichung beschriebene LTI‑System kausal. Andernfalls heißt es akausal.\footnote{Quelle: Umdruck S. 27}
+\begin{itemize}
+	\item akausal sind: \(r<0\) (d.\,h. \(m>n\)), z.\,B.
+	\begin{itemize}
+		\item D‑Glied: \(y = K_D\,\dot{u}\)
+		\item PD‑Glied: \(y = K\left(u + T_v\,\dot{u}\right)\)
+		\item PID‑Glied: \(y = K\left(u + \frac{1}{T_n}\int u\,\mathrm{d}t + T_v\,\dot{u}\right)\)
+	\end{itemize}
+\end{itemize}
+\end{defbar}
+\subsection{Darstellung von Differentialgleichungen im Zustandsraum}
+\subsubsection*{Zustandsraumdarstellung}
+\index{Zustandsraumdarstellung}
+\begin{defbar}
+Die Darstellung \(\dot{x}=f(x,u,t)\) und \(y=g(x,u,t)\) mit \(x\in\mathbb{R}^n\), \(u\in\mathbb{R}^p\), \(y\in\mathbb{R}^q\) und entsprechenden vektorwertigen Funktionen \(f\) und \(g\) heißt Zustandsraumdarstellung.\footnote{Quelle: Umdruck S. 29}
+\end{defbar}
+
+\subsubsection*{SISO und MIMO}
+\index{SISO-System}
+\index{MIMO-System}
+\begin{defbar}
+Ein System mit einer skalaren Eingangsgröße und einer skalaren Ausgangsgröße wird auch als SISO‑System (Single Input Single Output) bezeichnet. Systeme mit mehreren Ein‑ oder Ausgangsgrößen heißen MIMO‑Systeme (Multiple Input Multiple Output).\footnote{Quelle: Umdruck S. 30}
+\end{defbar}
+
+\subsubsection*{Regelungsnormalform}
+\index{Regelungsnormalform}
+\begin{defbar}
+Die Darstellungsform von Differentialgleichungen im Zustandsraum gemäß Gl.\,(2.25) bzw. Gl.\,(2.26) heißt Regelungsnormalform.\footnote{Quelle: Umdruck S. 32}
+\end{defbar}
+\subsection{Darstellung von Differentialgleichungen im Wirkungsplan}
+\subsection{Aufstellen von Differentialgleichungen}
+\subsection{Beispiele für Modellbildung}
+\subsubsection{Zerlegung in Teilsysteme}
+\subsubsection{Rückwirkungen}
+\subsubsection{Zusammenfassen von Teilsystemen im Wirkungsplan}
+\subsubsection{Modellierung von Regelungen}
+\subsection{Das Gesetz der Sparsamkeit}
+\subsubsection*{Minimale Realisierung}
+\index{Minimale Realisierung}
+\begin{defbar}
+Eine Differentialgleichung, die mit der minimal möglichen Ordnung auskommt, um das Übertragungsverhalten \(u \mapsto y\) zu beschreiben, wird minimale Realisierung genannt.\footnote{Quelle: Umdruck S. 48}
+\end{defbar}
+
+\subsubsection*{Gesetz der Sparsamkeit}
+\index{Gesetz der Sparsamkeit}
+\begin{defbar}
+Innerhalb einer Menge von wissenschaftlichen Erklärungen sollten solche Erklärungen bevorzugt werden, die mit weniger Variablen oder Elementen auskommen (lex parsimonae).\footnote{Quelle: Umdruck S. 48}
+\end{defbar}
+\subsection{Einheiten}
+\subsubsection*{Zeitkonstanten und Frequenzen}
+\index{Zeitkonstante}
+\index{Eckkreisfrequenz}
+\begin{defbar}
+In der Differentialgleichung \(T\dot{y}(t)+y(t)=0\) bezeichnet man \(T\) als Zeitkonstante des Systems. Schreibt man \(\dot{y}+\omega y=0\), so ist \(\omega\) eine Frequenz, die Eckkreisfrequenz genannt wird.\footnote{Quelle: Umdruck S. 49}
+\end{defbar}
+
+\subsubsection*{Notation von Absolut- und Abweichungsgrößen}
+\index{Absolutgrößen}
+\index{Abweichungsgrößen}
+\begin{defbar}
+Normalerweise werden alle Signale mit Kleinbuchstaben geschrieben. Treten in der Beschreibung sowohl Absolut‑ als auch Abweichungsgrößen auf, werden Absolutgrößen mit Großbuchstaben und Abweichungsgrößen mit Kleinbuchstaben geschrieben.\footnote{Quelle: Umdruck S. 50}
+\end{defbar}
+
+\clearpage
+\section{Autonome Systeme}
+\subsection{Arbeitspunkte und Ruhelagen}
+\subsection{Stabilität}
+\subsection{Linearisierung}
+\subsubsection{Linearisierung einer Funktion}
+\subsubsection{Linearisierung einer Differentialgleichung}
+\subsubsection{Linearisierung im Kennlinienfeld}
+\subsection{Charakteristisches Polynom}
+\subsection{Linearisierungstheorem}
+\subsection{Analyse im Zustandsraum}
+
+\clearpage
+\section{Verhalten bei allgemeiner Anregung}
+\subsection{Homogene und partikuläre Lösung}
+\subsection{Übergangsfunktion}
+\subsection{Faltung}
+\subsection{Laplace-Transformation}
+\subsubsection{Laplace-Transformation von Zeitfunktionen}
+\noindent\footnotesize
+\setlength{\tabcolsep}{6pt}
+\setlength{\extrarowheight}{2pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{||p{3.2cm}||p{11.6cm}||}
+	\hhline{|==|}
+	\textbf{\(F(s)\)} & \textbf{\(f(t)\) für \(t>0\)} \hfill \textbf{\(f(t)=0\) für \(t\le 0\)} \\
+	\hhline{|==|}
+	\(\dfrac{1}{(s-\lambda)^n}\) &
+	\(\dfrac{1}{(n-1)!}\,t^{n-1}e^{\lambda t}\) \hfill \(n=1,2,3,\ldots\) \\
+	\hline
+	1 & \(\delta(t)\) \(\emph{(= u(t) für Gewichtsfunktion \(g(t)\))}\) \\
+	\hline
+	\(\dfrac{1}{s}\) & \(1(t)\) \(\emph{(= u(t) für Übergangsfunktion \(h(t)\))}\)\\
+	\hline
+	\(\dfrac{1}{s^2}\) & \(t\) \\
+	\hline
+	\(\dfrac{1}{1+sT}\) & \(\dfrac{1}{T}e^{-t/T}\) \\
+	\hline
+	\(\dfrac{\omega_0^2}{s^2+2D\omega_0 s+\omega_0^2}\) &
+	\(\dfrac{\omega_0}{\sqrt{1-D^2}}\,e^{-D\omega_0 t}\sin(\omega_D t)\) \hfill \(|D|<1\) \\
+	& \(\omega_0^2 t\,e^{-D\omega_0 t}\) \hfill \(|D|=1,\ \omega_D=\sqrt{1-D^2}\,\omega_0\) \\
+	\hline
+	\(\dfrac{1}{(1+sT_1)(1+sT_2)}\) &
+	\(\dfrac{1}{T_1-T_2}\left(e^{-t/T_1}-e^{-t/T_2}\right)\) \hfill \(T_1\ne T_2\) \\
+	\hline
+	\(\dfrac{s}{1+sT}\) &
+	\(\dfrac{1}{T}\left(\delta(t)-\dfrac{1}{T}e^{-t/T}\right)\) \\
+	\hline
+	\(\dfrac{s}{(1+sT_1)(1+sT_2)}\) &
+	\(\dfrac{1}{T_1T_2(T_1-T_2)}\left(T_1e^{-t/T_2}-T_2e^{-t/T_1}\right)\) \hfill \(T_1\ne T_2\) \\
+	\hline
+	\(\dfrac{s\omega_0^2}{s^2+2D\omega_0 s+\omega_0^2}\) &
+	\(\omega_0^2 e^{-D\omega_0 t}\left(\cos(\omega_D t)-\dfrac{D}{\sqrt{1-D^2}}\sin(\omega_D t)\right)\) \hfill \(|D|<1,\ \omega_D=\sqrt{1-D^2}\,\omega_0\) \\
+	\hline
+	\(\dfrac{1}{s(1+sT)}\) & \(1-e^{-t/T}\) \\
+	\hline
+	\(\dfrac{1}{s(1+sT_1)(1+sT_2)}\) &
+	\(1-\dfrac{1}{T_1-T_2}\left(T_1e^{-t/T_1}-T_2e^{-t/T_2}\right)\) \hfill \(T_1\ne T_2\) \\
+	\hline
+	\(\dfrac{\omega_0^2}{s(s^2+2D\omega_0 s+\omega_0^2)}\) &
+	\(1-e^{-D\omega_0 t}\left(\cos(\omega_D t)+\dfrac{D}{\sqrt{1-D^2}}\sin(\omega_D t)\right)\) \hfill \(|D|<1,\ \omega_D=\sqrt{1-D^2}\,\omega_0\) \\
+	\hhline{|==|}
+\end{tabular}
+\normalsize
+
+
+\subsubsection{Laplace-Transformation von Operationen}
+\subsubsection{Bestimmung des Zeitverlaufes linearer Systeme}
+\subsubsection{Beispiele für Laplace Transformationen}
+\paragraph{\(f(t)=t^2\)}
+\[
+t^2 = 2\cdot \frac{1}{2!}\,t^2\,e^{0\cdot t}
+\;\xrightarrow{\ \mathcal{L}\ }\;
+F(s)=\frac{1}{(s-0)^3}
+\]
+\subsection{Übertragungsfunktion \(G(s)\)}
+\begin{quote}
+\textbf{Stabilität im Bildbereich:} 
+
+Die Wurzeln des charakteristischen Polynoms \(p(s)\) entsprechen den Polstellen \(\lambda_i\).
+
+Für Stabilität muss gelten:
+\[
+\Re(\lambda_i) < 0
+\]
+\emph{Umgangssprachlich:} Für Stabilität muss der Realteil der Polstellen  \(\lambda_i\) negativ sein 
+\begin{center}
+	ODER
+\end{center}
+Die Polstellen  \(\lambda_i\) müssen in der linken offenen \(s\)-Halbebene liegen für Stabilität.
+\end{quote}
+\subsection{Grenzwertsätze}
+
+\FloatBarrier
+\clearpage
+\section{Verhalten bei sinusförmiger Anregung}
+\subsection{Frequenzgang}
+\subsection{Ortskurve}
+\subsection{Bode-Diagramm}
+\subsection{Fourier-Transformation}
+\subsection{Filter}
+
+\clearpage
+\section{Verschaltungen von Systemen}
+\subsection{Zusammenfassen von Teilsystemen}
+\subsection{Zerlegung in einfache Elemente}
+\subsubsection{Pol-Nullstellen im Bodediagramm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/Pol-Nullstellen im Bodediagramm.png}
+    \caption{Pol-Nullstellen im Bodediagramm.}
+\end{figure}
+
+\subsubsection{Lösungsweg: Frequenzgang aus Bodediagramm}
+\begin{enumerate}
+    \item Knickfrequenzen und Steigungen im Bode-Diagramm ablesen.
+    \item Nullstellen/Polstellen als Faktoren ansetzen:
+    \[
+    G_{n}(s)=1\pm \frac{1}{|s_n|}s,\qquad
+    G_{p}(s)=\frac{1}{1\pm \frac{1}{|s_p|}s}
+    \]
+    \item Vorzeichen nach Lage wählen:
+    \begin{itemize}
+        \item \(\Re(s_n)>0 \Rightarrow 1-\frac{1}{|s_n|}s\), \(\Re(s_n)<0 \Rightarrow 1+\frac{1}{|s_n|}s\)
+        \item \(\Re(s_p)<0 \Rightarrow \frac{1}{1+\frac{1}{|s_p|}s}\), \(\Re(s_p)>0 \Rightarrow \frac{1}{1-\frac{1}{|s_p|}s}\)
+    \end{itemize}
+    \item Gesamtübertragungsfunktion:
+    \[
+    G(s)=K\cdot \prod \hat{G}_{n}\cdot \prod \hat{G}_{p}
+    \]
+\end{enumerate}
+
+\subsubsection{TPR 5 – Ansätze}
+\includepdf[pages=1,scale=0.9]{images/TPR 5 - Appetizer und Zusatzaufgaben.pdf}
+
+\subsection{Zerlegung nicht-minimalphasiger Systeme}
+
+\clearpage
+\section{Typische Übertragungsglieder}
+\subsection{Übersicht}
+\subsection{Grundlegende Reglertypen}
+\subsubsection{P-Element}
+\subsubsection{I-Element}
+\subsubsection{D-Element}
+\subsubsection{PI, PD und PID}
+\subsection{Verzögerungsglieder}
+\subsubsection{PT\(_1\)}
+\subsubsection{PT\(_2\)}
+\subsubsection{PT\(_n\)}
+\subsection{Kombinationen}
+\subsubsection{IT\(_1\)}
+\subsubsection{DT\(_1\)}
+\subsubsection{PIT}
+\subsubsection{PPT\(_1\) und PDT\(_1\)}
+\subsection{Nicht-minimalphasige Systeme}
+\subsubsection{PA\(_1\)}
+\subsubsection{PT\(_t\), PT\(_1\)T\(_t\)}
+
+\section{Verhalten bei Sinusförmiger Anregung}
+\subsection{Frequenzgang}
+\subsubsection{Übertragung sinusförmiger Signale \(u(t) = sin(\omega t)\)}
+\index{Systemantwort}
+\index{Frequenzgang@$G(j\omega)$}
+\index{Betrag@$|G(j\omega)|$}
+\index{Phase@\(\angle G(j\omega)\)}
+
+\paragraph{1. Bedingungen prüfen:}
+\begin{itemize}
+	\item Ist das System stabil?
+	\item Ist das System LTI?
+	\item Ist der Eingang $u(t)$ sinusförmig?
+\end{itemize}
+
+\paragraph{2. Koeffizienten ermitteln:}
+Für ein stabiles LTI-System mit dem Frequenzgang \(G(j\omega)\) gilt im \emph{eingeschwungenen Zustand}\footnotemark
+\footnotetext{Quelle: Umdruck S. 116, 119}
+\footnotetext{Beispiele: Altklausur H22, Aufgabe 4 (a); TPR 2, Aufgabe 1}:
+\index{Sinusförmige Signale}
+\index{Sinusförmige Signale!Umdruck (S. 119)}
+\index{u(t)=$\sin(\omega t)$}
+\[
+u(t)=\hat{U}\,\sin(\omega t)
+\;\Rightarrow\;
+y(t)=|G(j\omega)|\cdot\hat{U}\cdot\sin\!\bigl(\omega t+\angle G(j\omega)\bigr)
+\]
+analog:
+\[
+u(t)=\hat{U}\,\cos(\omega t)
+\;\Rightarrow\;
+y(t)=|G(j\omega)|\cdot\hat{U}\cdot\cos\!\bigl(\omega t+\angle G(j\omega)\bigr)
+\]
+Hinweis:
+\begin{equation}
+	u(t)=u_1(t)+u_2(t)\;\Rightarrow\;y(t)=y_1(t)+y_2(t)
+\end{equation}
+\begin{equation}
+	\sin\left(t-\frac{\pi}{2}\right) = -\cos(t)
+\end{equation}
+\paragraph{2.1. \(\omega\) bestimmen}
+Im ersten Schritt ist \(\omega\) aus dem Eingang \(u(t)\) zu bestimmen:
+\begin{enumerate}
+	\item Falls der Verlauf von \(u(t)\) und \(y(t)\) gegeben ist: \(\omega=\frac{2\pi}{T}\) mit der Periodendauer \(T\).
+	\item Beispiel: \(u(t)=\sin(2t)\;\Rightarrow\;\omega=2\).
+\end{enumerate}
+\paragraph{2.2. \(|G(j\omega)|\) bestimmen}
+Den Betrag \(|G(j\omega)|\) beim in 14.2.1 bestimmten \(\omega\) ermitteln:
+\begin{enumerate}
+	\item Falls der Verlauf von \(u(t)\) und \(y(t)\) gegeben ist: Amplitudenverhältnis \(\frac{\hat{Y}}{\hat{U}}\) berechnen.
+	\item Falls der Frequenzgang \(G(j\omega)\) gegeben ist: direkt einsetzen. Beispiel:
+	\[
+	\left|\frac{1}{j\omega+1}\right| = \frac{1}{\sqrt{1^2+\omega^2}}
+	\]
+	\item Bodediagramm: Betrag aus dem \emph{realen Verlauf} ablesen (nicht aus den Asymptoten).
+	\item Ortskurve: Betrag ist der Abstand vom Ursprung zum Punkt bei \(\omega\).
+\end{enumerate}
+\paragraph{2.3.  \( \angle G(j\omega)\) bestimmen}
+Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
+\begin{enumerate}
+	\item Wenn der Verlauf von \(u(t)\) und \(y(t)\) gegeben ist: Phasenverschiebung als Versatz zwischen \(u(t)\) und \(y(t)\) bestimmen.
+	\item Bodediagramm: Phasenverschiebung bei \(\omega\) ablesen.
+	\item Ortskurve: Winkel bei \(\omega\) messen.
+\end{enumerate}
+\subsection{Nicht-parametrische Identifikation}
+\subsection{Parametrische Identifikation}
+\subsubsection{Überanpassung}
+\subsubsection{Graphische Parameteridentifikation}
+\subsubsection{Methode der kleinsten Fehlerquadrate}
+
+\clearpage
+\section{6. Thema}
+
+\clearpage
+\section{7. Thema}
+
+\clearpage
+\section{8. Thema}
+
+\clearpage
+\section{Stabilitätsprüfung}
+
+\subsection{Problemstellung}
+\begin{quote}
+\textbf{Stabilitätskriterien}
+
+Alle Kriterien sind gleichbedeutend.
+\begin{enumerate}[label=\arabic*.]
+    \item Wurzeln des charakteristischen Polynoms besitzen alle negativen Realteil:
+    \[
+    p(\lambda)=0 \;\Rightarrow\; \Re(\lambda_i)<0
+    \]
+    \item Eigenwerte der Systemmatrix \(A\) besitzen alle einen negativen Realteil:
+    \[
+    \det(\lambda I-A)\ \Rightarrow\ p(\lambda)=0 \ \text{und}\ \Re(\lambda_i)<0
+    \]
+    \item Polstellen der Übertragungsfunktion \(G(s)=\dfrac{Z(s)}{N(s)}\) besitzen alle negativen Realteil:
+    \[
+    p(s)=N(s)=0 \;\Rightarrow\; \Re(s_i)<0
+    \]
+    \item Übergangsfunktion \(h(t)\) konvergiert gegen einen endlichen Wert.
+    \item Gewichtsfunktion \(g(t)=\dot{h}(t)\) konvergiert gegen null und ist für LTI-System absolut integrierbar.
+\end{enumerate}
+\end{quote}
+\subsection{Algebraische Stabilitätskriterien}
+\subsubsection{Grundidee}
+Für die Bestimmung der Stabilitätseigenschaften wird nicht die genaue Position der Wurzel, bzw. der Polstelle \(\lambda_i\) benötigt, \textbf{sondern es reicht die Kenntnis des Vorzeichens} der Wurzel bzw. der Polstelle \(\lambda_i\) aus.
+\subsubsection{Stabilitätskriterien nach Routh und Hurwitz}
+\noindent\textbf{1. Bedingung (hinreichend für Systeme mit Ordnung \(n=1,2\)).}\footnote{Stabilitätskriterien für Systeme bis Ordnung \(n=3\) (S. 226).}
+
+System der Ordnung \(n\) mit charakteristischem Polynom
+\[
+p(\lambda)=a_n\lambda^n+\dots+a_1\lambda+a_0
+\]
+ist stabil, wenn
+\begin{itemize}
+    \item alle Koeffizienten \(a_i\) vorhanden sind,
+    \item alle Koeffizienten \(a_i\) das gleiche Vorzeichen haben,
+    \item genauer: alle \(a_i\) positiv sind, ggf. Differentialgleichung mit \(-1\) multiplizieren, falls alle negativ sind.
+\end{itemize}
+
+\noindent\textbf{2. Bedingung nach Hurwitz (bis Ordnung \(n=3\)).}\\
+\(\det(H)\) sowie alle Unterdeterminanten sind größer null (Hurwitz-Matrix Bsp. S. 217).\\
+Für \(n=3\) (vgl. S. 219, Gl. 9.6):
+\[
+\det(H)=
+\begin{vmatrix}
+a_2 & a_0\\
+a_3 & a_1
+\end{vmatrix}
+=a_1a_2-a_0a_3>0 \quad \text{(S. 217)}
+\]
+
+\noindent\textbf{2. Bedingung nach Routh.}\\
+Routhschen Probefunktionen \(R_i\) sind sämtlich größer null.
+\paragraph{Vorlagen für Routh-Probefunktionen (bis \(n=4\)).}
+{\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\noindent Charakteristisches Polynom für \(n=4\):
+\[
+p(\lambda)=a_4\lambda^4+a_3\lambda^3+a_2\lambda^2+a_1\lambda+a_0
+\]
+\subparagraph*{Für \(n=1\)}
+\begin{tabular}{|c||c|}
+\hline
+\(i\) & \(R_i\)\\
+\hline
+1 & \(a_1\)\\
+\hline
+0 & \(a_0\)\\
+\hline
+\end{tabular}
+
+\subparagraph*{Für \(n=2\)}
+\begin{tabular}{|c||c|c|}
+\hline
+\(i\) & \(R_i\) &\\
+\hline
+2 &  \(a_2\) & \(a_0\)\\
+\hline
+1 & \(a_1\) & \(-\)\\
+\hline
+0 & \(a'_0 = a_0\) &\\
+\hline
+\end{tabular}
+
+\subparagraph*{Für \(n=3\)}
+\begin{tabular}{|c||c|c|}
+\hline
+\(i\) & \(R_i\) &\\
+\hline
+3 & \(a_3\) & \(a_1\)\\
+\hline
+2 & \(a_2\) & \(a_0\)\\
+\hline
+1 & \(a'_1= a_1 - \frac{a_3}{a_2} a_0\)  & \(-\)\\
+\hline
+0 & \(a'_0 = a_0\) & \(-\)\\
+\hline
+\end{tabular}
+
+\subparagraph*{Für \(n=4\)}
+\begin{tabular}{|c||c|c|c|}
+\hline
+\(i\) & \(R_i\) & & \\
+\hline
+4 & \(a_4\) & \(a_2\) & \(a_0\)\\
+\hline
+3 & \(a_3\) & \(a_1\) & \(-\)\\
+\hline
+2 & \(a'_2= a_2 - \frac{a_4}{a_3} a_1\) & \(a'_0= a_0\) & \(-\)\\
+\hline
+1 & \(a'_1= a_1 - \frac{a_3}{a'_2} a'_0\)  & \(-\) & \(-\)\\
+\hline
+0 & \(a'_0 = a_0\) & \(-\) & \(-\)\\
+\hline
+\end{tabular}
+}
+\subsubsection{Beispiele}
+\subsection{Nyquist-Kriterium}
+Wird benötigt, wenn das charakteristische Polynom \(p(\lambda)\) nicht gegeben oder nicht aufgestellt werden kann, z.B. bei Totzeitgliedern (vgl. \(G(s)=\frac{T s+1}{T s+1+K_p e^{-sT_t}}\), S. 225, Gl. 9.19).
+\subsubsection{Vollständiges Nyquist-Kriterium}
+Gegeben sei ein aufgeschnittener kausaler\footnotemark\footnotetext{Umdruck S. 27} Regelkreis \(G_0\) und ein zugehöriger geschlossener Regelkreis \(G\).
+Es gilt (S. 231):
+\[
+m = n - p
+\]
+mit
+\begin{itemize}
+    \item \(p = p_+(G_0)\): Anzahl der Pole des aufgeschnittenen Regelkreises \(G_0\) in der rechten offenen \(s\)-Halbebene,
+    \item \(n = n_+(1+G_0)\): Anzahl der Pole des geschlossenen Regelkreises \(G\) in der rechten offenen \(s\)-Halbebene,
+    \item \(m\): Anzahl der Umläufe der Ortskurve von \(G_0(j\omega)\) (für \(-\infty<\omega<\infty\)) um den kritischen Punkt \(-1\) im Uhrzeigersinn.
+\end{itemize}
+Damit \(G\) stabil ist, muss \(n=0\) gelten. Also folgt
+\[
+m=-p.
+\]
+\subsubsection{Beispiele}
+\subsubsection{Anwendung bei Polen am Stabilitätsrand}
+\subsubsection{Vereinfachtes Nyquist-Kriterium}
+\subsubsection{Amplituden- und Phasenreserve}
+\subsection{Sonderfälle}
+\subsubsection{Pol-Nullstellen-Kürzungen}
+\subsubsection{Unstetige Polstellen}
+
+\clearpage
+\section{Einführung in den Reglerentwurf}
+\subsection{Ziele und Lösungsansätze}
+\subsubsection{Motivation}
+\subsubsection{Gütemaße und Kennwerte}
+\subsubsection{Ansätze des Reglerentwurfs}
+\subsection{Statischer Reglerentwurf}
+\subsection{Abwägungen bei der Reglerverstärkung}
+\subsubsection{Vorteile hoher Verstärkungen}
+\subsubsection{Nachteile hoher Verstärkungen}
+\subsection{Einstellregeln}
+\subsubsection{Einstellung mittels \(T_u\)--\(T_g\)-Ersatzmodell}
+\subsubsection{Einstellung mittels Schwingversuch}
+
+\clearpage
+\section{Grundlegende modellbasierte Reglerentwurfsverfahren}
+\subsection{Frequenzkennlinienverfahren}
+\subsubsection{Grundidee}
+\subsubsection{Hohe Verstärkung bei niedrigen Frequenzen}
+\subsubsection{Übergangsbereich}
+\subsubsection{Niedrige Verstärkung bei hohen Frequenzen}
+\subsection{Betragskriterium und Symmetrisches Kriterium}
+\subsection{Polvorgabe}
+\subsubsection{Polvorgabe für Ausgangsrückführungen}
+\subsubsection{Polvorgabe für Zustandsrückführungen}
+\subsubsection{Steuerbarkeit}
+\subsection{Beobachterentwurf}
+\subsubsection{Zustandsschätzung}
+\subsubsection{Luenberger-Beobachter}
+\subsubsection{Beobachtbarkeit und Dualität}
+\subsubsection{Beispiel}
+\subsection{Wurzelortskurven}
+\subsubsection{Grundidee}
+\subsubsection{Konstruktionsregeln}
+\subsubsection{Beispiel}
+\clearpage
+\section{Vermaschte Regelkreise}
+\subsection{Erweiterung des Einfachregelkreises}
+\subsection{Vorsteuerung}
+\subsection{Führungsgrößenfilter}
+\subsection{Störgrößenaufschaltung}
+\subsection{Kaskadenregelung}
+\subsection{Hilfsstellgröße}
+\clearpage
+\section{Mehrgrößenregelung}
+\subsection{Zentrale vs. dezentrale Regelung}
+\subsection{Eigenschaften von Mehrgrößensystemen}
+\subsubsection{Verschaltungen von Mehrgrößensystemen}
+\subsubsection{Querkopplungen}
+\subsubsection{Polstellen von Mehrgrößensystemen}
+\subsubsection{Richtungsabhängige Verstärkung}
+\subsection{Verfahren der dezentralen Regelung}
+\subsubsection{Relative Gain Array}
+\subsubsection{MIMO-Nyquist und Diagonaldominanz}
+\subsection{Verfahren der zentralen Regelung}
+\subsubsection{Zentrale Regelung im Zustandsraum}
+\subsubsection{Entkopplungsregler}
+\clearpage
+\section{Zeitdiskrete Systeme}
+\subsection{Abtastregelungen}
+\subsubsection{Definitionen}
+\subsubsection{Abtaster und Halteglied}
+\subsubsection{Aliasing}
+\subsubsection{Verschaltung zu hybriden Systemen}
+\subsection{Einführung in Differenzengleichungen}
+\subsection{Autonome zeitdiskrete Systeme}
+\subsection{Umrechnen von Differenzen- und Differentialgleichungen}
+\subsubsection{Rückwärtsdifferenzen}
+\subsubsection{Analytische Lösung}
+\subsection{Quasikontinuierlicher Reglerentwurf}
+\subsection{Zeitdiskreter Bildbereich}
+\subsubsection{\(Z\)-Transformation}
+\subsubsection{Zeitdiskrete Übertragungsfunktion}
+\subsubsection{Zeitdiskreter Frequenzgang}
+\subsubsection{Zeitdiskrete Modelle zeitkontinuierlicher Systeme}
+\subsection{Bilineare Transformation}
+\subsection{Klassischer zeitdiskreter Reglerentwurf}
+\subsection{Regler mit endlicher Einstellzeit}
+\subsubsection{Entwurf}
+\subsubsection{Stabilität}
+\subsubsection{Beispiel}
+
+\clearpage
+\section{Kalmanfilter}
+\subsection{Allgemeines}
+\subsection{Herleitung}
+\subsection{Auslegung und Beispiel}
+\subsection{Limitierungen und Erweiterungen}
+
+\subsubsection{Allgemein}
+\begin{enumerate}[label=\arabic*.]
+	\item Es dürfen nur Terme wie \(x_k, y_k, u_k\) hinzugefügt werden.
+	\item Es dürfen KEINE! Terme wie \(x_{k-1}, y_{k-2}, u_{k-1}\) hinzugefügt werden.
+	\item \(y(t) \approx y_k\)
+	\item \(\dot{y}(t) \approx \dfrac{y_k - y_{k-1}}{T}\)
+	\item \(\ddot{y}(t) \approx \dfrac{y_k - 2y_{k-1} + y_{k-2}}{T^2}\)
+	\item \(y(t-T_t) \approx y_{k-d}\) mit \(d = \dfrac{T_t}{T}\).
+	
+	\textbf{Hinweis:} In den meisten Fällen wird der Term \(y_{k-d}\) als Totzeitglied angenommen. Besonders ist bei einem Koeffizientenvergleich darauf zu achten, ob ein Totzeitglied in der vorgegebenen Gleichung vorhanden ist.
+	\\
+	Wenn ein Totzeitglied \(K\,e^{-sT_t}\) vorhanden ist, dann \(y_{k-d}\) als Totzeitglied annehmen.
+	\\
+	Wenn kein Totzeitglied vorhanden ist, dann in den meisten Fällen \(\dot{y}(t)\) oder selten \(\ddot{y}(t)\).
+\end{enumerate}
+
+\section{Zustandsraum}
+\subsection{Zustandsregelung}
+In Figur 1 ist eine Zustandsregelung mit Proportionalgliedern zu sehen.
+
+\begin{figure}
+    \centering
+\includegraphics[width=0.5\linewidth]{images/Zustandsregelung F23 (1).png}
+    \caption{Zustandsregelung mit \(k^T = (x_1, x_2,x_3)\)}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection{Zustandsregler \(\mathbf{k}^T = [k_1 \quad k_2]\) bestimmen.}
+
+\(\mathbf{A} = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}, \mathbf{b}= \begin{pmatrix} b_{1} \\ b_{2}\end{pmatrix}\)
+
+\begin{enumerate}[label=\arabic*.]
+    \item \(\mathbf{A_k}\) bestimmen.
+
+    \[
+    \mathbf{A}_k = \mathbf{A} - \mathbf{B}\mathbf{K} \quad \text{oder} \quad \mathbf{A}_k = \mathbf{A} - \mathbf{b}\,\mathbf{k}^T
+    \]
+
+    \begin{equation}\mathbf{A}_k=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}-\begin{pmatrix} b_{1} \\ b_{2} \end{pmatrix}\begin{pmatrix} k_{1} & k_{2} \end{pmatrix}=\begin{pmatrix} a_{11} - b_1 k_1 & a_{12} - b_1 k_2 \\ a_{21} - b_2 k_1 & a_{22} - b_2 k_2 \end{pmatrix}.\end{equation}
+    \item Matrix für Determinante aufstellen.
+    \begin{equation}
+    \det\!
+    \left(s\mathbf{I}-\mathbf{A}_k\right)
+    =
+    \begin{vmatrix}
+    s-(a_{11} - b_1 k_1) & -(a_{12} - b_1 k_2) \\
+    -(a_{21} - b_2 k_1) & s-(a_{22} - b_2 k_2)
+    \end{vmatrix}.
+    \end{equation}
+    \item Determinante ausrechnen und \(p(s) \) aufstellen.
+    \item Koeffizientenvergleich mit vorgegebenen Polstellen.
+
+\end{enumerate}
+
+\section{Steuerbarkeitskriterium von Kalman}
+\index{Steuerbarkeitskriterium von Kalman}
+\index{Steuerbarkeitskriterium von Kalman!Umdruck (S. 304)}
+\index{Kalman}
+\index{Steuerbarkeitsmatrix@$Q_s$}
+\index{Q_s@\(Q_s\)|see{Steuerbarkeitsmatrix}}
+\index{Steuerbarkeitsmatrix!$Q_s$}
+\index{Qs Steuerbarkeitsmatrix@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeitsmatrix}}
+
+Das Paar \((\mathbf{A},\mathbf{B})\) ist genau dann steuerbar, wenn die sogenannte Steuerbarkeitsmatrix
+\begin{equation}
+\mathbf{Q}_s = \bigl[\mathbf{B}\;\;\mathbf{A}\mathbf{B}\;\;\mathbf{A}^2\mathbf{B}\;\;\cdots\;\;\mathbf{A}^{n-1}\mathbf{B}\bigr]
+\tag{11.47}
+\end{equation}
+vollen Rang besitzt.
+\footnotemark\footnotetext{Quelle: Umdruck S. 304}
+
+\noindent Falls \(\mathbf{Q}_s\) quadratisch ist (z.B. SISO), gilt: \emph{nicht steuerbar} \(\Leftrightarrow \det(\mathbf{Q}_s)=0\).
+
+\noindent \textbf{Hinweis:} Es ist sinnvoll, beim Rechnen konsequent \emph{Matrix $\cdot$ Vektor} zu multiplizieren, also z.B. \(\mathbf{A}(\mathbf{A}\mathbf{B})\) statt \((\mathbf{A}\mathbf{A})\mathbf{B}\).
+
+\section{Partialbruchzerlegung}
+
+\subsection{Einführung}
+Die Partialbruchzerlegung ist eine Methode, um rationale Funktionen, wie \(\frac{1 - s}{(s + 1)(s^2 + 1)}\), in einfachere Bruchterme zu zerlegen, die leichter zu integrieren oder zu analysieren sind. Dies ist besonders nützlich in der Signalverarbeitung, Regelungstechnik und bei der Lösung von Differentialgleichungen.
+
+\subsection{Beispiel: \(\frac{1 - s}{(s + 1)^2(s^2 + 1)}\)}
+Wir zerlegen den Ausdruck \(\frac{1 - s}{(s + 1)(s^2 + 1)}\) in Partialbrüche. Der Nenner besteht aus einem linearen Faktor \(s + 1\) und einem quadratischen Faktor \(s^2 + 1\). Die allgemeine Form der Partialbruchzerlegung lautet:
+
+\[
+\frac{1 - s}{(s + 1)^2(s^2 + 1)} = \frac{A}{s + 1} + \frac{B}{(s + 1)^2} + \frac{Cs + D}{s^2 + 1}
+\]
+
+wobei \(A\), \(B\) und \(C\) Konstanten sind, die wir bestimmen müssen.
+
+\section{Informationen über Ortskurven}
+Ortskurven für den aufgeschnittenen Regelkreis \(G_0\).
+\begin{enumerate}[label=\arabic*.]
+    \item Phase \(\phi\) der Ortskurve läuft für \(\omega \rightarrow \infty \) gegen \(\ - \infty\) \\
+    \(\rightarrow\) \(G_0\) enthält Totzeit. (S. 13, I)
+    \item Ortskurve startet mit einer Phase \(\phi = -90 ^\circ \) im Unendlichen, also \(\lim_{\omega \to 0}|G_0(j \omega)| = \infty\) \\ \(\rightarrow\) \(G_0\) hat integrierendes Verhalten. (S. 13, II)
+    \item Ortskurve startet im Ursprung, also \(\lim_{\omega \to 0}|G_0(j \omega)| = 0\) \\ \(\rightarrow\) \(G_0\) hat differenzierendes Verhalten. (S. 13, III)
+    \item Betrag der Ortskurve steigt und sinkt.
+    \\ \(\rightarrow\) \(G_0\) enthält ein Verzögerungsglied mit Resonanzüberhöhung (z.B. \(PT_2\)). (S. 13, IV)
+
+\end{enumerate}
+
+\section[Informationen über Übergangsfunktionen \(h(t)\)]{Informationen über Übergangsfunktionen \(h(t)\) des geschlossenen Regelkreises}
+    Für die Übergangsfunktion \(h(t)\) ist der Eingang \(u(t)=1(t)\).
+    Stationäre Genauigkeit gilt dann, weil \(\lim_{t \to \infty} u(t) = \lim_{t \to \infty} y(t)\).
+    Wenn \(u_0 = 1(t)\), dann ist die Sprungantwort \(y(t)\) gleich der Übertragungsfunktion \(h(t)\).
+
+\subsection{Stationäre Genauigkeit}
+\index{Stationäre Genauigkeit}
+\index{stationary accuracy|see{Stationäre Genauigkeit}}
+Damit ein Regelkreis stationär genau arbeitet, muss der Ausgang genau der Referenz folgen. Dies bedeutet, dass der Führungsgrößenfilter so ausgelegt werden muss, dass der stationäre Endwert des geschlossenen Regelkreises genau 1 ist.
+
+Außerdem gilt:
+\[
+\lim_{s \to 0} G(s) = \frac{\lim_{s \to 0} Y(s)}{\lim_{s \to 0} U(s)} = 1
+\]
+
+Daraus ergibt sich:
+\[
+\lim_{s \to 0} G(s)
+= \lim_{s \to 0}\left(\frac{G_F \cdot G_R \cdot G_{PT2}}{1 + G_R \cdot G_{PT2}}\right)
+= 1
+\]
+
+\begin{enumerate}[label=\arabic*.]
+    \item \(\lim_{t \to \infty} h(t) =  \lim_{s \to 0} G(s) = 0\), siehe Grenzwertsätze (S. 112)
+    \\ \(\rightarrow\) \(G\) hat differenzierendes Verhalten und eine Nullstelle im Ursprung.
+    \\ \(\rightarrow\) \(G_0\) hat die selben Nullstellen wie \(G\). \(G_0\) hat also auch differenzierendes Verhalten.
+    \item \(\lim_{t \to \infty} h(t) =  \lim_{s \to 0} G(s) =1\), siehe Grenzwertsätze (S. 112)
+    \\ \(\rightarrow\) Sprungantwort \(y(t)\) besitzt keine Regelabweichung (S. 165).
+    \\ \index{Regelabweichung}\index{Regelabweichung!Umdruck (S. 165)}
+    \\ \(\rightarrow\) \(G(s)\) arbeitet stationär genau (S. 165).
+    \\ \index{Stationäre Genauigkeit}\index{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}\index{stationary accuracy|see{Stationäre Genauigkeit}}\index{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}
+
+\end{enumerate}
+
+\section{Berechnung maximal zulässige Totzeit \(T_t\)}
+Die von der Totzeit hervorgerufene Phasenverschiebung \(\phi_t\) darf maximal der Phasenreserve \(\alpha_R\) von \(G^{'}_{0} (j \omega)\) entsprechen, um die Stabilität nicht zu gefähren.
+\begin{enumerate}[label=\arabic*.]
+    \item Durchtrittsfrequenz \(\omega_d\) von \(G^{'}_{0} (j \omega)\) ermitteln.
+    \item Phase \(\phi^{'}_{0} (\omega_d)\) ablesen.
+    \item Phasenreserve \(\alpha_R = 180^\circ + \phi^{'}_{0} (\omega_d)\).
+    \item Phasenverschiebung Totzeitglied \(\phi_t = -\omega \cdot T_t \overset{!}{=} -\alpha_R\)
+    \item Totzeit \(T_t = \dfrac{\alpha_R}{\omega_d} = \dfrac{\dfrac{\alpha_R}{180^\circ}\cdot \pi}{\omega_d}\)
+\end{enumerate}
+
+\section{Durchtrittsfrequenz \(\omega_d\)}
+\index{Durchtrittsfrequenz@$\omega_d$}
+\index{Durchtrittsfrequenz!Umdruck (S. 240, 248, 270, 273, 286, 363)}
+\index{crossover frequency|see{Durchtrittsfrequenz}}
+\index{crossover frequency!Umdruck (S. 240, 248, 270, 273, 286, 363)}
+\index{Durchgangsfrequenz|see{Durchtrittsfrequenz}}
+
+\subsection{Ansprechverhalten}
+\index{Ansprechverhalten}
+\index{Ansprechverhalten!Abhängigkeit von $\omega_d$}
+\index{Bodediagramm}
+\index{P-Glied}
+\index{PT$_2$-Glied}
+Ein gutes Ansprechverhalten und kurze Anschwingzeiten werden durch große \(\omega_d\) erreicht. Da aus Stabilitätsgründen \(\omega_d < \omega_{\pi}\) gelten muss, ist der Frequenzbereich, in dem große Reglerverstärkungen möglich sind, beim I-Regler stark limitiert.
+
+Durch große \(K\) bei einem \(P\)-Glied wird der Verlauf des \(PT_2\)-Gliedes im Bodediagramm nach oben verschoben. Dadurch wird \(\omega_d\) nach rechts verschoben und somit größer. Weil \(\omega_{\pi} = \infty\) in dem Fall, ist die Ungleichung \(\omega_d < \omega_{\pi}\) erfüllt.
+
+\section{Einstellung nach \(T_u\)--\(T_g\) (Chien, Hrones, Reswick)}
+\index{T_u-T_g@\(T_u\)--\(T_g\)}
+\index{T_u-T_g@\(T_u\)--\(T_g\)!Umdruck (S. 207)}
+\index{Chien, Hrones, Reswick (CHR)}
+\index{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}
+
+\begin{itemize}
+    \item Nicht schwingungsfähig \(\rightarrow\) aperiodischer Regelverlauf.\footnotemark
+    \footnotetext{Quelle: Altklausur H23, Aufgabe 4(c) \& 4(d).}
+    \item Ohne bleibende Regelabweichung \(\rightarrow\) am besten PI-Regler.\footnotemark
+    \footnotetext{Quelle: Altklausur H23, Aufgabe 4(c) \& 4(d).}
+\end{itemize}
+
+\section{Gewichts- und Übergangsfunktion aus \(G_s(s)\)}
+\index{Gewichtsfunktion}\index{Übergangsfunktion}\index{Dirac-Impuls@$\delta(t)$}\index{Sprungfunktion@$1(t)$}
+\index{Sprungantwort@$y(t)$}\index{Impulsantwort@$y(t)$}\index{Übergangsfunktion@$h(t)$}\index{Gewichtsfunktion@$g(t)$}
+
+Gegeben sei:
+\begin{equation}
+Y(s) = G_s(s)\,U(s)
+\end{equation}
+\subsection{Zusammenhänge:}
+\noindent Übergangsfunktion \(h(t)\)\footnotemark
+\footnotetext{Quelle: Umdruck S. 89}:
+\begin{equation}
+h(t)=\frac{y_{\text{Sprung}}(t)}{u_0}=\frac{\text{Sprungantwort}}{\text{Sprunghöhe}}
+\end{equation}
+\noindent Gewichtsfunktion \(g(t)\):
+\begin{equation}
+g(t)=\frac{y_{\text{Impuls}}(t)}{\int u\,\mathrm{d}t}=\frac{\text{Impulsantwort}}{\text{Impulsfläche}}
+\end{equation}
+\noindent Zusammenhang \(g(t)\) und \(h(t)\)\footnotemark
+\footnotetext{Quelle: Umdruck S. 91}:
+\begin{equation}
+g(t)=\dot{h}(t)=\frac{\mathrm{d}}{\mathrm{d}t}h(t)
+\end{equation}
+
+\subsection{Gewichtsfunktion \(g(t)\)}
+Für die Gewichtsfunktion gilt \(u(t)=\delta(t)\), also:
+\begin{equation}
+U(s) = \mathcal{L}\{\delta(t)\} = 1
+\end{equation}
+Damit folgt:
+\begin{equation}
+Y(s) = G_s(s)\,U(s) = G_s(s)
+\end{equation}
+und somit:
+\begin{equation}
+ g(t) = \mathcal{L}^{-1}\{G_s(s)\}
+\end{equation}
+
+\subsubsection{ \(G(s)\) ist gegeben, Gewichtsfunktion \(g(t)\) bestimmen.}
+
+Gewichtsfunktion \( g(t) \) durch inverse Laplace-Transformation von \( G(s) = \frac{K}{(1 + Ts)^2} \).
+
+\begin{enumerate}[label=\arabic*.]
+	\item \( C\frac{1}{(s - s_p)^n} \).
+	\item Gewichtsfunktion \(g(t) \rightarrow U(s) = 1\)
+	\item \( G(s) = \frac{K}{(1 + Ts)^2} = \dfrac{K}{T^2 \left( s + \dfrac{1}{T} \right)^2}\).
+	\item \(Y(s) = G(s)U(s)\)
+	\item \(g(t) = \mathcal{L}^{-1} \left\{ \frac{1}{\left( s + \frac{1}{T} \right)^2} \right\}\).
+	\item \(s_p = -\dfrac{1}{T}, n = 2, C = \dfrac{K}{T^2}\)
+	\item \(g(t) = \dfrac{K}{T^2} t e^{-\dfrac{1}{T} t}\)
+\end{enumerate}
+
+
+\subsection{Übergangsfunktion \(h(t)\)}
+Für die Übergangsfunktion gilt \(u(t)=1(t)\), also:
+\begin{equation}
+U(s) = \mathcal{L}\{1(t)\} = \frac{1}{s}
+\end{equation}
+Damit folgt:
+\begin{equation}
+Y(s) = G_s(s)\,U(s) = \frac{G_s(s)}{s}
+\end{equation}
+und somit:
+\begin{equation}
+ h(t) = \mathcal{L}^{-1}\left\{\frac{G_s(s)}{s}\right\}
+\end{equation}
+
+\section{Merksatz / Intuition (Bode: Zeitbereich \& Frequenzbereich)}
+\index{Zeitkonstante $T$}
+\index{Periodendauer $T=\frac{2\pi}{\omega}$}
+\index{Kreisfrequenz $\omega$}
+\index{Bodediagramm}
+
+\subsection{Intuition}
+\begin{itemize}
+    \item Zeitkonstante \(T\) im Bode-Diagram: \emph{Wie schnell reagiert das System?}
+    \item Periodendauer \(T=\tfrac{2\pi}{\omega_D}\) mit \(\omega_D = \omega_0\sqrt{1-D^2}\): \emph{Wie schnell schwingt das Signal?}
+\end{itemize}
+
+\section{Laplace Transformation}
+\subsection{Korrespondenztafel}
+
+\section{Berechnung der inversen Laplace-Transformation}
+
+\section{Mathematische Grundlagen}
+
+\subsection{Determinante einer 2x2 \& 3x3-Matrix}
+
+\subsubsection{2x2}
+Die Formel für die Determinante einer 2x2-Matrix \(A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}\) lautet:
+\begin{flalign*}
+	\det(A) &= \begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix} = a_{11} a_{22} -  a_{12} a_{21}
+\end{flalign*}
+
+\subsubsection{3x3}
+Die Formel für die Determinante einer 3x3-Matrix \(A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{pmatrix}\) lautet:
+
+
+\begin{flalign*}
+	\det(A) &= \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} \\
+	&= a_{11}\,\begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix}
+	- a_{12}\,\begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix}
+	+ a_{13}\,\begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix} \\
+	&= a_{11}\,(a_{22}a_{33}-a_{23}a_{32})
+	- a_{12}\,(a_{21}a_{33}-a_{23}a_{31})
+	+ a_{13}\,(a_{21}a_{32}-a_{22}a_{31}).
+\end{flalign*}
+
+\subsection{Integral einer Exponentialfunktion (\(\lambda>0\))}
+\[
+\int_{0^-}^{R} e^{-\lambda \tau}\,\mathrm{d}\tau
+= \int_{0^-}^{R} \frac{\mathrm{d}}{\mathrm{d}\tau}\!\left(-\frac{1}{\lambda}e^{-\lambda \tau}\right)\mathrm{d}\tau
+\stackrel{\text{HDI}}{=}
+-\frac{1}{\lambda}e^{-\lambda \tau}\Big|_{\tau=0^-}^{R}
+= \frac{1}{\lambda}-\frac{1}{\lambda}e^{-\lambda R}.
+\]
+Somit gilt für den Limes
+\[
+\lim_{R\to\infty}\int_{0^-}^{R} e^{-\lambda \tau}\,\mathrm{d}\tau
+= \lim_{R\to\infty}\left(\frac{1}{\lambda}-\frac{1}{\lambda}e^{-\lambda R}\right)
+= \frac{1}{\lambda}.
+\]
+Analog folgt mittels partieller Integration (PI)
+\[
+\int_{0^-}^{R} \tau e^{-\lambda \tau}\,\mathrm{d}\tau
+= \int_{0^-}^{R} \tau\,\frac{\mathrm{d}}{\mathrm{d}\tau}\!\left(-\frac{1}{\lambda}e^{-\lambda \tau}\right)\mathrm{d}\tau
+\stackrel{\text{PI}}{=}
+-\int_{0^-}^{R}\frac{\mathrm{d}}{\mathrm{d}\tau}(\tau)\,\frac{1}{\lambda}e^{-\lambda \tau}\,\mathrm{d}\tau
+\;+\;\tau\left(-\frac{1}{\lambda}e^{-\lambda \tau}\right)\Big|_{\tau=0^-}^{R}
+\]
+\[
+= \frac{1}{\lambda}\int_{0^-}^{R} e^{-\lambda \tau}\,\mathrm{d}\tau - \frac{R}{\lambda}e^{-\lambda R}.
+\]
+Der Übergang zum Limes liefert nun
+\[
+\lim_{R\to\infty}\int_{0^-}^{R} \tau e^{-\lambda \tau}\,\mathrm{d}\tau
+= \lim_{R\to\infty}\left(\frac{1}{\lambda}\int_{0^-}^{R} e^{-\lambda \tau}\,\mathrm{d}\tau - \frac{R}{\lambda}e^{-\lambda R}\right)
+= \frac{1}{\lambda^2}.
+\]
+
+\subsubsection*{2. Integral mit linearem Faktor \(t\) (partielle Integration)}
+Wähle \(u(t)=t\) und \(v'(t)=e^{-\lambda t}\) mit \(\lambda>0\). Dann gilt \(u'(t)=1\) und \(v(t)=-\frac{1}{\lambda}e^{-\lambda t}\).
+\begin{align*}
+\int_0^{\infty} t\,e^{-\lambda t}\,\mathrm{d}t
+&= \lim_{R\to\infty}\int_0^{R} t\,e^{-\lambda t}\,\mathrm{d}t
+= \lim_{R\to\infty}\left(\left[t\left(-\frac{1}{\lambda}e^{-\lambda t}\right)\right]_{0}^{R} - \int_0^{R}\left(-\frac{1}{\lambda}e^{-\lambda t}\right)\,\mathrm{d}t\right)\\
+&= \lim_{R\to\infty}\left(-\frac{R}{\lambda}e^{-\lambda R} + \frac{1}{\lambda}\int_0^{R} e^{-\lambda t}\,\mathrm{d}t\right).
+\end{align*}
+Da \(R e^{-\lambda R}\to 0\) für \(R\to\infty\) und \(\int_0^{\infty} e^{-\lambda t}\,\mathrm{d}t=\frac{1}{\lambda}\), folgt
+\[
+\int_0^{\infty} t\,e^{-\lambda t}\,\mathrm{d}t = \frac{1}{\lambda^2}.
+\]
+
+\subsubsection*{3. Allgemeine Definition der partiellen Integration}
+\[
+\int u\,\mathrm{d}v = u\,v - \int v\,\mathrm{d}u.
+\]
+Äquivalent dazu ist die Produktregel
+\[
+\frac{\mathrm{d}}{\mathrm{d}t}(u v) = u'v + u v',
+\]
+die als Grundlage für die Herleitung der partiellen Integration dient.
+
+\subsection{Betrag von \(e^{-j \frac{\pi}{2} \omega}\), \(e^{j \theta}\)}
+
+\subsubsection{Berechnung des Betrags}
+Der Ausdruck \(e^{\pm j \theta}\) kann mit Euler’scher Formel beschrieben werden:
+
+\[
+e^{\pm j \theta} = \cos\left(\theta\right) \pm j \sin\left(\theta\right)
+\]
+
+\subsubsection{Berechnung des Betrags}
+Der Ausdruck \(e^{-j \frac{\pi}{2} \omega}\) kann mit Euler’scher Formel beschrieben werden:
+
+\[
+e^{-j \frac{\pi}{2} \omega} = \cos\left(\frac{\pi}{2} \omega\right) - j \sin\left(\frac{\pi}{2} \omega\right)
+\]
+
+Der Betrag einer komplexen Zahl \(z = x + jy\) ist gegeben durch:
+
+\[
+|z| = \sqrt{x^2 + y^2}
+\]
+
+Für \(e^{-j \frac{\pi}{2} \omega}\) gilt:
+
+\[
+|e^{-j \frac{\pi}{2} \omega}| = \sqrt{\cos^2\left(\frac{\pi}{2} \omega\right) + \sin^2\left(\frac{\pi}{2} \omega\right)} = \sqrt{1} = 1
+\]
+
+Der Betrag ist somit immer \(1\), unabhängig von \(\omega\).
+
+
+\subsection{ \(G(s)\) ist gegeben, Differentialgleichung bestimmen.}
+
+DGL durch inverse Laplace-Transformation von \( G(s) =\dfrac{X(s)}{U(s)}= \dfrac{K_1}{1 + T_1 s + K_R K_1} e^{-sT_t} \).
+
+\begin{enumerate}[label=\arabic*.]
+    \item Umstellen nach \( X(s)(1 + T_1 s + K_R K_1) = U(s)K_1 e^{-sT_t}\).
+    \item \(\mathcal{L}^{-1} \left\{ X(s)(1 + K_RK_1) \right\} = x(t)(1 + K_RK_1)\).
+    \item \(\mathcal{L}^{-1} \left\{ X(s)T_1s \right\} = T_1\dot{x}(t)\).
+    \item \(\mathcal{L}^{-1} \left\{ K_1e^{-sT_t} \right\} = K_1 \tilde{u} (t) = K_1 {u} (t-T_t)\).
+    \item \(x(t)(1 + K_RK_1)+T_1\dot{x}(t)= K_1 \tilde{u} (t)\)
+\end{enumerate}
+
+\newpage
+
+\section{Shannon-/Nyquist-Abtasttheorem (für \(T_{\min}\)) }
+\index{Abtasttheorem}
+\index{Abtasttheorem!nach Shannon (S. 380)}
+\index{Shannontheorem!S. 380}
+\index{Nyquist-Abtasttheorem|see{Abtasttheorem}}
+
+Für die höchste in dieser Funktion enthaltene Frequenz \(\omega_{\max}\) und die Abtastfrequenz \(\omega_s\) gilt:\footnote{Umdruck S. 380.}
+
+% Shannon/Nyquist-Abtasttheorem (in Kreisfrequenzen)
+\[
+2\,\omega_{\max} < \omega_s
+\]
+\[
+\omega_s = \frac{2\pi}{T}, \qquad \omega_{\max} = \frac{2\pi}{T_{\min}}
+\]
+
+% Einsetzen
+\[
+2\cdot \frac{2\pi}{T_{\min}} < \frac{2\pi}{T}
+\]
+
+% Kürzen von 2\pi
+\[
+\frac{2}{T_{\min}} < \frac{1}{T}
+\]
+
+% Invertieren (alles positiv) und umstellen
+\[
+T < \frac{T_{\min}}{2}
+\]
+
+\section{Inverse einer Matrix}
+
+\subsection{Allgemein}
+Eine quadratische Matrix \(A\) ist genau dann invertierbar, wenn
+\[
+\det(A) \neq 0
+\]
+Dann gilt:
+\[
+A^{-1} = \frac{1}{\det(A)} \operatorname{adj}(A)
+\]
+wobei \(\operatorname{adj}(A)\) die adjungierte Matrix ist.
+
+\subsection{Inverse einer \(2 \times 2\)-Matrix}
+
+Gegeben sei:
+\[
+A = \begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\]
+
+Determinante:
+\[
+\det(A) = ad - bc
+\]
+
+Inverse:
+\[
+A^{-1} =
+\frac{1}{ad - bc}
+\begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}
+\qquad \text{für } ad - bc \neq 0
+\]
+
+\subsection{Hinweis (Regelungstechnik)}
+\begin{itemize}
+    \item In der Regelungstechnik treten häufig \(2 \times 2\)-Inverse bei
+    Zustandsrückführung, Beobachtern und statischer Entkopplung auf.
+    \item Für größere Matrizen wird meist numerisch invertiert oder mit
+    Gauß-Elimination gearbeitet.
+\end{itemize}
+
+\section{Stationäre Genauigkeit}
+\subsection{Stationäre Genauigkeit im geschlossenen Regelkreis}
+Die Führungsübertragungsfunktion des geschlossenen Standard-Regelkreises ist genau dann stationär genau, wenn\footnotemark
+\begin{enumerate}[label=\arabic*.]
+    \item der geschlossene Regelkreis stabil ist und
+    \item der aufgeschnittene Regelkreis \(G_0\) einen integrierenden Anteil besitzt.
+\end{enumerate}
+\footnotetext{Quelle: Umdruck S. 167}
+
+\section{Integrierender Anteil und integrierendes Verhalten}
+Ein LTI-System besitzt genau dann einen integrierenden Anteil, wenn es eine Polstelle in \(s=0\) besitzt.\footnotemark
+Haben zusätzlich alle weiteren Polstellen des Systems einen negativen Realteil, so gilt
+\begin{equation}
+\lim_{t\to\infty} g(t)=\text{konstant} \neq 0
+\end{equation}
+und das System besitzt integrierendes Verhalten.
+\footnotetext{Quelle: Umdruck S. 166}
+
+\section{Grafische Darstellung der Übergangsfunktion \(h(t)\) des \(IT_1\) Gliedes}
+\noindent Beispiel:\footnotemark \(y(t)=m(t-n)+a\,e^{-\lambda t}\) (hier: \(m=0.5\), \(n=1\), \(a=\tfrac{1}{2}\), \(\lambda=1\)).
+\footnotetext{Quelle: TPR 1, Aufgabe 2(a).}
+
+\subsection{Erläuterung der Terme}
+Addition aus einer Geraden \(m(t-n)\) und Exponentialfunktion \(a\,e^{-\lambda t}\).
+\begin{itemize}
+    \item \(m\): Steigung der Geraden
+    \item \(n\): \(x\)-Achsenverschiebung
+    \item \(a\): Vorfaktor der Exponentialfunktion
+\end{itemize}
+
+\subsection{Werte bestimmen}
+\begin{itemize}
+    \item Steigung \(m\) der Asymptote.
+    \item \(x\)-Achsenverschiebung der Geraden: \(y(t=1)=0=m(1-n)\Rightarrow n=1\).
+    \item \(a\) und \(\lambda\) können mit \(y(t=0)=0\) und \(y'(t=0)=0\) bestimmt werden.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{plot_beispiel.pdf}
+    \caption{Plot der Beispiel-Funktion.}
+\end{figure}
+
+\section{Korrekturtabellen und Skalierung}
+\subsection{Korrekturtabelle (log/Phase)}
+\noindent\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{||c|c||cccc||cccc||}
+\hline
+\multicolumn{2}{|c|}{\(\frac{\omega}{\omega_E}\) bzw. \(\frac{\omega_E}{\omega}\)} &
+\multicolumn{4}{c||}{\(|\lg|G|-\lg|\text{Asymptote}||\)} &
+\multicolumn{4}{c||}{\(|\varphi-\varphi_{\text{Asymptote}}|\)} \\
+\hline\hline
+\multicolumn{2}{||c||}{} & 0,1 & 0,5 & 0,8 & 1 & 0,1 & 0,5 & 0,8 & 1 \\
+\hline
+\multicolumn{2}{||c||}{\(PT_1\)} & -0,002 & -0,048 & -0,107 & -0,151 & 5,7 & 26,6 & 38,7 & 45,0 \\
+\hline
+\multirow{8}{*}{\(PT_2\)} & \(D=1\) & -0,004 & -0,097 & -0,215 & -0,301 & 11,4 & 53,1 & 77,3 & 90,0 \\
+ & \(D=0,707\) & 0,000 & -0,013 & -0,075 & -0,151 & 8,1 & 43,4 & 72,3 & 90,0 \\
+ & \(D=0,5\) & 0,002 & 0,045 & 0,057 & 0,000 & 5,8 & 33,7 & 65,8 & 90,0 \\
+ & \(D=0,4\) & 0,003 & 0,071 & 0,134 & 0,097 & 4,6 & 28,1 & 60,6 & 90,0 \\
+ & \(D=0,3\) & 0,004 & 0,093 & 0,222 & 0,222 & 3,5 & 21,8 & 53,1 & 90,0 \\
+ & \(D=0,2\) & 0,004 & 0,110 & 0,317 & 0,398 & 2,3 & 14,9 & 41,6 & 90,0 \\
+ & \(D=0,1\) & 0,004 & 0,121 & 0,405 & 0,699 & 1,2 & 7,6 & 24,0 & 90,0 \\
+ & \(D=0,05\) & 0,004 & 0,124 & 0,433 & 1,000 & 0,6 & 3,8 & 12,5 & 90,0 \\
+\hline
+\end{tabular}
+\normalsize
+
+\subsection{Korrekturtabelle in mm}
+\noindent\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{||c|c||cccc||cccc||}
+\hline
+\multicolumn{2}{|c|}{\(\frac{\omega}{\omega_E}\) bzw. \(\frac{\omega_E}{\omega}\)} &
+\multicolumn{4}{c||}{\shortstack{Abstand von \(|G|\) und\\ \(|\text{Asymptote}|\) in mm}} &
+\multicolumn{4}{c||}{\shortstack{Abstand von \(\varphi\) und\\ \(\varphi_{\text{Asymptote}}\) in mm}} \\
+\hline\hline
+\multicolumn{2}{||c||}{} & 0,1 & 0,5 & 0,8 & 1 & 0,1 & 0,5 & 0,8 & 1 \\
+\hline
+\multicolumn{2}{||c||}{\(PT_1\)} & -0,1 & -1,9 & -4,3 & -6,0 & 1,1 & 5,3 & 7,7 & 9,0 \\
+\hline
+\multirow{8}{*}{\(PT_2\)} & \(D=1\) & -0,2 & -3,9 & -8,6 & -12,0 & 2,3 & 10,6 & 15,5 & 18,0 \\
+ & \(D=0,707\) & 0 & -0,5 & -3,0 & -6,0 & 1,6 & 8,7 & 14,5 & 18,0 \\
+ & \(D=0,5\) & 0,1 & 1,8 & 2,3 & 0,0 & 1,2 & 6,7 & 13,2 & 18,0 \\
+ & \(D=0,4\) & 0,1 & 2,8 & 5,4 & 3,9 & 0,9 & 5,6 & 12,1 & 18,0 \\
+ & \(D=0,3\) & 0,2 & 3,7 & 8,9 & 8,9 & 0,7 & 4,4 & 10,6 & 18,0 \\
+ & \(D=0,2\) & 0,2 & 4,4 & 12,7 & 15,9 & 0,5 & 3,0 & 8,3 & 18,0 \\
+ & \(D=0,1\) & 0,2 & 4,8 & 16,2 & 28,0 & 0,2 & 1,5 & 4,8 & 18,0 \\
+ & \(D=0,05\) & 0,2 & 5,0 & 17,3 & 40,0 & 0,1 & 0,8 & 2,5 & 18,0 \\
+\hline
+\end{tabular}
+\normalsize
+
+\subsection{Skalierung (Diagramm rechts)}
+\noindent\begin{tabular}{ll}
+1\,lg-Einheit & \(= 40\,\text{mm}\) \\
+360\(^\circ\) & \(= 72\,\text{mm}\) \\
+\end{tabular}
+
+\section{Was noch hinzugefügt werden muss}
+\subsection{}
+
+% \newpage
+% \input{DefinitionsTabellen}
+
+\newpage
+\printindex
+\end{document}

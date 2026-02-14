@@ -1,0 +1,212 @@
+pageSort,page,title
+005,5,Signale und Systeme
+006,6,Bezeichnungen für Systeme
+008,8,Definition der Signale und Systeme im Regelkreis
+009,9,Offener und Geschlossener Regelkreis
+020,20,Modell
+022,22,Systemordnung
+023,23,Anfangsbedingungen
+024,24,Zeitinvariante Systeme
+025,25,Lineare Systeme
+026,26,LTI-Systeme
+026,26,Relativer Grad
+027,27,Kausale Systeme
+029,29,Zustandsraumdarstellung
+030,30,SISO und MIMO
+032,32,Regelungsnormalform
+048,48,Minimale Realisierung
+048,48,Gesetz der Sparsamkeit (lex parsimonae)
+049,49,Zeitkonstanten und Frequenzen
+050,50,Notation von Absolut- und Abweichungsgrößen
+052,52,Arbeitspunkt
+053,53,Autonome Systeme
+053,53,Ruhelage
+056,56,Asymptotische Stabilität
+057,57,Grenzstabilität und Instabilität
+060,60,Taylorreihe
+061,61,Linearisierung einer Funktion
+068,68,Charakteristisches Polynom
+069,69,Schwingungsfähige Systeme
+069,69,Eigenkreisfrequenz
+071,71,Stabilität von LTI-Systemen
+071,71,Stabilitätsrand
+072,72,Linearisierungstheorem (Hartman-Grobman)
+076,76,Zustandstransformation
+077,77,Stabilität im Zustandsraum
+078,78,Transitionsmatrix
+080,80,Diagonale Normalform
+082,82,Jordansche Normalform
+085,85,Homogene / Partikuläre Lösung
+089,89,"Sprungantwort, Impulsantwort, Übergangsfunktion, Gewichtsfunktion"
+091,91,Faltung
+094,94,BIBO-Stabilität
+095,95,BIBO-Stabilität und Stabilität
+096,96,Statische Verstärkung
+097,97,Laplace-Transformation
+101,101,Linearität der Laplace-Transformation
+102,102,Laplace-Transformation von Ableitungen
+105,105,"Partialbruchzerlegung, Residuum"
+108,108,Übertragungsfunktion
+109,109,Laplace-Transformation der Faltung
+110,110,Stabilität im Bildbereich
+111,111,Pol-Nullstellen-Diagramm
+113,113,Berechnung der statischen Verstärkung / Sprungfähigkeit; Durchgriff
+114,114,Relativer Grad und Anfangswert
+116,116,Eingeschwungener Zustand
+117,117,Zeigerdarstellung für sinusförmige Signale
+118,118,Grad und Bogenmaß
+119,119,Frequenzgang / Übertragung sinusförmiger Signale
+123,123,Ortskurven von Frequenzgängen
+126,126,Bode-Diagramm
+131,131,Fourier-Transformation / Frequenzgang für instabile Systeme
+132,132,Frequenzspektrum
+133,133,"Filter, das"
+134,134,"Tiefpass, Hochpass, Bandpass"
+139,139,Parallelschaltung; Reihenschaltung und Rückführung
+140,140,Aufgeschnittener Regelkreis / Stabilität von Verschaltungen
+141,141,Führungs- und Störübertragungsfunktion
+153,153,Minimalphasigkeit
+154,154,Allpass
+155,155,Zerlegung nicht-minimalphasiger Systeme
+164,164,Stationäre Genauigkeit
+165,165,Bleibende Regelabweichung
+166,166,Integrierender Anteil und integrierendes Verhalten
+167,167,Stationäre Genauigkeit im geschlossenen Regelkreis
+168,168,Vollständige Ausregelung von Störungen
+169,169,Differenzierender Anteil und differenzierendes Verhalten
+175,175,Verzögerungsglieder
+178,178,Dämpfungsgrad und Kennkreisfrequenz
+181,181,Aperiodischer Grenzfall / Überschwingen; Unterschwingen
+183,183,Resonanzüberhöhung
+187,187,Rampenantwort
+188,188,Festwertregelung und Folgeregelung
+200,200,Systemidentifikation
+202,202,Parametrische und nicht-parametrische Identifikation
+205,205,Überanpassung
+206,206,Tu-Tg-Modell
+210,210,Methode der kleinsten Fehlerquadrate (least-square)
+210,210,Pseudoinverse
+213,213,Positive Definitheit / Wahl der Gewichtungsmatrix
+214,214,Stabilitätskriterien
+217,217,1. Bedingung (Algebraische Stabilitätskriterien) / 2. Bedingung nach Hurwitz
+218,218,2. Bedingung nach Routh
+220,220,Stabilitätskriterien für Systeme bis Ordnung n = 3 / Stetigkeit der Eigenwerte
+221,221,Hurwitz-Kriterium und Stabilitätsrand
+231,231,Vollständiges Nyquist-Kriterium / Stabilitätsbedingung nach Nyquist
+234,234,Nyquist-Kriterium und Stabilitätsrand
+239,239,Stabilität und Schnitt mit der reellen Achse
+240,240,Durchtrittsfrequenz / Hinreichende Stabilitätsbedingung
+242,242,Anwendbarkeit / Aussage des Vereinfachten Nyquist-Kriteriums
+245,245,Systeme mit Phasenwinkel ungleich -180°
+247,247,Vereinfachtes Nyquist bei integrierendem Verhalten / Satz der kleinen Verstärkungen
+248,248,Amplituden- und Phasenreserve; Durchtrittsfrequenz
+251,251,Robustheit
+252,252,Einfluss von Totzeiten auf Stabilität
+254,254,Kürzungen von Pol- und Nullstellen
+257,257,Ziel des Reglerentwurfs
+260,260,Kennwerte für die Güte einer Regelung
+262,262,Entwurf am offenen oder geschlossenen Regelkreis
+263,263,Ausgangs- oder Zustandsrückführung
+266,266,Regelfaktor
+267,267,Vorzeichen einer Regelung
+269,269,Wahl der Reglerverstärkung / Stellgrößenbeschränkungen
+270,270,Energieverbrauch des Aktors
+271,271,Frequenzabhängige Reglerverstärkung / Pole für hohe Verstärkungen
+273,273,Vernachlässigbare Dynamik
+275,275,Fundamentales Dilemma der Regelungstechnik
+284,284,Empfohlene Bereiche für Amplituden- und Phasenreserve
+297,297,Zielgebiet der Pole des geschlossenen Regelkreises
+301,301,Zustandsrückführung über Polvorgabe
+302,302,Steuerbarkeit
+303,303,Lösbarkeit der Polvorgabe
+304,304,Steuerbarkeitskriterium von Kalman
+306,306,Zustandsregler als PDn-Regler / Uneindeutiger Zusammenhang x und y
+308,308,Schätzfehler
+310,310,Luenberger-Beobachter
+312,312,Duales Problem
+313,313,Beobachtungsnormalform / Beobachtbarkeit
+314,314,"Steuerbarkeit, Beobachtbarkeit und minimale Realisierung"
+315,315,Beobachtbarkeitkriterium von Kalman
+316,316,Separationstheorem
+317,317,Eigenwerte des Schätzfehlers
+318,318,Beobachter als Filter
+322,322,Betrags- und Winkelbedingung
+323,323,Wurzelortskurve
+334,334,Vorsteuerung
+336,336,Perfekte Steuerung
+337,337,Modellbasierter Steuerungsentwurf
+340,340,Führungsgrößenfilter
+343,343,Störgrößenaufschaltung
+346,346,Kaskadenregelung
+351,351,"Unteraktuiert, Vollaktuiert, Überaktuiert"
+352,352,Zentrale und Dezentrale Regelung
+354,354,Direkte und indirekte Wirkung
+358,358,Hauptregelkreise und Querkopplung
+360,360,Polstellen von MIMO-Systemen
+361,361,Charakteristisches Polynom von MIMO-Systemen
+362,362,Richtungsabhängige Verstärkung
+363,363,Singulärwerte
+365,365,Relative Gain Array (RGA)
+367,367,Nyquist-Kriterium für Mehrgrößensysteme
+368,368,Nyquist-Kriterium für Mehrgrößensysteme (Variante)
+369,369,Gershgorin-Theorem
+370,370,Diagonaldominanz / Stabilitätskriterium über Diagonaldominanz
+373,373,Entkopplungsregler
+375,375,Zeitkontinuierliche Signale und Systeme
+376,376,Zeitdiskrete Signale und Systeme / Folgen und Funktionen
+377,377,Abtaster und Halteglied
+380,380,Abtasttheorem / Unterabtastung / Aliasing
+381,381,Wahl der Abtastzeit
+382,382,Anti-Aliasing-Filter / Quasikontinuierliche Beschreibung
+383,383,Zeitdiskrete Beschreibung
+385,385,Relativer Grad zeitdiskreter Systeme
+386,386,Übergangsfolge und Gewichtsfolge
+388,388,Stabilität zeitdiskreter LTI-Systeme
+389,389,Rückwärtsdifferenzen
+391,391,Rückwärtsdifferenzen als Näherung
+394,394,Zeitdiskreter Zustandsraum zeitkontinuierlicher Modelle
+395,395,Transitionsmatrix exp(AT) und das Shannon-Theorem
+399,399,Z-Transformation
+400,400,Geometrische Reihe
+401,401,Zusammenhang zwischen s- und z-Ebene
+407,407,Polstellen und Stabilität zeitdiskreter Systeme
+408,408,"Minimalphasige / Schwingungsfähige zeitdiskrete Systeme"
+411,411,Bestimmen von G(z) aus G(s) mit Abtaster und Halteglied
+412,412,Bilineare Transformation
+413,413,Bilineare Transformation und algebraische Stabilitätskriterien
+415,415,Zielgebiete im Zeitdiskreten
+418,418,"Regler mit endlicher Einstellzeit (Dead-beat)"
+422,422,Stabilität des Reglers mit endlicher Einstellzeit
+426,426,Kalmanfilter
+428,428,Zeitdiskreter Beobachter mit Prädiktion und Korrektur
+430,430,Zeitdiskreter Beobachter mit least-square / Stochastische Signale
+431,431,"Wahrscheinlichkeitsdichte, Erwartungswert / Kovarianz"
+433,433,Schätzung mit minimaler Kovarianz
+434,434,Optimalität des Kalmanfilters
+435,435,Algorithmus des Kalmanfilters
+436,436,Wahl der Gewichtungsmatrizen
+445,445,Algorithmus des Erweiterten Kalmanfilters
+447,447,Global vs. lokal
+448,448,Phasenportrait
+450,450,Einzugsbereich
+452,452,Globale Stabilität
+453,453,Kandidatenfunktion
+454,454,Direkte Methode nach Lyapunov
+458,458,Grenzzyklen
+459,459,Schaltende Systeme
+462,462,Integrator-Windup
+464,464,Definition von Beschreibungsfunktion
+472,472,Voraussetzungen / Grenzzyklen gemäß harmonischer Balance
+474,474,Stabilitätsanalyse von Grenzzyklen
+480,480,Relativer Grad
+481,481,Exakte Linearisierung
+482,482,Exakte Linearisierung als Zustandstransformation
+483,483,Exakte Eingangs-Zustands (EZL) / Eingangs-Ausgangs (EAL)
+484,484,Interne und externe Dynamik
+485,485,Byrnes-Isidori-Normalform (BINF)
+487,487,Flachheit
+488,488,Flachheit und EZL / Steuerbarkeit und Flachheit
+491,491,Nichtlineare Regelungsnormalform / Strenge Rückkopplungsform
+492,492,Eingangsaffine Systeme / Flachheit eingangsaffiner Systeme
+497,497,Nulldynamik / Stabilität von Regelungen über EZL und EAL
+499,499,Nulldynamik und Nullstellen

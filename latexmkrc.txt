@@ -1,0 +1,5 @@
+# Ensure index is built automatically (makeidx / \makeindex + \printindex)
+$makeindex = 'makeindex %O -o %D %S';
+
+# Re-run LaTeX as needed
+$max_repeat = 5;

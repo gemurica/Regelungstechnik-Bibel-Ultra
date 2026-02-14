@@ -1,0 +1,145 @@
+\begin{theindex}
+
+  \item Absolutgrößen, 14
+  \item Abtasttheorem, 45
+    \subitem nach Shannon (S. 380), 45
+  \item Abweichungsgrößen, 14
+  \item akausale Systeme, 13
+  \item Anfangsbedingungen, 12
+  \item Ansprechverhalten, 39
+    \subitem Abhängigkeit von $\omega_d$, 39
+
+  \indexspace
+
+  \item Bezeichnungen für Systeme, 8
+  \item Bodediagramm, 39, 41
+
+  \indexspace
+
+  \item Chien, Hrones, Reswick (CHR), 39
+  \item crossover frequency, \see{Durchtrittsfrequenz}{39}
+    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 39
+
+  \indexspace
+
+  \item $\delta(t)$, 40
+  \item Durchgangsfrequenz, \see{Durchtrittsfrequenz}{39}
+  \item Durchtrittsfrequenz
+    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 39
+  \item $\omega_d$, 39
+
+  \indexspace
+
+  \item Eckkreisfrequenz, 14
+  \item Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell
+    \subitem Umdruck (S. 276), 39
+
+  \indexspace
+
+  \item $G(j\omega)$, 23
+
+  \indexspace
+
+  \item Geschlossener Regelkreis, 8
+  \item Gesetz der Sparsamkeit, 14
+  \item Gewichtsfunktion, 40
+  \item $g(t)$, 40
+
+  \indexspace
+
+  \item $y(t)$, 40
+
+  \indexspace
+
+  \item Kalman, 37
+  \item Kausale Systeme, 13
+  \item Kreisfrequenz $\omega$, 41
+
+  \indexspace
+
+  \item Lineare Systeme, 12
+  \item LTI-System, 12
+
+  \indexspace
+
+  \item MIMO-System, 13
+  \item Minimale Realisierung, 14
+  \item Modell, 12
+
+  \indexspace
+
+  \item Nyquist-Abtasttheorem, \see{Abtasttheorem}{45}
+
+  \indexspace
+
+  \item Offener Regelkreis, 8
+
+  \indexspace
+
+  \item P-Glied, 39
+  \item Periodendauer $T=\frac{2\pi}{\omega}$, 41
+  \item \(\angle G(j\omega)\), 23
+  \item PT$_2$-Glied, 39
+
+  \indexspace
+
+  \item \(Q_s\), \see{Steuerbarkeitsmatrix}{37}
+  \item \(Q_s\) Steuerbarkeitsmatrix, \see{Steuerbarkeitsmatrix}{37}
+
+  \indexspace
+
+  \item Regelabweichung, 39
+    \subitem Umdruck (S. 165), 39
+  \item Regelungsnormalform, 13
+  \item Relativer Grad, 8, 12
+    \subitem Umdruck (S. 26), 8
+
+  \indexspace
+
+  \item Shannontheorem
+    \subitem S. 380, 45
+  \item Signale und Systeme, 8
+  \item Signale und Systeme im Regelkreis, 8
+  \item Sinusförmige Signale, 24
+    \subitem Umdruck (S. 119), 24
+  \item SISO-System, 13
+  \item $y(t)$, 40
+  \item $1(t)$, 40
+  \item stationary accuracy, \see{Stationäre Genauigkeit}{38, 39}
+    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 39
+  \item Stationäre Genauigkeit, 38, 39
+    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 39
+  \item Steuerbarkeitskriterium von Kalman, 37
+    \subitem Umdruck (S. 304), 37
+  \item Steuerbarkeitsmatrix
+    \subitem $Q_s$, 37
+  \item $Q_s$, 37
+  \item Systemantwort, 23
+  \item Systemordnung, 12
+
+  \indexspace
+
+  \item \(T_u\)--\(T_g\), 39
+    \subitem Umdruck (S. 207), 39
+
+  \indexspace
+
+  \item u(t)=$\sin(\omega t)$, 24
+
+  \indexspace
+
+  \item Vorzeichenkonvention, 8, \see{Umdruck (S.123)}{8}
+
+  \indexspace
+
+  \item Zeitinvariante Systeme, 12
+  \item Zeitkonstante, 14
+  \item Zeitkonstante $T$, 41
+  \item Zustandsraumdarstellung, 13
+
+  \indexspace
+
+  \item Übergangsfunktion, 40
+  \item $h(t)$, 40
+
+\end{theindex}

@@ -1,0 +1,449 @@
+% Dieses File dient als Quelle fuer Index-Eintraege.
+% Wir schreiben die Skript-Seitenzahl ("Umdruck S. ...") in den Indexbegriff,
+% damit die Referenz im Stichwortverzeichnis sichtbar ist.
+
+\index{Signale und Systeme (Umdruck S. 5)}
+\index{Bezeichnungen für Systeme (Umdruck S. 6)}
+\index{Definition der Signale und Systeme im Regelkreis (Umdruck S. 8)}
+\index{Offener und Geschlossener Regelkreis (Umdruck S. 9)}
+\index{Modell (Umdruck S. 20)}
+\index{Systemordnung (Umdruck S. 22)}
+\index{Anfangsbedingungen (Umdruck S. 23)}
+\index{Zeitinvariante Systeme (Umdruck S. 24)}
+\index{Lineare Systeme (Umdruck S. 25)}
+\index{LTI-Systeme (Umdruck S. 26)}
+\index{Relativer Grad (Umdruck S. 26)}
+\index{Kausale Systeme (Umdruck S. 27)}
+\index{Zustandsraumdarstellung (Umdruck S. 29)}
+\index{SISO und MIMO (Umdruck S. 30)}
+\index{Regelungsnormalform (Umdruck S. 32)}
+\index{Minimale Realisierung (Umdruck S. 48)}
+\index{Gesetz der Sparsamkeit (lex parsimonae) (Umdruck S. 48)}
+\index{Zeitkonstanten und Frequenzen (Umdruck S. 49)}
+\index{Notation von Absolut- und Abweichungsgrößen (Umdruck S. 50)}
+\index{Arbeitspunkt (Umdruck S. 52)}
+\index{Autonome Systeme (Umdruck S. 53)}
+\index{Ruhelage (Umdruck S. 53)}
+\index{Asymptotische Stabilität (Umdruck S. 56)}
+\index{Grenzstabilität und Instabilität (Umdruck S. 57)}
+\index{Taylorreihe (Umdruck S. 60)}
+\index{Linearisierung einer Funktion (Umdruck S. 61)}
+\index{Charakteristisches Polynom (Umdruck S. 68)}
+\index{Schwingungsfähige Systeme (Umdruck S. 69)}
+\index{Eigenkreisfrequenz (Umdruck S. 69)}
+\index{Stabilität von LTI-Systemen (Umdruck S. 71)}
+\index{Stabilitätsrand (Umdruck S. 71)}
+\index{Linearisierungstheorem (Hartman-Grobman) (Umdruck S. 72)}
+\index{Zustandstransformation (Umdruck S. 76)}
+\index{Stabilität im Zustandsraum (Umdruck S. 77)}
+\index{Transitionsmatrix (Umdruck S. 78)}
+\index{Diagonale Normalform (Umdruck S. 80)}
+\index{Jordansche Normalform (Umdruck S. 82)}
+\index{Homogene / Partikuläre Lösung (Umdruck S. 85)}
+\index{Sprungantwort, Impulsantwort, Übergangsfunktion, Gewichtsfunktion (Umdruck S. 89)}
+\index{Faltung (Umdruck S. 91)}
+\index{BIBO-Stabilität (Umdruck S. 94)}
+\index{BIBO-Stabilität und Stabilität (Umdruck S. 95)}
+\index{Statische Verstärkung (Umdruck S. 96)}
+\index{Laplace-Transformation (Umdruck S. 97)}
+\index{Linearität der Laplace-Transformation (Umdruck S. 101)}
+\index{Laplace-Transformation von Ableitungen (Umdruck S. 102)}
+\index{Partialbruchzerlegung, Residuum (Umdruck S. 105)}
+\index{Übertragungsfunktion (Umdruck S. 108)}
+\index{Laplace-Transformation der Faltung (Umdruck S. 109)}
+\index{Stabilität im Bildbereich (Umdruck S. 110)}
+\index{Pol-Nullstellen-Diagramm (Umdruck S. 111)}
+\index{Berechnung der statischen Verstärkung / Sprungfähigkeit, Durchgriff (Umdruck S. 113)}
+\index{Relativer Grad und Anfangswert (Umdruck S. 114)}
+\index{Eingeschwungener Zustand (Umdruck S. 116)}
+\index{Zeigerdarstellung für sinusförmige Signale (Umdruck S. 117)}
+\index{Grad und Bogenmaß (Umdruck S. 118)}
+\index{Frequenzgang / Übertragung sinusförmiger Signale (Umdruck S. 119)}
+\index{Ortskurven von Frequenzgängen (Umdruck S. 123)}
+\index{Bode-Diagramm (Umdruck S. 126)}
+\index{Fourier-Transformation / Frequenzgang für instabile Systeme (Umdruck S. 131)}
+\index{Frequenzspektrum (Umdruck S. 132)}
+\index{Filter, das (Umdruck S. 133)}
+\index{Tiefpass, Hochpass, Bandpass (Umdruck S. 134)}
+\index{Parallelschaltung, Reihenschaltung und Rückführung (Umdruck S. 139)}
+\index{Aufgeschnittener Regelkreis / Stabilität von Verschaltungen (Umdruck S. 140)}
+\index{Führungs- und Störübertragungsfunktion (Umdruck S. 141)}
+\index{Minimalphasigkeit (Umdruck S. 153)}
+\index{Allpass (Umdruck S. 154)}
+\index{Zerlegung nicht-minimalphasiger Systeme (Umdruck S. 155)}
+\index{Stationäre Genauigkeit (Umdruck S. 164)}
+\index{Bleibende Regelabweichung (Umdruck S. 165)}
+\index{Integrierender Anteil und integrierendes Verhalten (Umdruck S. 166)}
+\index{Stationäre Genauigkeit im geschlossenen Regelkreis (Umdruck S. 167)}
+\index{Vollständige Ausregelung von Störungen (Umdruck S. 168)}
+\index{Differenzierender Anteil und differenzierendes Verhalten (Umdruck S. 169)}
+\index{Verzögerungsglieder (Umdruck S. 175)}
+\index{Dämpfungsgrad und Kennkreisfrequenz (Umdruck S. 178)}
+\index{Aperiodischer Grenzfall / Überschwingen, Unterschwingen (Umdruck S. 181)}
+\index{Resonanzüberhöhung (Umdruck S. 183)}
+\index{Rampenantwort (Umdruck S. 187)}
+\index{Festwertregelung und Folgeregelung (Umdruck S. 188)}
+\index{Systemidentifikation (Umdruck S. 200)}
+\index{Parametrische und nicht-parametrische Identifikation (Umdruck S. 202)}
+\index{Überanpassung (Umdruck S. 205)}
+\index{Tu-Tg-Modell (Umdruck S. 206)}
+\index{Methode der kleinsten Fehlerquadrate (least-square) (Umdruck S. 210)}
+\index{Pseudoinverse (Umdruck S. 210)}
+\index{Positive Definitheit / Wahl der Gewichtungsmatrix (Umdruck S. 213)}
+\index{Stabilitätskriterien (Umdruck S. 214)}
+\index{1. Bedingung (Algebraische Stabilitätskriterien) / 2. Bedingung nach Hurwitz (Umdruck S. 217)}
+\index{2. Bedingung nach Routh (Umdruck S. 218)}
+\index{Stabilitätskriterien für Systeme bis Ordnung n = 3 / Stetigkeit der Eigenwerte (Umdruck S. 220)}
+\index{Hurwitz-Kriterium und Stabilitätsrand (Umdruck S. 221)}
+\index{Vollständiges Nyquist-Kriterium / Stabilitätsbedingung nach Nyquist (Umdruck S. 231)}
+\index{Nyquist-Kriterium und Stabilitätsrand (Umdruck S. 234)}
+\index{Stabilität und Schnitt mit der reellen Achse (Umdruck S. 239)}
+\index{Durchtrittsfrequenz / Hinreichende Stabilitätsbedingung (Umdruck S. 240)}
+\index{Anwendbarkeit / Aussage des Vereinfachten Nyquist-Kriteriums (Umdruck S. 242)}
+\index{Systeme mit Phasenwinkel ungleich -180° (Umdruck S. 245)}
+\index{Vereinfachtes Nyquist bei integrierendem Verhalten / Satz der kleinen Verstärkungen (Umdruck S. 247)}
+\index{Amplituden- und Phasenreserve; Durchtrittsfrequenz (Umdruck S. 248)}
+\index{Robustheit (Umdruck S. 251)}
+\index{Einfluss von Totzeiten auf Stabilität (Umdruck S. 252)}
+\index{Kürzungen von Pol- und Nullstellen (Umdruck S. 254)}
+\index{Ziel des Reglerentwurfs (Umdruck S. 257)}
+\index{Kennwerte für die Güte einer Regelung (Umdruck S. 260)}
+\index{Entwurf am offenen oder geschlossenen Regelkreis (Umdruck S. 262)}
+\index{Ausgangs- oder Zustandsrückführung (Umdruck S. 263)}
+\index{Regelfaktor (Umdruck S. 266)}
+\index{Vorzeichen einer Regelung (Umdruck S. 267)}
+\index{Wahl der Reglerverstärkung / Stellgrößenbeschränkungen (Umdruck S. 269)}
+\index{Energieverbrauch des Aktors (Umdruck S. 270)}
+\index{Frequenzabhängige Reglerverstärkung / Pole für hohe Verstärkungen (Umdruck S. 271)}
+\index{Vernachlässigbare Dynamik (Umdruck S. 273)}
+\index{Fundamentales Dilemma der Regelungstechnik (Umdruck S. 275)}
+\index{Empfohlene Bereiche für Amplituden- und Phasenreserve (Umdruck S. 284)}
+\index{Zielgebiet der Pole des geschlossenen Regelkreises (Umdruck S. 297)}
+\index{Zustandsrückführung über Polvorgabe (Umdruck S. 301)}
+\index{Steuerbarkeit (Umdruck S. 302)}
+\index{Lösbarkeit der Polvorgabe (Umdruck S. 303)}
+\index{Steuerbarkeitskriterium von Kalman (Umdruck S. 304)}
+\index{Zustandsregler als PDn-Regler / Uneindeutiger Zusammenhang x und y (Umdruck S. 306)}
+\index{Schätzfehler (Umdruck S. 308)}
+\index{Luenberger-Beobachter (Umdruck S. 310)}
+\index{Duales Problem (Umdruck S. 312)}
+\index{Beobachtungsnormalform / Beobachtbarkeit (Umdruck S. 313)}
+\index{Steuerbarkeit, Beobachtbarkeit und minimale Realisierung (Umdruck S. 314)}
+\index{Beobachtbarkeitkriterium von Kalman (Umdruck S. 315)}
+\index{Separationstheorem (Umdruck S. 316)}
+\index{Eigenwerte des Schätzfehlers (Umdruck S. 317)}
+\index{Beobachter als Filter (Umdruck S. 318)}
+\index{Betrags- und Winkelbedingung (Umdruck S. 322)}
+\index{Wurzelortskurve (Umdruck S. 323)}
+\index{Vorsteuerung (Umdruck S. 334)}
+\index{Perfekte Steuerung (Umdruck S. 336)}
+\index{Modellbasierter Steuerungsentwurf (Umdruck S. 337)}
+\index{Führungsgrößenfilter (Umdruck S. 340)}
+\index{Störgrößenaufschaltung (Umdruck S. 343)}
+\index{Kaskadenregelung (Umdruck S. 346)}
+\index{Unteraktuiert, Vollaktuiert, Überaktuiert (Umdruck S. 351)}
+\index{Zentrale und Dezentrale Regelung (Umdruck S. 352)}
+\index{Direkte und indirekte Wirkung (Umdruck S. 354)}
+\index{Hauptregelkreise und Querkopplung (Umdruck S. 358)}
+\index{Polstellen von MIMO-Systemen (Umdruck S. 360)}
+\index{Charakteristisches Polynom von MIMO-Systemen (Umdruck S. 361)}
+\index{Richtungsabhängige Verstärkung (Umdruck S. 362)}
+\index{Singulärwerte (Umdruck S. 363)}
+\index{Relative Gain Array (RGA) (Umdruck S. 365)}
+\index{Nyquist-Kriterium für Mehrgrößensysteme (Umdruck S. 367)}
+\index{Nyquist-Kriterium für Mehrgrößensysteme (Variante) (Umdruck S. 368)}
+\index{Gershgorin-Theorem (Umdruck S. 369)}
+\index{Diagonaldominanz / Stabilitätskriterium über Diagonaldominanz (Umdruck S. 370)}
+\index{Entkopplungsregler (Umdruck S. 373)}
+\index{Zeitkontinuierliche Signale und Systeme (Umdruck S. 375)}
+\index{Zeitdiskrete Signale und Systeme / Folgen und Funktionen (Umdruck S. 376)}
+\index{Abtaster und Halteglied (Umdruck S. 377)}
+\index{Abtasttheorem / Unterabtastung / Aliasing (Umdruck S. 380)}
+\index{Wahl der Abtastzeit (Umdruck S. 381)}
+\index{Anti-Aliasing-Filter / Quasikontinuierliche Beschreibung (Umdruck S. 382)}
+\index{Zeitdiskrete Beschreibung (Umdruck S. 383)}
+\index{Relativer Grad zeitdiskreter Systeme (Umdruck S. 385)}
+\index{Übergangsfolge und Gewichtsfolge (Umdruck S. 386)}
+\index{Stabilität zeitdiskreter LTI-Systeme (Umdruck S. 388)}
+\index{Rückwärtsdifferenzen (Umdruck S. 389)}
+\index{Rückwärtsdifferenzen als Näherung (Umdruck S. 391)}
+\index{Zeitdiskreter Zustandsraum zeitkontinuierlicher Modelle (Umdruck S. 394)}
+\index{Transitionsmatrix exp(AT) und das Shannon-Theorem (Umdruck S. 395)}
+\index{Z-Transformation (Umdruck S. 399)}
+\index{Geometrische Reihe (Umdruck S. 400)}
+\index{Zusammenhang zwischen s- und z-Ebene (Umdruck S. 401)}
+\index{Polstellen und Stabilität zeitdiskreter Systeme (Umdruck S. 407)}
+\index{Minimalphasige / Schwingungsfähige zeitdiskrete Systeme (Umdruck S. 408)}
+\index{Bestimmen von G(z) aus G(s) mit Abtaster und Halteglied (Umdruck S. 411)}
+\index{Bilineare Transformation (Umdruck S. 412)}
+\index{Bilineare Transformation und algebraische Stabilitätskriterien (Umdruck S. 413)}
+\index{Zielgebiete im Zeitdiskreten (Umdruck S. 415)}
+\index{Regler mit endlicher Einstellzeit ("Dead-beat") (Umdruck S. 418)}
+\index{Stabilität des Reglers mit endlicher Einstellzeit (Umdruck S. 422)}
+\index{Kalmanfilter (Umdruck S. 426)}
+\index{Zeitdiskreter Beobachter mit Prädiktion und Korrektur (Umdruck S. 428)}
+\index{Zeitdiskreter Beobachter mit least-square / Stochastische Signale (Umdruck S. 430)}
+\index{Wahrscheinlichkeitsdichte, Erwartungswert / Kovarianz (Umdruck S. 431)}
+\index{Schätzung mit minimaler Kovarianz (Umdruck S. 433)}
+\index{Optimalität des Kalmanfilters (Umdruck S. 434)}
+\index{Algorithmus des Kalmanfilters (Umdruck S. 435)}
+\index{Wahl der Gewichtungsmatrizen (Umdruck S. 436)}
+\index{Algorithmus des Erweiterten Kalmanfilters (Umdruck S. 445)}
+\index{Global vs. lokal (Umdruck S. 447)}
+\index{Phasenportrait (Umdruck S. 448)}
+\index{Einzugsbereich (Umdruck S. 450)}
+\index{Globale Stabilität (Umdruck S. 452)}
+\index{Kandidatenfunktion (Umdruck S. 453)}
+\index{Direkte Methode nach Lyapunov (Umdruck S. 454)}
+\index{Grenzzyklen (Umdruck S. 458)}
+\index{Schaltende Systeme (Umdruck S. 459)}
+\index{Integrator-Windup (Umdruck S. 462)}
+\index{Definition von Beschreibungsfunktion (Umdruck S. 464)}
+\index{Voraussetzungen / Grenzzyklen gemäß harmonischer Balance (Umdruck S. 472)}
+\index{Stabilitätsanalyse von Grenzzyklen (Umdruck S. 474)}
+\index{Relativer Grad (Umdruck S. 480)}
+\index{Exakte Linearisierung (Umdruck S. 481)}
+\index{Exakte Linearisierung als Zustandstransformation (Umdruck S. 482)}
+\index{Exakte Eingangs-Zustands (EZL) / Eingangs-Ausgangs (EAL) (Umdruck S. 483)}
+\index{Interne und externe Dynamik (Umdruck S. 484)}
+\index{Byrnes-Isidori-Normalform (BINF) (Umdruck S. 485)}
+\index{Flachheit (Umdruck S. 487)}
+\index{Flachheit und EZL / Steuerbarkeit und Flachheit (Umdruck S. 488)}
+\index{Nichtlineare Regelungsnormalform / Strenge Rückkopplungsform (Umdruck S. 491)}
+\index{Eingangsaffine Systeme / Flachheit eingangsaffiner Systeme (Umdruck S. 492)}
+\index{Nulldynamik / Stabilität von Regelungen über EZL und EAL (Umdruck S. 497)}
+\index{Nulldynamik und Nullstellen (Umdruck S. 499)}
+
+\endinput
+
+\section{Definitionsverzeichnis}
+\label{sec:definitionsverzeichnis}
+
+\noindent Tabellarische Übersicht aller optisch hervorgehobenen Definitionen, Sätze und zentralen Sachverhalte aus dem Skript bis Seite 500.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|r|p{0.72\linewidth}|r|}
+\hline
+\textbf{Seite} & \textbf{Überschrift / Inhalt der Hervorhebung} & \textbf{Nr.} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Seite} & \textbf{Überschrift / Inhalt der Hervorhebung} & \textbf{Nr.} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+5 & Signale und Systeme\index{Signale und Systeme} & 2 \\
+6 & Bezeichnungen für Systeme\index{Bezeichnungen für Systeme} & 3 \\
+8 & Definition der Signale und Systeme im Regelkreis\index{Definition der Signale und Systeme im Regelkreis} & 4 \\
+9 & Offener und Geschlossener Regelkreis\index{Offener und Geschlossener Regelkreis} & 5 \\
+20 & Modell\index{Modell} & 6 \\
+22 & Systemordnung\index{Systemordnung} & 7 \\
+23 & Anfangsbedingungen\index{Anfangsbedingungen} & 8 \\
+24 & Zeitinvariante Systeme\index{Zeitinvariante Systeme} & 9 \\
+25 & Lineare Systeme\index{Lineare Systeme} & 10 \\
+26 & LTI-Systeme\index{LTI-Systeme} & 11 \\
+26 & Relativer Grad\index{Relativer Grad} & 12 \\
+27 & Kausale Systeme\index{Kausale Systeme} & 13 \\
+29 & Zustandsraumdarstellung\index{Zustandsraumdarstellung} & 14 \\
+30 & SISO und MIMO\index{SISO und MIMO} & 15 \\
+32 & Regelungsnormalform\index{Regelungsnormalform} & 16 \\
+48 & Minimale Realisierung\index{Minimale Realisierung} & 17 \\
+48 & Gesetz der Sparsamkeit (lex parsimonae)\index{Gesetz der Sparsamkeit (lex parsimonae)} & 18 \\
+49 & Zeitkonstanten und Frequenzen\index{Zeitkonstanten und Frequenzen} & 19 \\
+50 & Notation von Absolut- und Abweichungsgrößen\index{Notation von Absolut- und Abweichungsgrößen} & 20 \\
+52 & Arbeitspunkt\index{Arbeitspunkt} & 21 \\
+53 & Autonome Systeme\index{Autonome Systeme} & 22 \\
+53 & Ruhelage\index{Ruhelage} & 23 \\
+56 & Asymptotische Stabilität\index{Asymptotische Stabilität} & 24 \\
+57 & Grenzstabilität und Instabilität\index{Grenzstabilität und Instabilität} & 25 \\
+60 & Taylorreihe\index{Taylorreihe} & 26 \\
+61 & Linearisierung einer Funktion\index{Linearisierung einer Funktion} & 27 \\
+68 & Charakteristisches Polynom\index{Charakteristisches Polynom} & 28 \\
+69 & Schwingungsfähige Systeme\index{Schwingungsfähige Systeme} & 29 \\
+69 & Eigenkreisfrequenz\index{Eigenkreisfrequenz} & 30 \\
+71 & Stabilität von LTI-Systemen\index{Stabilität von LTI-Systemen} & 31 \\
+71 & Stabilitätsrand\index{Stabilitätsrand} & 32 \\
+72 & Linearisierungstheorem (Hartman-Grobman)\index{Linearisierungstheorem (Hartman-Grobman)} & 33 \\
+76 & Zustandstransformation\index{Zustandstransformation} & 34 \\
+77 & Stabilität im Zustandsraum\index{Stabilität im Zustandsraum} & 35 \\
+78 & Transitionsmatrix\index{Transitionsmatrix} & 36 \\
+80 & Diagonale Normalform\index{Diagonale Normalform} & 37 \\
+82 & Jordansche Normalform\index{Jordansche Normalform} & 38 \\
+85 & Homogene / Partikuläre Lösung\index{Homogene Lösung}\index{Partikuläre Lösung} & 39 \\
+89 & Sprungantwort, Impulsantwort, Übergangsfunktion, Gewichtsfunktion\index{Sprungantwort}\index{Impulsantwort}\index{Übergangsfunktion}\index{Gewichtsfunktion} & 40 \\
+91 & Faltung\index{Faltung} & 41 \\
+94 & BIBO-Stabilität\index{BIBO-Stabilität} & 42 \\
+95 & BIBO-Stabilität und Stabilität\index{BIBO-Stabilität und Stabilität} & 43 \\
+96 & Statische Verstärkung\index{Statische Verstärkung} & 44 \\
+97 & Laplace-Transformation\index{Laplace-Transformation} & 45 \\
+101 & Linearität der Laplace-Transformation\index{Linearität der Laplace-Transformation} & 46 \\
+102 & Laplace-Transformation von Ableitungen\index{Laplace-Transformation von Ableitungen} & 47 \\
+105 & Partialbruchzerlegung, Residuum\index{Partialbruchzerlegung}\index{Residuum} & 48 \\
+108 & Übertragungsfunktion\index{Übertragungsfunktion} & 49 \\
+109 & Laplace-Transformation der Faltung\index{Laplace-Transformation der Faltung} & 50 \\
+110 & Stabilität im Bildbereich\index{Stabilität im Bildbereich} & 51 \\
+111 & Pol-Nullstellen-Diagramm\index{Pol-Nullstellen-Diagramm} & 52 \\
+113 & Berechnung der statischen Verstärkung / Sprungfähigkeit, Durchgriff\index{Sprungfähigkeit}\index{Durchgriff} & 53--54 \\
+114 & Relativer Grad und Anfangswert\index{Relativer Grad und Anfangswert} & 55 \\
+116 & Eingeschwungener Zustand\index{Eingeschwungener Zustand} & 56 \\
+117 & Zeigerdarstellung für sinusförmige Signale\index{Zeigerdarstellung für sinusförmige Signale} & 57 \\
+118 & Grad und Bogenmaß\index{Grad und Bogenmaß} & 58 \\
+119 & Frequenzgang / Übertragung sinusförmiger Signale\index{Frequenzgang}\index{Übertragung sinusförmiger Signale} & 59--60 \\
+123 & Ortskurven von Frequenzgängen\index{Ortskurven von Frequenzgängen} & 61 \\
+126 & Bode-Diagramm\index{Bode-Diagramm} & 62 \\
+131 & Fourier-Transformation / Frequenzgang für instabile Systeme\index{Fourier-Transformation}\index{Frequenzgang für instabile Systeme} & 63--64 \\
+132 & Frequenzspektrum\index{Frequenzspektrum} & 65 \\
+133 & Filter, das\index{Filter} & 66 \\
+134 & Tiefpass, Hochpass, Bandpass\index{Tiefpass}\index{Hochpass}\index{Bandpass} & 67 \\
+139 & Parallelschaltung, Reihenschaltung und Rückführung\index{Parallelschaltung}\index{Reihenschaltung}\index{Rückführung} & 68 \\
+140 & Aufgeschnittener Regelkreis / Stabilität von Verschaltungen\index{Aufgeschnittener Regelkreis}\index{Stabilität von Verschaltungen} & 69 \\
+141 & Führungs- und Störübertragungsfunktion\index{Führungsübertragungsfunktion}\index{Störübertragungsfunktion} & 70 \\
+153 & Minimalphasigkeit\index{Minimalphasigkeit} & 71 \\
+154 & Allpass\index{Allpass} & 72 \\
+155 & Zerlegung nicht-minimalphasiger Systeme\index{Zerlegung nicht-minimalphasiger Systeme} & 73 \\
+164 & Stationäre Genauigkeit\index{Stationäre Genauigkeit} & 74 \\
+165 & Bleibende Regelabweichung\index{Bleibende Regelabweichung} & 74 \\
+166 & Integrierender Anteil und integrierendes Verhalten\index{Integrierender Anteil}\index{integrierendes Verhalten} & 75 \\
+167 & Stationäre Genauigkeit im geschlossenen Regelkreis\index{Stationäre Genauigkeit im geschlossenen Regelkreis} & 76 \\
+168 & Vollständige Ausregelung von Störungen\index{Vollständige Ausregelung von Störungen} & 77 \\
+169 & Differenzierender Anteil und differenzierendes Verhalten\index{Differenzierender Anteil}\index{differenzierendes Verhalten} & 78 \\
+175 & Verzögerungsglieder\index{Verzögerungsglieder} & 79 \\
+178 & Dämpfungsgrad und Kennkreisfrequenz\index{Dämpfungsgrad}\index{Kennkreisfrequenz} & 80 \\
+181 & Aperiodischer Grenzfall / Überschwingen, Unterschwingen\index{Aperiodischer Grenzfall}\index{Überschwingen}\index{Unterschwingen} & 81--82 \\
+183 & Resonanzüberhöhung\index{Resonanzüberhöhung} & 83 \\
+187 & Rampenantwort\index{Rampenantwort} & 84 \\
+188 & Festwertregelung und Folgeregelung\index{Festwertregelung}\index{Folgeregelung} & 85 \\
+200 & Systemidentifikation\index{Systemidentifikation} & 86 \\
+202 & Parametrische und nicht-parametrische Identifikation\index{Parametrische Identifikation}\index{nicht-parametrische Identifikation} & 87 \\
+205 & Überanpassung\index{Überanpassung} & 88 \\
+206 & Tu-Tg-Modell\index{Tu-Tg-Modell} & 89 \\
+210 & Methode der kleinsten Fehlerquadrate (least-square)\index{Methode der kleinsten Fehlerquadrate} & 90 \\
+210 & Pseudoinverse\index{Pseudoinverse} & 91 \\
+213 & Positive Definitheit / Wahl der Gewichtungsmatrix\index{Positive Definitheit}\index{Gewichtungsmatrix!Wahl} & 92--93 \\
+214 & Stabilitätskriterien\index{Stabilitätskriterien} & 94 \\
+217 & 1. Bedingung (Algebraische Stabilitätskriterien) / 2. Bedingung nach Hurwitz\index{Algebraische Stabilitätskriterien}\index{Hurwitz!2. Bedingung} & 95--96 \\
+218 & 2. Bedingung nach Routh\index{Routh!2. Bedingung} & 97 \\
+220 & Stabilitätskriterien für Systeme bis Ordnung $n=3$ / Stetigkeit der Eigenwerte\index{Stabilitätskriterien!bis Ordnung $n=3$}\index{Stetigkeit der Eigenwerte} & 98--99 \\
+221 & Hurwitz-Kriterium und Stabilitätsrand\index{Hurwitz-Kriterium}\index{Stabilitätsrand} & 100 \\
+231 & Vollständiges Nyquist-Kriterium / Stabilitätsbedingung nach Nyquist\index{Nyquist-Kriterium!vollständig}\index{Stabilitätsbedingung nach Nyquist} & 101--102 \\
+234 & Nyquist-Kriterium und Stabilitätsrand\index{Nyquist-Kriterium}\index{Stabilitätsrand} & 103 \\
+239 & Stabilität und Schnitt mit der reellen Achse\index{Stabilität!Schnitt mit der reellen Achse} & 104 \\
+240 & Durchtrittsfrequenz / Hinreichende Stabilitätsbedingung\index{Durchtrittsfrequenz}\index{Hinreichende Stabilitätsbedingung} & 105--106 \\
+242 & Anwendbarkeit / Aussage des Vereinfachten Nyquist-Kriteriums\index{Nyquist-Kriterium!vereinfacht!Anwendbarkeit}\index{Nyquist-Kriterium!vereinfacht!Aussage} & 107 \\
+245 & Systeme mit Phasenwinkel ungleich $-180^\circ$\index{Phasenwinkel ungleich $-180^\circ$} & 108 \\
+247 & Vereinfachtes Nyquist bei integrierendem Verhalten / Satz der kleinen Verstärkungen\index{Nyquist-Kriterium!vereinfacht!integrierendes Verhalten}\index{Satz der kleinen Verstärkungen} & 109--110 \\
+248 & Amplituden- und Phasenreserve; Durchtrittsfrequenz\index{Amplitudenreserve}\index{Phasenreserve}\index{Durchtrittsfrequenz} & 111 \\
+251 & Robustheit\index{Robustheit} & 112 \\
+252 & Einfluss von Totzeiten auf Stabilität\index{Totzeit!Einfluss auf Stabilität} & 113 \\
+254 & Kürzungen von Pol- und Nullstellen\index{Kürzungen von Pol- und Nullstellen} & 114 \\
+257 & Ziel des Reglerentwurfs\index{Reglerentwurf!Ziel} & 115 \\
+260 & Kennwerte für die Güte einer Regelung\index{Güte einer Regelung!Kennwerte} & 116 \\
+262 & Entwurf am offenen oder geschlossenen Regelkreis\index{Reglerentwurf!offener Regelkreis}\index{Reglerentwurf!geschlossener Regelkreis} & 117 \\
+263 & Ausgangs- oder Zustandsrückführung\index{Ausgangsrückführung}\index{Zustandsrückführung} & 118 \\
+266 & Regelfaktor\index{Regelfaktor} & 119 \\
+267 & Vorzeichen einer Regelung\index{Vorzeichen einer Regelung} & 120 \\
+269 & Wahl der Reglerverstärkung / Stellgrößenbeschränkungen\index{Reglerverstärkung!Wahl}\index{Stellgrößenbeschränkungen} & 121--122 \\
+270 & Energieverbrauch des Aktors\index{Energieverbrauch des Aktors} & 123 \\
+271 & Frequenzabhängige Reglerverstärkung / Pole für hohe Verstärkungen\index{Reglerverstärkung!frequenzabhängig}\index{Pole!für hohe Verstärkungen} & 124--125 \\
+273 & Vernachlässigbare Dynamik\index{Vernachlässigbare Dynamik} & 126 \\
+275 & Fundamentales Dilemma der Regelungstechnik\index{Fundamentales Dilemma der Regelungstechnik} & 127 \\
+284 & Empfohlene Bereiche für Amplituden- und Phasenreserve\index{Amplitudenreserve!empfohlene Bereiche}\index{Phasenreserve!empfohlene Bereiche} & 128 \\
+297 & Zielgebiet der Pole des geschlossenen Regelkreises\index{Pole!Zielgebiet} & 129 \\
+301 & Zustandsrückführung über Polvorgabe\index{Zustandsrückführung!Polvorgabe} & 130 \\
+302 & Steuerbarkeit\index{Steuerbarkeit} & 131 \\
+303 & Lösbarkeit der Polvorgabe\index{Polvorgabe!Lösbarkeit} & 132 \\
+304 & Steuerbarkeitskriterium von Kalman\index{Steuerbarkeitskriterium von Kalman} & 133 \\
+306 & Zustandsregler als PD$n$-Regler / Uneindeutiger Zusammenhang $x$ und $y$\index{Zustandsregler!als PD$n$-Regler}\index{Zusammenhang $x$ und $y$} & 134--135 \\
+308 & Schätzfehler\index{Schätzfehler} & 136 \\
+310 & Luenberger-Beobachter\index{Luenberger-Beobachter} & 137 \\
+312 & Duales Problem\index{Duales Problem} & 138 \\
+313 & Beobachtungsnormalform / Beobachtbarkeit\index{Beobachtungsnormalform}\index{Beobachtbarkeit} & 139--140 \\
+314 & Steuerbarkeit, Beobachtbarkeit und minimale Realisierung\index{Steuerbarkeit}\index{Beobachtbarkeit}\index{Minimale Realisierung} & 141 \\
+315 & Beobachtbarkeitkriterium von Kalman\index{Beobachtbarkeitkriterium von Kalman} & 142 \\
+316 & Separationstheorem\index{Separationstheorem} & 143 \\
+317 & Eigenwerte des Schätzfehlers\index{Eigenwerte!Schätzfehler} & 144 \\
+318 & Beobachter als Filter\index{Beobachter!als Filter} & 145 \\
+322 & Betrags- und Winkelbedingung\index{Betragsbedingung}\index{Winkelbedingung} & 146 \\
+323 & Wurzelortskurve\index{Wurzelortskurve} & 147 \\
+334 & Vorsteuerung\index{Vorsteuerung} & 148 \\
+336 & Perfekte Steuerung\index{Perfekte Steuerung} & 149 \\
+337 & Modellbasierter Steuerungsentwurf\index{Modellbasierter Steuerungsentwurf} & 150 \\
+340 & Führungsgrößenfilter\index{Führungsgrößenfilter} & 151 \\
+343 & Störgrößenaufschaltung\index{Störgrößenaufschaltung} & 152 \\
+346 & Kaskadenregelung\index{Kaskadenregelung} & 153 \\
+351 & Unteraktuiert, Vollaktuiert, Überaktuiert\index{Unteraktuiert}\index{Vollaktuiert}\index{Überaktuiert} & 154 \\
+352 & Zentrale und Dezentrale Regelung\index{Zentrale Regelung}\index{Dezentrale Regelung} & 155 \\
+354 & Direkte und indirekte Wirkung\index{Direkte Wirkung}\index{Indirekte Wirkung} & 156 \\
+358 & Hauptregelkreise und Querkopplung\index{Hauptregelkreise}\index{Querkopplung} & 157 \\
+360 & Polstellen von MIMO-Systemen\index{Polstellen!MIMO-Systeme} & 158 \\
+361 & Charakteristisches Polynom von MIMO-Systemen\index{Charakteristisches Polynom!MIMO-Systeme} & 159 \\
+362 & Richtungsabhängige Verstärkung\index{Richtungsabhängige Verstärkung} & 160 \\
+363 & Singulärwerte\index{Singulärwerte} & 161 \\
+365 & Relative Gain Array (RGA)\index{Relative Gain Array (RGA)} & 162 \\
+367 & Nyquist-Kriterium für Mehrgrößensysteme\index{Nyquist-Kriterium!Mehrgrößensysteme} & 163 \\
+368 & Nyquist-Kriterium für Mehrgrößensysteme (Variante)\index{Nyquist-Kriterium!Mehrgrößensysteme!Variante} & 164 \\
+369 & Gershgorin-Theorem\index{Gershgorin-Theorem} & 165 \\
+370 & Diagonaldominanz / Stabilitätskriterium über Diagonaldominanz\index{Diagonaldominanz}\index{Stabilitätskriterium!Diagonaldominanz} & 166--167 \\
+373 & Entkopplungsregler\index{Entkopplungsregler} & 168 \\
+375 & Zeitkontinuierliche Signale und Systeme\index{Zeitkontinuierliche Signale und Systeme} & 169 \\
+376 & Zeitdiskrete Signale und Systeme / Folgen und Funktionen\index{Zeitdiskrete Signale und Systeme}\index{Folgen und Funktionen} & 170--171 \\
+377 & Abtaster und Halteglied\index{Abtaster}\index{Halteglied} & 172 \\
+380 & Abtasttheorem / Unterabtastung / Aliasing\index{Abtasttheorem}\index{Unterabtastung}\index{Aliasing} & 173--174 \\
+381 & Wahl der Abtastzeit\index{Abtastzeit!Wahl} & 175 \\
+382 & Anti-Aliasing-Filter / Quasikontinuierliche Beschreibung\index{Anti-Aliasing-Filter}\index{Quasikontinuierliche Beschreibung} & 176--177 \\
+383 & Zeitdiskrete Beschreibung\index{Zeitdiskrete Beschreibung} & 178 \\
+385 & Relativer Grad zeitdiskreter Systeme\index{Relativer Grad!zeitdiskrete Systeme} & 179 \\
+386 & Übergangsfolge und Gewichtsfolge\index{Übergangsfolge}\index{Gewichtsfolge} & 180 \\
+388 & Stabilität zeitdiskreter LTI-Systeme\index{Stabilität!zeitdiskrete LTI-Systeme} & 181 \\
+389 & Rückwärtsdifferenzen\index{Rückwärtsdifferenzen} & 182 \\
+391 & Rückwärtsdifferenzen als Näherung\index{Rückwärtsdifferenzen!als Näherung} & 183 \\
+394 & Zeitdiskreter Zustandsraum zeitkontinuierlicher Modelle\index{Zustandsraum!zeitdiskret} & 184 \\
+395 & Transitionsmatrix $\exp(AT)$ und das Shannon-Theorem\index{Transitionsmatrix!$\exp(AT)$}\index{Shannon-Theorem} & 185 \\
+399 & Z-Transformation\index{Z-Transformation} & 186 \\
+400 & Geometrische Reihe\index{Geometrische Reihe} & 187 \\
+401 & Zusammenhang zwischen $s$- und $z$-Ebene\index{Zusammenhang $s$- und $z$-Ebene} & 188 \\
+407 & Polstellen und Stabilität zeitdiskreter Systeme\index{Polstellen!zeitdiskrete Systeme}\index{Stabilität!zeitdiskrete Systeme} & 189 \\
+408 & Minimalphasige / Schwingungsfähige zeitdiskrete Systeme\index{Minimalphasige Systeme!zeitdiskret}\index{Schwingungsfähige Systeme!zeitdiskret} & 190--191 \\
+411 & Bestimmen von $G(z)$ aus $G(s)$ mit Abtaster und Halteglied\index{$G(z)$ aus $G(s)$}\index{Abtaster}\index{Halteglied} & 192 \\
+412 & Bilineare Transformation\index{Bilineare Transformation} & 193 \\
+413 & Bilineare Transformation und algebraische Stabilitätskriterien\index{Bilineare Transformation}\index{Algebraische Stabilitätskriterien} & 194 \\
+415 & Zielgebiete im Zeitdiskreten\index{Zielgebiete!zeitdiskret} & 195 \\
+418 & Regler mit endlicher Einstellzeit (Dead-beat)\index{Dead-beat}\index{Regler!endliche Einstellzeit} & 196 \\
+422 & Stabilität des Reglers mit endlicher Einstellzeit\index{Stabilität!Dead-beat-Regler} & 197 \\
+426 & Kalmanfilter\index{Kalmanfilter} & 198 \\
+428 & Zeitdiskreter Beobachter mit Prädiktion und Korrektur\index{Beobachter!zeitdiskret}\index{Prädiktion}\index{Korrektur} & 199 \\
+430 & Zeitdiskreter Beobachter mit least-square / Stochastische Signale\index{Beobachter!least-square}\index{Stochastische Signale} & 200--201 \\
+431 & Wahrscheinlichkeitsdichte, Erwartungswert / Kovarianz\index{Wahrscheinlichkeitsdichte}\index{Erwartungswert}\index{Kovarianz} & 202--203 \\
+433 & Schätzung mit minimaler Kovarianz\index{Schätzung!minimale Kovarianz} & 204 \\
+434 & Optimalität des Kalmanfilters\index{Kalmanfilter!Optimalität} & 205 \\
+435 & Algorithmus des Kalmanfilters\index{Kalmanfilter!Algorithmus} & 206 \\
+436 & Wahl der Gewichtungsmatrizen\index{Gewichtungsmatrizen!Wahl} & 207 \\
+445 & Algorithmus des Erweiterten Kalmanfilters\index{Erweitertes Kalmanfilter!Algorithmus} & 208 \\
+447 & Global vs. lokal\index{Global vs. lokal} & 209 \\
+448 & Phasenportrait\index{Phasenportrait} & 210 \\
+450 & Einzugsbereich\index{Einzugsbereich} & 211 \\
+452 & Globale Stabilität\index{Globale Stabilität} & 212 \\
+453 & Kandidatenfunktion\index{Kandidatenfunktion} & 213 \\
+454 & Direkte Methode nach Lyapunov\index{Lyapunov!direkte Methode} & 214 \\
+458 & Grenzzyklen\index{Grenzzyklen} & 215 \\
+459 & Schaltende Systeme\index{Schaltende Systeme} & 216 \\
+462 & Integrator-Windup\index{Integrator-Windup} & 217 \\
+464 & Definition von Beschreibungsfunktion\index{Beschreibungsfunktion!Definition} & 218 \\
+472 & Voraussetzungen / Grenzzyklen gemäß harmonischer Balance\index{Grenzzyklen!harmonische Balance}\index{Harmonische Balance} & 219--220 \\
+474 & Stabilitätsanalyse von Grenzzyklen\index{Grenzzyklen!Stabilitätsanalyse} & 221 \\
+480 & Relativer Grad\index{Relativer Grad} & 222 \\
+481 & Exakte Linearisierung\index{Exakte Linearisierung} & 223 \\
+482 & Exakte Linearisierung als Zustandstransformation\index{Exakte Linearisierung!Zustandstransformation} & 224 \\
+483 & Exakte Eingangs-Zustands (EZL) / Eingangs-Ausgangs (EAL)\index{Eingangs-Zustands-Linearisierung (EZL)}\index{Eingangs-Ausgangs-Linearisierung (EAL)} & 225--226 \\
+484 & Interne und externe Dynamik\index{Interne Dynamik}\index{Externe Dynamik} & 227 \\
+485 & Byrnes-Isidori-Normalform (BINF)\index{Byrnes-Isidori-Normalform (BINF)} & 228 \\
+487 & Flachheit\index{Flachheit} & 229 \\
+488 & Flachheit und EZL / Steuerbarkeit und Flachheit\index{Flachheit!EZL}\index{Steuerbarkeit!Flachheit} & 230--231 \\
+491 & Nichtlineare Regelungsnormalform / Strenge Rückkopplungsform\index{Nichtlineare Regelungsnormalform}\index{Strenge Rückkopplungsform} & 232--233 \\
+492 & Eingangsaffine Systeme / Flachheit eingangsaffiner Systeme\index{Eingangsaffine Systeme}\index{Flachheit!eingangsaffine Systeme} & 234--235 \\
+497 & Nulldynamik / Stabilität von Regelungen über EZL und EAL\index{Nulldynamik}\index{Stabilität!EZL/EAL} & 236--237 \\
+499 & Nulldynamik und Nullstellen\index{Nulldynamik und Nullstellen} & 238 \\
+\end{longtable}

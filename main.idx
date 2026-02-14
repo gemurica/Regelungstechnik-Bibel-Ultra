@@ -1,0 +1,80 @@
+\indexentry{Signale und Systeme}{8}
+\indexentry{Bezeichnungen für Systeme}{8}
+\indexentry{Signale und Systeme im Regelkreis}{8}
+\indexentry{Offener Regelkreis}{8}
+\indexentry{Geschlossener Regelkreis}{8}
+\indexentry{Vorzeichenkonvention}{8}
+\indexentry{Vorzeichenkonvention!|see{Umdruck (S.123)}}{8}
+\indexentry{Relativer Grad}{8}
+\indexentry{Relativer Grad!Umdruck (S. 26)}{8}
+\indexentry{Modell}{12}
+\indexentry{Systemordnung}{12}
+\indexentry{Anfangsbedingungen}{12}
+\indexentry{Zeitinvariante Systeme}{12}
+\indexentry{Lineare Systeme}{12}
+\indexentry{LTI-System}{12}
+\indexentry{Relativer Grad}{12}
+\indexentry{Kausale Systeme}{13}
+\indexentry{akausale Systeme}{13}
+\indexentry{Zustandsraumdarstellung}{13}
+\indexentry{SISO-System}{13}
+\indexentry{MIMO-System}{13}
+\indexentry{Regelungsnormalform}{13}
+\indexentry{Minimale Realisierung}{14}
+\indexentry{Gesetz der Sparsamkeit}{14}
+\indexentry{Zeitkonstante}{14}
+\indexentry{Eckkreisfrequenz}{14}
+\indexentry{Absolutgrößen}{14}
+\indexentry{Abweichungsgrößen}{14}
+\indexentry{Systemantwort}{23}
+\indexentry{Frequenzgang@$G(j\omega)$}{23}
+\indexentry{Betrag@$|G(j\omega)|$}{23}
+\indexentry{Phase@\(\angle G(j\omega)\)}{23}
+\indexentry{Sinusförmige Signale}{24}
+\indexentry{Sinusförmige Signale!Umdruck (S. 119)}{24}
+\indexentry{u(t)=$\sin(\omega t)$}{24}
+\indexentry{Steuerbarkeitskriterium von Kalman}{37}
+\indexentry{Steuerbarkeitskriterium von Kalman!Umdruck (S. 304)}{37}
+\indexentry{Kalman}{37}
+\indexentry{Steuerbarkeitsmatrix@$Q_s$}{37}
+\indexentry{Q_s@\(Q_s\)|see{Steuerbarkeitsmatrix}}{37}
+\indexentry{Steuerbarkeitsmatrix!$Q_s$}{37}
+\indexentry{Qs Steuerbarkeitsmatrix@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeitsmatrix}}{37}
+\indexentry{Stationäre Genauigkeit}{38}
+\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{38}
+\indexentry{Regelabweichung}{39}
+\indexentry{Regelabweichung!Umdruck (S. 165)}{39}
+\indexentry{Stationäre Genauigkeit}{39}
+\indexentry{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}{39}
+\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{39}
+\indexentry{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}{39}
+\indexentry{Durchtrittsfrequenz@$\omega_d$}{39}
+\indexentry{Durchtrittsfrequenz!Umdruck (S. 240, 248, 270, 273, 286, 363)}{39}
+\indexentry{crossover frequency|see{Durchtrittsfrequenz}}{39}
+\indexentry{crossover frequency!Umdruck (S. 240, 248, 270, 273, 286, 363)}{39}
+\indexentry{Durchgangsfrequenz|see{Durchtrittsfrequenz}}{39}
+\indexentry{Ansprechverhalten}{39}
+\indexentry{Ansprechverhalten!Abhängigkeit von $\omega_d$}{39}
+\indexentry{Bodediagramm}{39}
+\indexentry{P-Glied}{39}
+\indexentry{PT$_2$-Glied}{39}
+\indexentry{T_u-T_g@\(T_u\)--\(T_g\)}{39}
+\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Umdruck (S. 207)}{39}
+\indexentry{Chien, Hrones, Reswick (CHR)}{39}
+\indexentry{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}{39}
+\indexentry{Gewichtsfunktion}{40}
+\indexentry{Übergangsfunktion}{40}
+\indexentry{Dirac-Impuls@$\delta(t)$}{40}
+\indexentry{Sprungfunktion@$1(t)$}{40}
+\indexentry{Sprungantwort@$y(t)$}{40}
+\indexentry{Impulsantwort@$y(t)$}{40}
+\indexentry{Übergangsfunktion@$h(t)$}{40}
+\indexentry{Gewichtsfunktion@$g(t)$}{40}
+\indexentry{Zeitkonstante $T$}{41}
+\indexentry{Periodendauer $T=\frac{2\pi}{\omega}$}{41}
+\indexentry{Kreisfrequenz $\omega$}{41}
+\indexentry{Bodediagramm}{41}
+\indexentry{Abtasttheorem}{45}
+\indexentry{Abtasttheorem!nach Shannon (S. 380)}{45}
+\indexentry{Shannontheorem!S. 380}{45}
+\indexentry{Nyquist-Abtasttheorem|see{Abtasttheorem}}{45}

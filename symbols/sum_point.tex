@@ -1,0 +1,15 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (-0.2,0) -- (0.8,0);
+  \draw[->] (0.8,-1.0) -- (0.8,-0.2);
+  \draw[->] (1.2,0) -- (2.4,0);
+  \draw (0.8,0) circle (0.2);
+  \node at (0.8,0.33) {\tiny $+$};
+  \node at (0.8,-0.40) {\tiny $-$};
+  \node at (-0.3,0.15) {$u_1$};
+  \node at (0.55,-1.2) {$u_2$};
+  \node at (2.6,0) {$y$};
+\end{tikzpicture}
+\end{document}
