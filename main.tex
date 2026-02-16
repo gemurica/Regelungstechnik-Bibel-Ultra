@@ -524,6 +524,34 @@ Für Stabilität muss gelten:
 Die Polstellen  \(\lambda_i\) müssen in der linken offenen \(s\)-Halbebene liegen für Stabilität.
 \end{quote}
 \subsection{Grenzwertsätze}
+\index{Grenzwertsätze}
+\index{Anfangswertsatz}
+\index{Endwertsatz}
+
+Neben der Lösung von Differentialgleichungen für definierte Eingangsgrößen
+\(u(t)\) liefert die Laplace-Transformation über die Grenzwertsätze ein
+handliches Werkzeug.
+
+\begin{align}
+\lim_{t\to+0} f(t) &= \lim_{s\to\infty} sF(s) \\
+\lim_{t\to\infty} f(t) &= \lim_{s\to0} sF(s)
+\end{align}
+
+Die Grenzwerte sind nur dann anwendbar, wenn die zugehörigen Grenzwerte
+existieren (insbesondere endlich sind).
+
+Mit
+\[
+H(s) = \frac{1}{s}\,G(s)
+\]
+ergibt sich für die Übergangsfunktion \(h(t)\):
+\begin{align}
+\lim_{t\to\infty} h(t) &= \lim_{s\to0} sH(s) = \lim_{s\to0} G(s), \\
+\lim_{t\to+0} h(t) &= \lim_{s\to\infty} sH(s) = \lim_{s\to\infty} G(s).
+\end{align}
+
+Damit lassen sich Anfangswert und (für stabile Systeme) Endwert der
+Übergangsfunktion direkt bestimmen.
 
 \FloatBarrier
 \clearpage
@@ -1156,6 +1184,16 @@ und somit:
 
 \section{Mathematische Grundlagen}
 
+\subsection{PQ-Formel}
+Gegeben sei die quadratische Gleichung
+\[
+f(x)=x^2 + p\,x + q = 0.
+\]
+Dann lauten die Lösungen:
+\[
+x_{1,2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}.
+\]
+
 \subsection{Determinante einer 2x2 \& 3x3-Matrix}
 
 \subsubsection{2x2}
@@ -1263,6 +1301,45 @@ Für \(e^{-j \frac{\pi}{2} \omega}\) gilt:
 
 Der Betrag ist somit immer \(1\), unabhängig von \(\omega\).
 
+\subsection{Inverse einer Matrix}
+
+\subsubsection{Allgemein}
+Eine quadratische Matrix \(A\) ist genau dann invertierbar, wenn
+\[
+\det(A) \neq 0
+\]
+Dann gilt:
+\[
+A^{-1} = \frac{1}{\det(A)} \operatorname{adj}(A)
+\]
+wobei \(\operatorname{adj}(A)\) die adjungierte Matrix ist.
+
+\subsubsection{Inverse einer \(2 \times 2\)-Matrix}
+
+Gegeben sei:
+\[
+A = \begin{pmatrix}
+	a & b \\
+	c & d
+\end{pmatrix}
+\]
+
+Determinante:
+\[
+\det(A) = ad - bc
+\]
+
+Inverse:
+\[
+A^{-1} =
+\frac{1}{ad - bc}
+\begin{pmatrix}
+	d & -b \\
+	-c & a
+\end{pmatrix}
+\qquad \text{für } ad - bc \neq 0
+\]
+
 
 \subsection{ \(G(s)\) ist gegeben, Differentialgleichung bestimmen.}
 
@@ -1309,44 +1386,6 @@ Für die höchste in dieser Funktion enthaltene Frequenz \(\omega_{\max}\) und d
 T < \frac{T_{\min}}{2}
 \]
 
-\section{Inverse einer Matrix}
-
-\subsection{Allgemein}
-Eine quadratische Matrix \(A\) ist genau dann invertierbar, wenn
-\[
-\det(A) \neq 0
-\]
-Dann gilt:
-\[
-A^{-1} = \frac{1}{\det(A)} \operatorname{adj}(A)
-\]
-wobei \(\operatorname{adj}(A)\) die adjungierte Matrix ist.
-
-\subsection{Inverse einer \(2 \times 2\)-Matrix}
-
-Gegeben sei:
-\[
-A = \begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix}
-\]
-
-Determinante:
-\[
-\det(A) = ad - bc
-\]
-
-Inverse:
-\[
-A^{-1} =
-\frac{1}{ad - bc}
-\begin{pmatrix}
-d & -b \\
--c & a
-\end{pmatrix}
-\qquad \text{für } ad - bc \neq 0
-\]
 
 \section{Stationäre Genauigkeit}
 \subsection{Stationäre Genauigkeit im geschlossenen Regelkreis}
