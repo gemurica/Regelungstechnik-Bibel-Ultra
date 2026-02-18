@@ -4,7 +4,7 @@
 \indexentry{Offener Regelkreis}{10}
 \indexentry{Geschlossener Regelkreis}{10}
 \indexentry{Vorzeichenkonvention}{10}
-\indexentry{Vorzeichenkonvention!|see{Umdruck (S.123)}}{10}
+\indexentry{Vorzeichenkonvention!Umdruck (S. 123)}{10}
 \indexentry{Relativer Grad}{10}
 \indexentry{Relativer Grad!Umdruck (S. 26)}{10}
 \indexentry{Modell}{14}
@@ -36,7 +36,7 @@
 \indexentry{Sprungfähigkeit! in Abhängigkeit von rel. Grad \(r\)}{20}
 \indexentry{Systemantwort}{21}
 \indexentry{Frequenzgang@$G(j\omega)$}{21}
-\indexentry{Betrag@$|G(j\omega)|$}{21}
+\indexentry{Betrag@$\lvert G(j\omega)\rvert$}{21}
 \indexentry{Phase@\(\angle G(j\omega)\)}{21}
 \indexentry{Sinusförmige Signale}{21}
 \indexentry{Sinusförmige Signale!Umdruck (S. 119)}{21}
@@ -45,52 +45,54 @@
 \indexentry{Periodendauer $T=\frac{2\pi}{\omega}$}{22}
 \indexentry{Kreisfrequenz $\omega$}{22}
 \indexentry{Bodediagramm}{22}
+\indexentry{Führungsübertragungsfunktion \(T(s)\)}{23}
+\indexentry{Störungsübertragungsfunktion \(S(s)\)}{23}
+\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Modell für Parameter \(T_u\)-\(T_g\) }{29}
 \indexentry{Stabilität!Allgemeine Stabilitätskriterien}{30}
 \indexentry{Stabilität!Algebraische Stabilitätskriterien}{30}
 \indexentry{Stabilität!Routh / Hurwitz Stabilität}{30}
 \indexentry{Routh / Hurwitz Stabilitätskriterium}{30}
-\indexentry{Regelfaktor}{33}
-\indexentry{Regelfaktor!sinnvoll}{33}
-\indexentry{Regelfaktor!technisch Sinnvoll}{33}
-\indexentry{Amplitudenreserve \(A_R\)! Empfohlener Bereich}{34}
-\indexentry{Phasenreserve \(alpha_R\)! Empfohlener Bereich}{34}
-\indexentry{Polvorgabe}{34}
-\indexentry{Polvorgabe!für Ausgangsrückführung}{34}
-\indexentry{Polvorgabe!für Zustandsrückführung}{34}
-\indexentry{Steuerbarkeit}{35}
-\indexentry{Steuerbarkeit!Kriterium von Kalman}{35}
-\indexentry{Kalman}{35}
-\indexentry{Qs@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeit}}{35}
-\indexentry{Abtaster}{39}
-\indexentry{Halteglied! Wirkungsplan}{39}
-\indexentry{Abtaster! Stabilität}{39}
-\indexentry{Stabilität! Abtaster-Halteglied}{39}
-\indexentry{Abtaster!Abtasttheorem nach Shannon}{39}
-\indexentry{Abtasttheorem nach Shannon|see{Abtaster}}{39}
-\indexentry{Shannontheorem|see{Abtaster}}{39}
-\indexentry{Nyquist-Abtasttheorem|see{Abtaster}}{39}
-\indexentry{Stationäre Genauigkeit}{41}
-\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{41}
-\indexentry{Regelabweichung}{42}
-\indexentry{Regelabweichung!Umdruck (S. 165)}{42}
+\indexentry{Amplitudenreserve \(A_R\)}{32}
+\indexentry{Phasenreserve \(\alpha_R\)}{32}
+\indexentry{Durchtrittsfrequenz \(\omega_d\)}{32}
+\indexentry{Ansprechverhalten}{33}
+\indexentry{Ansprechverhalten!Abhängigkeit von $\omega_d$}{33}
+\indexentry{Regelfaktor}{34}
+\indexentry{Regelfaktor!sinnvoll}{34}
+\indexentry{Regelfaktor!technisch Sinnvoll}{34}
+\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Einstellregeln für P, PI, PID Regler}{34}
+\indexentry{Chien, Hrones, Reswick (CHR)}{34}
+\indexentry{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}{34}
+\indexentry{Amplitudenreserve \(A_R\)! Empfohlener Bereich}{35}
+\indexentry{Phasenreserve \(alpha_R\)! Empfohlener Bereich}{35}
+\indexentry{Polvorgabe}{35}
+\indexentry{Polvorgabe!für Ausgangsrückführung}{35}
+\indexentry{Polvorgabe!für Zustandsrückführung}{35}
+\indexentry{Steuerbarkeit}{36}
+\indexentry{Steuerbarkeit!Kriterium von Kalman}{36}
+\indexentry{Kalman}{36}
+\indexentry{Qs@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeit}}{36}
+\indexentry{Abtaster}{40}
+\indexentry{Halteglied! Wirkungsplan}{40}
+\indexentry{Abtaster! Stabilität}{40}
+\indexentry{Stabilität! Abtaster-Halteglied}{40}
+\indexentry{Abtaster!Abtasttheorem nach Shannon}{40}
+\indexentry{Abtasttheorem nach Shannon|see{Abtaster}}{40}
+\indexentry{Shannontheorem|see{Abtaster}}{40}
+\indexentry{Nyquist-Abtasttheorem|see{Abtaster}}{40}
 \indexentry{Stationäre Genauigkeit}{42}
-\indexentry{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}{42}
 \indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{42}
-\indexentry{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}{42}
-\indexentry{Durchtrittsfrequenz@$\omega_d$}{42}
-\indexentry{Durchtrittsfrequenz!Umdruck (S. 240, 248, 270, 273, 286, 363)}{42}
-\indexentry{crossover frequency|see{Durchtrittsfrequenz}}{42}
-\indexentry{crossover frequency!Umdruck (S. 240, 248, 270, 273, 286, 363)}{42}
-\indexentry{Durchgangsfrequenz|see{Durchtrittsfrequenz}}{42}
-\indexentry{Ansprechverhalten}{42}
-\indexentry{Ansprechverhalten!Abhängigkeit von $\omega_d$}{42}
-\indexentry{Bodediagramm}{42}
-\indexentry{P-Glied}{42}
-\indexentry{PT$_2$-Glied}{42}
-\indexentry{T_u-T_g@\(T_u\)--\(T_g\)}{42}
-\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Umdruck (S. 207)}{42}
-\indexentry{Chien, Hrones, Reswick (CHR)}{42}
-\indexentry{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}{42}
+\indexentry{Regelabweichung}{43}
+\indexentry{Regelabweichung!Umdruck (S. 165)}{43}
+\indexentry{Stationäre Genauigkeit}{43}
+\indexentry{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}{43}
+\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{43}
+\indexentry{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}{43}
+\indexentry{Durchtrittsfrequenz@$\omega_d$}{43}
+\indexentry{Durchtrittsfrequenz!Umdruck (S. 240, 248, 270, 273, 286, 363)}{43}
+\indexentry{crossover frequency|see{Durchtrittsfrequenz}}{43}
+\indexentry{crossover frequency!Umdruck (S. 240, 248, 270, 273, 286, 363)}{43}
+\indexentry{Durchgangsfrequenz|see{Durchtrittsfrequenz}}{43}
 \indexentry{Gewichtsfunktion}{43}
 \indexentry{Übergangsfunktion}{43}
 \indexentry{Dirac-Impuls@$\delta(t)$}{43}

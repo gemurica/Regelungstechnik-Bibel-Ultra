@@ -19,7 +19,9 @@
 \usepackage[ngerman]{babel}
 \usepackage{pdfpages}
 \usepackage{mdframed}
+\usepackage{xurl}
 \makeindex
+\providecommand{\chatsee}[2]{\see{#1}{#2}}
 \newcommand{\inputDefinitionsNoIndex}{%
     \begingroup
     \let\index\relax
@@ -90,7 +92,7 @@ Deswegen ist der Aufbau nach den Themenbereichen des Umdrucks aufgebaut, um so E
 \noindent Mein Ziel ist es, dieses Dokument zum ultimativen Nachschlagewerk für die Klausur zu machen. Deswegen bitte ich euch um eure Hilfe und Unterstützung dies umzusetzen.
 
 \vspace{0.8em}
-\noindent Fügt bitte so viele Hinweise, Lösungsansätze und Korrekturen hinzu. Außerdem könnt ihr hier https://github.com/gemurica/Regelungstechnik-Bibel-Ultra/issues ebenfalls Fehler oder Anmerkungen machen. Der Code für dieses Dokument ist öffentlich verfügbar und wer die Möglichkeit hat, kann gerne auf GitHub Ergänzungen direkt Pushen und somit direkt in diese Datei hinzufügen.
+\noindent Fügt bitte so viele Hinweise, Lösungsansätze und Korrekturen hinzu. Außerdem könnt ihr hier \url{https://github.com/gemurica/Regelungstechnik-Bibel-Ultra/issues} ebenfalls Fehler oder Anmerkungen machen. Der Code für dieses Dokument ist öffentlich verfügbar und wer die Möglichkeit hat, kann gerne auf GitHub Ergänzungen direkt Pushen und somit direkt in diese Datei hinzufügen.
 
 \vspace{0.8em}
 \noindent Somit kann diese Bibel auch nach der nächsten Klausur von euch weiter verbessert werden.
@@ -99,7 +101,7 @@ Deswegen ist der Aufbau nach den Themenbereichen des Umdrucks aufgebaut, um so E
 	\item Alte Bilder aus "RT-Bibel | Neues Testament" habe ich bisher auch noch nicht hinzugefügt.
 	\item Ich werde noch alle restlichen Hinweise aus dem Umdruck hinzufügen, bisher habe ich nur die aus Kapitel 1 \& 2. 
 	\item Besonders Begriffe für den Index mit Verweis auf die Seite im Umdruck sowie eine kleine Erläuterung sind wünschenswert, weil manche Begriffe im Index des Umdrucks nicht zu finden sind und somit das Lösen von Aufgaben erschweren.
-	\item Hier https://github.com/gemurica/Regelungstechnik-Bibel-Ultra/blob/main/main.pdf findet ihr immer die aktuelleste Version.
+	\item Hier \url{https://github.com/gemurica/Regelungstechnik-Bibel-Ultra/blob/main/main.pdf} findet ihr immer die aktuelleste Version.
 \end{itemize}
 
 
@@ -143,7 +145,7 @@ Die Regelgröße \(y\) ist die Ausgangsgröße der Regelstrecke, die auf einem W
 Das Übertragungsverhalten in Bild 1‑6 mit Rückführung wird als geschlossener Regelkreis bezeichnet. Das Übertragungsverhalten in Bild 1‑7 ohne Rückführung wird als offener Regelkreis bezeichnet.\footnote{Quelle: Umdruck S. 9}
 \end{defbar}
 \subsubsection{Vorzeichenkonvention}\index{Vorzeichenkonvention}
-\index{Vorzeichenkonvention!|see{Umdruck (S.123)}}
+\index{Vorzeichenkonvention!Umdruck (S. 123)}
 \index{Relativer Grad}
 \index{Relativer Grad!Umdruck (S. 26)}
 Umlauf \(-1\) \(\rightarrow\) Minus an die Führungsgröße, z.B.  \(w= v_{soll}, t_{soll}, etc\).
@@ -623,7 +625,7 @@ Damit lassen sich Anfangswert und (für stabile Systeme) Endwert der
 \subsubsection{Übertragung sinusförmiger Signale \(u(t) = sin(\omega t)\)}
 \index{Systemantwort}
 \index{Frequenzgang@$G(j\omega)$}
-\index{Betrag@$|G(j\omega)|$}
+\index{Betrag@$\lvert G(j\omega)\rvert$}
 \index{Phase@\(\angle G(j\omega)\)}
 
 \paragraph{1. Bedingungen prüfen:}
@@ -699,9 +701,25 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 \clearpage
 \section{Verschaltungen von Systemen}
 \subsection{Zusammenfassen von Teilsystemen}
+\begin{defbar}
+\textbf{Führungs \(T(s)\)- und Störübertragungsfunktion \(S(s)\)}\par
+\index{Führungsübertragungsfunktion \(T(s)\)}
+\index{Störungsübertragungsfunktion \(S(s)\)}
+In dem einfachen Regelkreis wird die Übertragungsfunktion von der Stör- auf die Regelgröße
+\[
+S(s)=\frac{Y(s)}{Z(s)}=\frac{1}{1+G_0(s)}=\frac{N_S(s)\,Z_R(s)}{Z_S(s)\,Z_R(s)+N_S(s)\,N_R(s)}
+\]
+als Störübertragungsfunktion oder auch Sensitivität bezeichnet.
+
+Die Übertragungsfunktion von der Führungs- auf die Regelgröße
+\[
+T(s)=\frac{Y(s)}{W(s)}=\frac{G_0(s)}{1+G_0(s)}=\frac{Z_S(s)\,Z_R(s)}{Z_S(s)\,Z_R(s)+N_S(s)\,N_R(s)}
+\]
+wird als Führungsübertragungsfunktion oder auch komplementäre Sensitivität bezeichnet.\footnote{Quelle: Umdruck S. 141}
+\end{defbar}
 \subsection{Zerlegung in einfache Elemente}
 \subsubsection{Pol-Nullstellen im Bodediagramm}
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\linewidth]{images/Pol-Nullstellen im Bodediagramm.png}
     \caption{Pol-Nullstellen im Bodediagramm.}
@@ -737,6 +755,59 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 \subsection{Grundlegende Reglertypen}
 \subsubsection{P-Element}
 \subsubsection{I-Element}
+\begin{defbar}
+\textbf{Stationäre Genauigkeit}\par
+Ein stabiles System \(u \mapsto y\) heißt stationär genau, wenn für jedes konvergente Eingangssignal \(u(t)\) gilt:
+\[
+\lim_{t\to\infty} u(t) = \lim_{t\to\infty} y(t),
+\]
+d.\,h., dass der Grenzwert von Ein- und Ausgangsgröße identisch ist.\footnote{Quelle: Umdruck S. 164}
+\end{defbar}
+
+\noindent Für einen Endwert \(u_{\infty}\neq 0\) folgt:
+\[
+\lim_{t\to\infty}\frac{y(t)}{u(t)}=1
+\]
+
+\noindent Mit dem Endwertsatz ergibt sich für einen Einheitssprung \(u(t) = 1(t)\):
+\[
+y_{\infty}=\lim_{s\to 0} G(s)
+\]
+
+\noindent Stationäre Genauigkeit verlangt daher (geschlossener Regelkreis):
+\[
+{\lim_{s\to 0} G(s)=1}
+\]
+
+\textbf{Wichtig:} Die Bedingung gilt für die Übertragungsfunktion des \emph{geschlossenen} Regelkreises.
+
+\begin{defbar}
+\textbf{Bleibende Regelabweichung}\par
+Für einen stabilen geschlossenen Regelkreis mit der Führungsübertragungsfunktion \(w \mapsto y\) ergibt sich für jedes konvergente \(w(t)\) ein Grenzwert
+\[
+\lim_{t\to\infty}\!\bigl(w(t)-y(t)\bigr)=\lim_{t\to\infty} e(t)=e_{\infty},
+\]
+der als bleibende Regelabweichung bezeichnet wird. Ist das System \(w \mapsto y\) stationär genau, so gilt \(e_{\infty}=0\) und man spricht davon, dass keine bleibende Regelabweichung vorliegt.\footnote{Quelle: Umdruck S. 165}
+\end{defbar}
+\begin{defbar}
+\textbf{Integrierender Anteil und integrierendes Verhalten}\par
+Ein LTI-System besitzt genau dann einen integrierenden Anteil, wenn es eine Polstelle in \(s=0\) besitzt.
+
+Haben zusätzlich alle weiteren Polstellen des Systems einen negativen Realteil, so gilt
+\[
+\lim_{t\to\infty} g(t)=\text{konstant}\neq 0
+\]
+und das System besitzt integrierendes Verhalten.\footnote{Quelle: Umdruck S. 166}
+\end{defbar}
+\begin{defbar}
+\textbf{Stationäre Genauigkeit im geschlossenen Regelkreis}\par
+Die Führungsübertragungsfunktion des geschlossenen Standard-Regelkreises ist genau dann stationär genau, wenn
+\begin{enumerate}[label=\arabic*)]
+    \item der geschlossene Regelkreis stabil ist und
+    \item der aufgeschnittene Regelkreis \(G_0\) einen integrierenden Anteil besitzt.
+\end{enumerate}
+\footnote{Quelle: Umdruck S. 167}
+\end{defbar}
 \subsubsection{D-Element}
 \subsubsection{PI, PD und PID}
 \subsection{Verzögerungsglieder}
@@ -753,7 +824,7 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 \subsubsection{PT\(_t\), PT\(_1\)T\(_t\)}
 
 \paragraph{Totzeit \(T_t\) aus Phasengang ableiten}
-In Abbildung~\ref{fig:totzeit-eckfrequenz} kann aus dem Regelkreis mit einem Totzeitglied die Eckfrequenz des Totzeitgliedes so abgelesen werden, dass wenn \(\varphi\) gegen \(-180^\circ\) strebt, und die \(\varphi\) dann exponentiell abfällt wie üblich bei einem Totzeitglied, dann ist die Eckfrequenz dort wo das Totzeitelement ca. \(57^\circ\) abgefallen ist. Das Beispiel sieht man in Abbildung~\ref{fig:totzeit-eckfrequenz}.
+In Abbildung~\ref{fig:totzeit-eckfrequenz} kann aus dem Regelkreis mit einem Totzeitglied die Eckfrequenz des Totzeitgliedes so abgelesen werden, dass wenn \(\varphi\) gegen \(-180^\circ\) strebt, und die Phase \(\varphi_0(\omega)\) dann exponentiell abfällt wie üblich bei einem Totzeitglied, dann ist die Eckfrequenz dort wo das Totzeitelement ca. \(57^\circ\) abgefallen ist. Das Beispiel sieht man in Abbildung~\ref{fig:totzeit-eckfrequenz}.
 \begin{enumerate}[label=\arabic*.]
     \item Was wäre \(\varphi\) ohne Totzeitglied für \(\omega \to \infty\) (Asymptoten rot und orange)?
     \item Wenn die Differenz \(\varphi_{0,\mathrm{ohne\,Totzeit}}\) und \(\varphi_0\) \(57^\circ\) ist, \(\omega_t\) ablesen (lila).
@@ -776,6 +847,20 @@ In Abbildung~\ref{fig:totzeit-eckfrequenz} kann aus dem Regelkreis mit einem Tot
 \clearpage
 \section{Identifikation linearer Regelkreisglieder}
 \subsection{Allgemeines}
+\subsection{Nicht-parametrische Identifikation}
+\subsection{Parametrische Identifikation}
+\subsubsection{Überanpassung}
+\subsubsection{Graphische Parameteridentifikation}
+\begin{defbar}
+\textbf{\(T_u\)-\(T_g\)-Modell}\par\index{T_u-T_g@\(T_u\)--\(T_g\)!Modell für Parameter \(T_u\)-\(T_g\) }
+Wird ein Verzögerungselement höherer Ordnung ersatzweise über ein \(PT_1T_t\)-System beschrieben, so spricht man von einem \(T_u\)-\(T_g\)-Modell.\footnote{Quelle: Umdruck S. 206}
+\end{defbar}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/8.3.2 TuTg Modell.png}
+    \caption{Sprungantwort und Kennwerte des \(T_u\)-\(T_g\)-Modells.}
+\end{figure}
+\subsubsection{Methode der kleinsten Fehlerquadrate}
 
 \clearpage
 \section{Stabilitätsprüfung}
@@ -923,6 +1008,35 @@ m=-p.
 \subsubsection{Anwendung bei Polen am Stabilitätsrand}
 \subsubsection{Vereinfachtes Nyquist-Kriterium}
 \subsubsection{Amplituden- und Phasenreserve}
+\begin{defbar}
+\textbf{Amplituden- und Phasenreserve; Durchtrittsfrequenz \(\omega_d\)}\par
+\index{Amplitudenreserve \(A_R\)}
+\index{Phasenreserve \(\alpha_R\)}
+\index{Durchtrittsfrequenz \(\omega_d\)}
+Die Amplitudenreserve ist die Zahl, mit der die Ortskurve des aufgeschnittenen Regelkreises multipliziert werden muss, so dass diese genau durch den kritischen Punkt \(-1\) verläuft:
+\[
+A_R=\frac{1}{\left|G_0\!\left(j\omega_{\pi}\right)\right|}.
+\]
+Gibt es verschiedene Amplitudenreserven, so ist die kleinste Amplitudenreserve die entscheidende Größe.
+
+Die Phasenreserve ist der Winkel, um den die Ortskurve des aufgeschnittenen Regelkreises gedreht werden muss, so dass diese genau durch den kritischen Punkt \(-1\) verläuft:
+\[
+\alpha_R=\varphi_0(\omega_d)-\left(180^\circ \pm n\cdot 360^\circ\right).
+\]
+mit der Durchtrittsfrequenz \(\omega_d\) definiert durch
+\[
+\left|G_0\!\left(j\omega_d\right)\right|=1.
+\]
+\footnote{Quelle: Umdruck S. 248}
+\end{defbar}
+
+\paragraph{Ansprechverhalten in Abhängigkeit von \(\omega_d\)}
+\index{Ansprechverhalten}
+\index{Ansprechverhalten!Abhängigkeit von $\omega_d$}
+Ein gutes Ansprechverhalten und kurze Anschwingzeiten werden durch große \(\omega_d\) erreicht. Da aus Stabilitätsgründen \(\omega_d < \omega_{\pi}\) gelten muss, ist der Frequenzbereich, in dem große Reglerverstärkungen möglich sind, beim I-Regler stark limitiert.
+
+Durch große \(K\) bei einem \(P\)-Glied wird der Verlauf des \(PT_2\)-Gliedes im Bodediagramm nach oben verschoben. Dadurch wird \(\omega_d\) nach rechts verschoben und somit größer. Weil \(\omega_{\pi} = \infty\) in dem Fall, ist die Ungleichung \(\omega_d < \omega_{\pi}\) erfüllt.
+
 \subsection{Sonderfälle}
 \subsubsection{Pol-Nullstellen-Kürzungen}
 \subsubsection{Unstetige Polstellen}
@@ -954,6 +1068,17 @@ definiert. Sein konkreter Wert ist im Fall stabiler linearer Systeme unabhängig
 \subsubsection{Nachteile hoher Verstärkungen}
 \subsection{Einstellregeln}
 \subsubsection{Einstellung mittels \(T_u\)--\(T_g\)-Ersatzmodell}
+\paragraph{Einstellung nach \(T_u\)--\(T_g\) (Chien, Hrones, Reswick)}
+\index{T_u-T_g@\(T_u\)--\(T_g\)!Einstellregeln für P, PI, PID Regler}
+\index{Chien, Hrones, Reswick (CHR)}
+\index{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}
+
+\begin{itemize}
+	\item Nicht schwingungsfähig \(\rightarrow\) aperiodischer Regelverlauf.\footnotemark
+	\footnotetext{Quelle: Altklausur H23, Aufgabe 4(c) \& 4(d).}
+	\item Ohne bleibende Regelabweichung \(\rightarrow\) am besten PI-Regler.\footnotemark
+	\footnotetext{Quelle: Altklausur H23, Aufgabe 4(c) \& 4(d).}
+\end{itemize}
 \subsubsection{Einstellung mittels Schwingversuch}
 
 \clearpage
@@ -1168,9 +1293,9 @@ T < \frac{T_{\min}}{2}
 \section{Informationen über Ortskurven}
 Ortskurven für den aufgeschnittenen Regelkreis \(G_0\).
 \begin{enumerate}[label=\arabic*.]
-    \item Phase \(\phi\) der Ortskurve läuft für \(\omega \rightarrow \infty \) gegen \(\ - \infty\) \\
+    \item Phase \(\varphi\) der Ortskurve läuft für \(\omega \rightarrow \infty \) gegen \(\ - \infty\) \\
     \(\rightarrow\) \(G_0\) enthält Totzeit. (S. 13, I)
-    \item Ortskurve startet mit einer Phase \(\phi = -90 ^\circ \) im Unendlichen, also \(\lim_{\omega \to 0}|G_0(j \omega)| = \infty\) \\ \(\rightarrow\) \(G_0\) hat integrierendes Verhalten. (S. 13, II)
+    \item Ortskurve startet mit einer Phase \(\varphi = -90 ^\circ \) im Unendlichen, also \(\lim_{\omega \to 0}|G_0(j \omega)| = \infty\) \\ \(\rightarrow\) \(G_0\) hat integrierendes Verhalten. (S. 13, II)
     \item Ortskurve startet im Ursprung, also \(\lim_{\omega \to 0}|G_0(j \omega)| = 0\) \\ \(\rightarrow\) \(G_0\) hat differenzierendes Verhalten. (S. 13, III)
     \item Betrag der Ortskurve steigt und sinkt.
     \\ \(\rightarrow\) \(G_0\) enthält ein Verzögerungsglied mit Resonanzüberhöhung (z.B. \(PT_2\)). (S. 13, IV)
@@ -1212,12 +1337,12 @@ Daraus ergibt sich:
 \end{enumerate}
 
 \section{Berechnung maximal zulässige Totzeit \(T_t\)}
-Die von der Totzeit hervorgerufene Phasenverschiebung \(\phi_t\) darf maximal der Phasenreserve \(\alpha_R\) von \(G^{'}_{0} (j \omega)\) entsprechen, um die Stabilität nicht zu gefähren.
+Die von der Totzeit hervorgerufene Phasenverschiebung \(\varphi_t\) darf maximal der Phasenreserve \(\alpha_R\) von \(G^{'}_{0} (j \omega)\) entsprechen, um die Stabilität nicht zu gefähren.
 \begin{enumerate}[label=\arabic*.]
     \item Durchtrittsfrequenz \(\omega_d\) von \(G^{'}_{0} (j \omega)\) ermitteln.
-    \item Phase \(\phi^{'}_{0} (\omega_d)\) ablesen.
-    \item Phasenreserve \(\alpha_R = 180^\circ + \phi^{'}_{0} (\omega_d)\).
-    \item Phasenverschiebung Totzeitglied \(\phi_t = -\omega \cdot T_t \overset{!}{=} -\alpha_R\)
+    \item Phase \(\varphi^{'}_{0} (\omega_d)\) ablesen.
+    \item Phasenreserve \(\alpha_R = 180^\circ + \varphi^{'}_{0} (\omega_d)\).
+    \item Phasenverschiebung Totzeitglied \(\varphi_t = -\omega \cdot T_t \overset{!}{=} -\alpha_R\)
     \item Totzeit \(T_t = \dfrac{\alpha_R}{\omega_d} = \dfrac{\dfrac{\alpha_R}{180^\circ}\cdot \pi}{\omega_d}\)
 \end{enumerate}
 
@@ -1227,29 +1352,6 @@ Die von der Totzeit hervorgerufene Phasenverschiebung \(\phi_t\) darf maximal de
 \index{crossover frequency|see{Durchtrittsfrequenz}}
 \index{crossover frequency!Umdruck (S. 240, 248, 270, 273, 286, 363)}
 \index{Durchgangsfrequenz|see{Durchtrittsfrequenz}}
-
-\subsection{Ansprechverhalten}
-\index{Ansprechverhalten}
-\index{Ansprechverhalten!Abhängigkeit von $\omega_d$}
-\index{Bodediagramm}
-\index{P-Glied}
-\index{PT$_2$-Glied}
-Ein gutes Ansprechverhalten und kurze Anschwingzeiten werden durch große \(\omega_d\) erreicht. Da aus Stabilitätsgründen \(\omega_d < \omega_{\pi}\) gelten muss, ist der Frequenzbereich, in dem große Reglerverstärkungen möglich sind, beim I-Regler stark limitiert.
-
-Durch große \(K\) bei einem \(P\)-Glied wird der Verlauf des \(PT_2\)-Gliedes im Bodediagramm nach oben verschoben. Dadurch wird \(\omega_d\) nach rechts verschoben und somit größer. Weil \(\omega_{\pi} = \infty\) in dem Fall, ist die Ungleichung \(\omega_d < \omega_{\pi}\) erfüllt.
-
-\section{Einstellung nach \(T_u\)--\(T_g\) (Chien, Hrones, Reswick)}
-\index{T_u-T_g@\(T_u\)--\(T_g\)}
-\index{T_u-T_g@\(T_u\)--\(T_g\)!Umdruck (S. 207)}
-\index{Chien, Hrones, Reswick (CHR)}
-\index{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}
-
-\begin{itemize}
-    \item Nicht schwingungsfähig \(\rightarrow\) aperiodischer Regelverlauf.\footnotemark
-    \footnotetext{Quelle: Altklausur H23, Aufgabe 4(c) \& 4(d).}
-    \item Ohne bleibende Regelabweichung \(\rightarrow\) am besten PI-Regler.\footnotemark
-    \footnotetext{Quelle: Altklausur H23, Aufgabe 4(c) \& 4(d).}
-\end{itemize}
 
 \section{Gewichts- und Übergangsfunktion aus \(G_s(s)\)}
 \index{Gewichtsfunktion}\index{Übergangsfunktion}\index{Dirac-Impuls@$\delta(t)$}\index{Sprungfunktion@$1(t)$}
@@ -1542,7 +1644,7 @@ Addition aus einer Geraden \(m(t-n)\) und Exponentialfunktion \(a\,e^{-\lambda t
     \item \(a\) und \(\lambda\) können mit \(y(t=0)=0\) und \(y'(t=0)=0\) bestimmt werden.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.9\linewidth]{plot_beispiel.pdf}
     \caption{Plot der Beispiel-Funktion.}

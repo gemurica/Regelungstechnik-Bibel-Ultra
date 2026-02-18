@@ -1,43 +1,45 @@
 \begin{theindex}
 
   \item Absolutgrößen, 16
-  \item Abtaster, 39
-    \subitem  Stabilität, 39
-    \subitem Abtasttheorem nach Shannon, 39
-  \item Abtasttheorem nach Shannon, \see{Abtaster}{39}
+  \item Abtaster, 40
+    \subitem  Stabilität, 40
+    \subitem Abtasttheorem nach Shannon, 40
+  \item Abtasttheorem nach Shannon, \see{Abtaster}{40}
   \item Abweichungsgrößen, 16
   \item akausale Systeme, 15
-  \item Amplitudenreserve \(A_R\)
-    \subitem  Empfohlener Bereich, 34
+  \item Amplitudenreserve \(A_R\), 32
+    \subitem  Empfohlener Bereich, 35
   \item Anfangsbedingungen, 14
   \item Anfangswertsatz, 19
-  \item Ansprechverhalten, 42
-    \subitem Abhängigkeit von $\omega_d$, 42
+  \item Ansprechverhalten, 33
+    \subitem Abhängigkeit von $\omega_d$, 33
 
   \indexspace
 
+  \item $\lvert G(j\omega)\rvert$, 21
   \item Bezeichnungen für Systeme, 10
-  \item Bodediagramm, 22, 42
+  \item Bodediagramm, 22
 
   \indexspace
 
-  \item Chien, Hrones, Reswick (CHR), 42
-  \item crossover frequency, \see{Durchtrittsfrequenz}{42}
-    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 42
+  \item Chien, Hrones, Reswick (CHR), 34
+  \item crossover frequency, \see{Durchtrittsfrequenz}{43}
+    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 43
 
   \indexspace
 
   \item $\delta(t)$, 43
-  \item Durchgangsfrequenz, \see{Durchtrittsfrequenz}{42}
+  \item Durchgangsfrequenz, \see{Durchtrittsfrequenz}{43}
   \item Durchtrittsfrequenz
-    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 42
-  \item $\omega_d$, 42
+    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 43
+  \item $\omega_d$, 43
+  \item Durchtrittsfrequenz \(\omega_d\), 32
 
   \indexspace
 
   \item Eckkreisfrequenz, 16
   \item Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell
-    \subitem Umdruck (S. 276), 42
+    \subitem Umdruck (S. 276), 34
   \item Endwertsatz, 19
 
   \indexspace
@@ -56,7 +58,7 @@
   \indexspace
 
   \item Halteglied
-    \subitem  Wirkungsplan, 39
+    \subitem  Wirkungsplan, 40
 
   \indexspace
 
@@ -64,7 +66,7 @@
 
   \indexspace
 
-  \item Kalman, 35
+  \item Kalman, 36
   \item Kausale Systeme, 15
   \item Kreisfrequenz $\omega$, 22
 
@@ -81,7 +83,7 @@
 
   \indexspace
 
-  \item Nyquist-Abtasttheorem, \see{Abtaster}{39}
+  \item Nyquist-Abtasttheorem, \see{Abtaster}{40}
 
   \indexspace
 
@@ -89,27 +91,26 @@
 
   \indexspace
 
-  \item P-Glied, 42
   \item Periodendauer $T=\frac{2\pi}{\omega}$, 22
   \item \(\angle G(j\omega)\), 21
+  \item Phasenreserve \(\alpha_R\), 32
   \item Phasenreserve \(alpha_R\)
-    \subitem  Empfohlener Bereich, 34
-  \item Polvorgabe, 34
-    \subitem für Ausgangsrückführung, 34
-    \subitem für Zustandsrückführung, 34
-  \item PT$_2$-Glied, 42
+    \subitem  Empfohlener Bereich, 35
+  \item Polvorgabe, 35
+    \subitem für Ausgangsrückführung, 35
+    \subitem für Zustandsrückführung, 35
 
   \indexspace
 
-  \item \(Q_s\) Steuerbarkeitsmatrix, \see{Steuerbarkeit}{35}
+  \item \(Q_s\) Steuerbarkeitsmatrix, \see{Steuerbarkeit}{36}
 
   \indexspace
 
-  \item Regelabweichung, 42
-    \subitem Umdruck (S. 165), 42
-  \item Regelfaktor, 33
-    \subitem sinnvoll, 33
-    \subitem technisch Sinnvoll, 33
+  \item Regelabweichung, 43
+    \subitem Umdruck (S. 165), 43
+  \item Regelfaktor, 34
+    \subitem sinnvoll, 34
+    \subitem technisch Sinnvoll, 34
   \item Regelungsnormalform, 15
   \item Relativer Grad, 10, 14
     \subitem Umdruck (S. 26), 10
@@ -117,7 +118,7 @@
 
   \indexspace
 
-  \item Shannontheorem, \see{Abtaster}{39}
+  \item Shannontheorem, \see{Abtaster}{40}
   \item Signale und Systeme, 9
   \item Signale und Systeme im Regelkreis, 10
   \item Sinusförmige Signale, 21
@@ -130,23 +131,24 @@
     \subitem  in Abhängigkeit von rel. Grad \(r\), 20
   \item Sprungfähigkeit im Zustandsraum, 20
   \item Stabilität
-    \subitem  Abtaster-Halteglied, 39
+    \subitem  Abtaster-Halteglied, 40
     \subitem Algebraische Stabilitätskriterien, 30
     \subitem Allgemeine Stabilitätskriterien, 30
     \subitem Routh / Hurwitz Stabilität, 30
-  \item stationary accuracy, \see{Stationäre Genauigkeit}{41, 42}
-    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 42
-  \item Stationäre Genauigkeit, 41, 42
-    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 42
-  \item Steuerbarkeit, 35
-    \subitem Kriterium von Kalman, 35
+  \item stationary accuracy, \see{Stationäre Genauigkeit}{42, 43}
+    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 43
+  \item Stationäre Genauigkeit, 42, 43
+    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 43
+  \item Steuerbarkeit, 36
+    \subitem Kriterium von Kalman, 36
   \item Systemantwort, 21
   \item Systemordnung, 14
 
   \indexspace
 
-  \item \(T_u\)--\(T_g\), 42
-    \subitem Umdruck (S. 207), 42
+  \item \(T_u\)--\(T_g\)
+    \subitem Einstellregeln für P, PI, PID Regler, 34
+    \subitem Modell für Parameter \(T_u\)-\(T_g\) , 29
 
   \indexspace
 
@@ -154,7 +156,8 @@
 
   \indexspace
 
-  \item Vorzeichenkonvention, 10, \see{Umdruck (S.123)}{10}
+  \item Vorzeichenkonvention, 10
+    \subitem Umdruck (S. 123), 10
 
   \indexspace
 
