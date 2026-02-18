@@ -4,6 +4,7 @@
 \usepackage{array}
 \usepackage{hhline}
 \usepackage{multirow}
+\usepackage{float}
 \usepackage{placeins}
 \usepackage{tikz}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
@@ -110,7 +111,7 @@ Deswegen ist der Aufbau nach den Themenbereichen des Umdrucks aufgebaut, um so E
 \section{Einführung}
 \subsection{Steuerung und Regelung}
 \subsection{Grundstruktur des Regelkreises}
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.85\linewidth]{images/Bildschirmfoto 2026-02-12 um 22.00.15.png}
     \caption{Symbole der Grundstruktur des Regelkreises.}
@@ -683,6 +684,15 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 \end{enumerate}
 \subsection{Ortskurve}
 \subsection{Bode-Diagramm}
+\paragraph{Unterschied Zeitkonstante und Periodendauer}
+\index{Zeitkonstante $T$}
+\index{Periodendauer $T=\frac{2\pi}{\omega}$}
+\index{Kreisfrequenz $\omega$}
+\index{Bodediagramm}
+\begin{itemize}
+	\item Zeitkonstante \(T\) im Bode-Diagram: \emph{Wie schnell reagiert das System?}
+	\item Periodendauer \(T=\tfrac{2\pi}{\omega_D}\) mit \(\omega_D = \omega_0\sqrt{1-D^2}\): \emph{Wie schnell schwingt das Signal?}
+\end{itemize}
 \subsection{Fourier-Transformation}
 \subsection{Filter}
 
@@ -741,6 +751,21 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 \subsection{Nicht-minimalphasige Systeme}
 \subsubsection{PA\(_1\)}
 \subsubsection{PT\(_t\), PT\(_1\)T\(_t\)}
+
+\paragraph{Totzeit \(T_t\) aus Phasengang ableiten}
+In Abbildung~\ref{fig:totzeit-eckfrequenz} kann aus dem Regelkreis mit einem Totzeitglied die Eckfrequenz des Totzeitgliedes so abgelesen werden, dass wenn \(\varphi\) gegen \(-180^\circ\) strebt, und die \(\varphi\) dann exponentiell abfällt wie üblich bei einem Totzeitglied, dann ist die Eckfrequenz dort wo das Totzeitelement ca. \(57^\circ\) abgefallen ist. Das Beispiel sieht man in Abbildung~\ref{fig:totzeit-eckfrequenz}.
+\begin{enumerate}[label=\arabic*.]
+    \item Was wäre \(\varphi\) ohne Totzeitglied für \(\omega \to \infty\) (Asymptoten rot und orange)?
+    \item Wenn die Differenz \(\varphi_{0,\mathrm{ohne\,Totzeit}}\) und \(\varphi_0\) \(57^\circ\) ist, \(\omega_t\) ablesen (lila).
+    \item \(T_t = \dfrac{1}{\omega_t}\)
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png}
+    \caption{Eckfrequenz des Totzeitgliedes aus dem Phasengang ablesen.}
+    \label{fig:totzeit-eckfrequenz}
+\end{figure}
 
 \subsection{Nicht-parametrische Identifikation}
 \subsection{Parametrische Identifikation}
@@ -909,6 +934,21 @@ m=-p.
 \subsubsection{Gütemaße und Kennwerte}
 \subsubsection{Ansätze des Reglerentwurfs}
 \subsection{Statischer Reglerentwurf}
+\begin{defbar}
+\textbf{Regelfaktor}\par
+\index{Regelfaktor}
+
+\noindent Der Regelfaktor charakterisiert die statische Leistungsfähigkeit eines Reglers gegenüber Störungen und ist als das Verhältnis
+\[
+R=\frac{y_{\infty}^{mR}}{y_{\infty}^{oR}}=\frac{1}{1+K_S K_R}=\frac{1}{1+G_0(s=0)}
+\]
+definiert. Sein konkreter Wert ist im Fall stabiler linearer Systeme unabhängig vom statischen Endwert der Störungen.\footnote{Quelle: Umdruck S. 266}
+\end{defbar}
+\begin{itemize}
+	\item Wenn \(G_0\) einen \textbf{integrierenden Anteil} hat wird \(G_0(s=0) = \infty \) und somit \(R = \frac{1}{1+\infty }= 0\) 
+	\item Regelfaktor sollte bei \textbf{sinnvollen} Regelungen \(R<1\) sein. \index{Regelfaktor!sinnvoll}
+	\item Für \textbf{technisch sinnvolle} Regelungen wird fast immer ein Regelfaktor \(R<0{,}2\) gefordert. \index{Regelfaktor!technisch Sinnvoll}
+\end{itemize}
 \subsection{Abwägungen bei der Reglerverstärkung}
 \subsubsection{Vorteile hoher Verstärkungen}
 \subsubsection{Nachteile hoher Verstärkungen}
@@ -922,12 +962,85 @@ m=-p.
 \subsubsection{Grundidee}
 \subsubsection{Hohe Verstärkung bei niedrigen Frequenzen}
 \subsubsection{Übergangsbereich}
+\begin{defbar}
+	\textbf{Empfohlene Bereiche für Amplituden- und Phasenreserve\footnote{Quelle: Umdruck S. 284}}\par
+	\index{Amplitudenreserve \(A_R\)! Empfohlener Bereich}
+	\index{Phasenreserve \(alpha_R\)! Empfohlener Bereich}
+	Für \textbf{Festwertregelungen} wird als allgemeine Entwurfsregel
+	\[
+	1{,}5 < A_R < 3{,}0 \;;\quad 20^\circ < \alpha_R < 70^\circ
+	\]
+	empfohlen; für \textbf{Folgeregelungen} lauten die empfohlenen Bereiche
+	\[
+	4 < A_R < 10 \;;\quad 40^\circ < \alpha_R < 60^\circ .
+	\]
+	
+\end{defbar}
 \subsubsection{Niedrige Verstärkung bei hohen Frequenzen}
 \subsection{Betragskriterium und Symmetrisches Kriterium}
-\subsection{Polvorgabe}
-\subsubsection{Polvorgabe für Ausgangsrückführungen}
-\subsubsection{Polvorgabe für Zustandsrückführungen}
-\subsubsection{Steuerbarkeit}
+\subsection{Polvorgabe}\index{Polvorgabe}
+\subsubsection{Polvorgabe für Ausgangsrückführungen}\index{Polvorgabe!für Ausgangsrückführung}
+\subsubsection{Polvorgabe für Zustandsrückführungen}\index{Polvorgabe!für Zustandsrückführung}
+\paragraph{Idee der Polvorgabe}
+\noindent Mithilfe der Zustandsrückführung kann man die Polstellen der geschlossenen Regelkreises beliebig vorgeben. In Abbildung~\ref{fig:zustandsregelung-prop} ist eine Zustandsregelung mit Proportionalgliedern zu sehen.\\
+\noindent Zu sehen ist, dass alle Zustände \(\mathbf{x}^T = [x_1 \quad x_2 \quad x_3]\) über ein Proportionalglied in der Form \(\mathbf{u}=-\mathbf{K}\mathbf{x}\) zurückgeführt werden.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{images/Zustandsregelung F23 (1).png}
+	\caption{Zustandsregelung mit \(k^T = (k_1, k_2,k_3)\)}
+	\label{fig:zustandsregelung-prop}
+\end{figure}
+
+
+\paragraph{Hinweis: Polvorgabe ist nur möglich, wenn das Paar \(\mathbf{A,B}\) steuerbar ist (siehe: Steuerbarkeit 11.3.3)!}
+\paragraph{Zustandsregler \(\mathbf{k}^T = [k_1 \quad k_2]\) bestimmen.}
+
+\(\mathbf{A} = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}, \mathbf{b}= \begin{pmatrix} b_{1} \\ b_{2}\end{pmatrix}, \lambda_i\)
+
+\begin{enumerate}[label=\arabic*.]
+	\item \(\mathbf{A_k}\) bestimmen.
+	
+	\[
+	\mathbf{A}_k = \mathbf{A} - \mathbf{B}\mathbf{K} \quad \text{oder} \quad \mathbf{A}_k = \mathbf{A} - \mathbf{b}\,\mathbf{k}^T
+	\]
+	
+	\begin{equation}\mathbf{A}_k=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}-\begin{pmatrix} b_{1} \\ b_{2} \end{pmatrix}\begin{pmatrix} k_{1} & k_{2} \end{pmatrix}=\begin{pmatrix} a_{11} - b_1 k_1 & a_{12} - b_1 k_2 \\ a_{21} - b_2 k_1 & a_{22} - b_2 k_2 \end{pmatrix}.\end{equation}
+	\item Matrix für Determinante aufstellen.
+	\begin{equation}
+		\det\!
+		\left(\lambda\mathbf{I}-\mathbf{A}_k\right)
+		=
+		\begin{vmatrix}
+			\lambda-(a_{11} - b_1 k_1) & -(a_{12} - b_1 k_2) \\
+			-(a_{21} - b_2 k_1) & \lambda-(a_{22} - b_2 k_2)
+		\end{vmatrix}.
+	\end{equation}
+	\item Determinante ausrechnen und \(p(\lambda) \) aufstellen.
+	\item Koeffizientenvergleich mit vorgegebenen Polstellen.
+	\begin{equation}
+		\underbrace{\det\!
+		\left(\lambda\mathbf{I}-\mathbf{A}_k\right)}_{\substack{\text{Eigenwerte der Systemmatrix } \mathbf{A}_k}}
+		=
+		\underbrace{(\lambda - \lambda_1)(\lambda - \lambda_2)\cdots(\lambda - \lambda_n)}_{\text{vorgegebene Polstellen}}
+	\end{equation}
+	
+\end{enumerate}
+\subsubsection{Steuerbarkeit}\index{Steuerbarkeit}
+\begin{defbar}
+\textbf{Steuerbarkeitskriterium von Kalman}\par\index{Steuerbarkeit!Kriterium von Kalman}\index{Kalman}\index{Qs@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeit}}
+Das Paar \((\mathbf{A}, \mathbf{B})\) ist genau dann steuerbar, wenn die sogenannte Steuerbarkeitsmatrix
+\[
+\mathbf{Q}_S = \bigl[\mathbf{B}\ \ \mathbf{A}\mathbf{B}\ \ \mathbf{A}^2\mathbf{B}\ \ \cdots\ \ \mathbf{A}^{n-1}\mathbf{B}\bigr]
+\]
+vollen Rang besitzt\footnote{Quelle: Umdruck S. 304}.
+\end{defbar}
+
+
+\noindent Falls \(\mathbf{Q}_s\) quadratisch ist (z.B. SISO), gilt: \emph{nicht steuerbar} \(\Leftrightarrow \det(\mathbf{Q}_s)=0\).
+
+\noindent \textbf{Hinweis:} Es ist sinnvoll, beim Rechnen konsequent \emph{Matrix $\cdot$ Vektor} zu multiplizieren, also z.B. \(\mathbf{A}(\mathbf{A}\mathbf{B})\) statt \((\mathbf{A}\mathbf{A})\mathbf{B}\).
+
 \subsection{Beobachterentwurf}
 \subsubsection{Zustandsschätzung}
 \subsubsection{Luenberger-Beobachter}
@@ -964,12 +1077,71 @@ m=-p.
 \subsection{Abtastregelungen}
 \subsubsection{Definitionen}
 \subsubsection{Abtaster und Halteglied}
+\index{Abtaster}
+\index{Halteglied! Wirkungsplan}
+\noindent Aufbau einer einfachen Abtastregelung\footnote{Quelle: Umdruck S. 377}googoogogog
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/14.1.2 Einfache Abtastregelung.png}
+    \caption{Einfache Abtastregelung.}
+\end{figure}
+
+\paragraph{Stabiltät einer Abtastregelung}\index{Abtaster! Stabilität}
+\noindent Die Abtastregelung wirkt näherungsweise wie eine zusätzliche Totzeit \(T_t \approx T/2\) (Phasenverzug), wodurch die Stabilitätsreserven typischerweise kleiner werden. Stabiltät muss entsprechend erneut geprüft werden.\index{Stabilität! Abtaster-Halteglied}
 \subsubsection{Aliasing}
+
+\paragraph{Shannon-/Nyquist-Abtasttheorem (für \(T_{\min}\)) }
+\index{Abtaster!Abtasttheorem nach Shannon}
+\index{Abtasttheorem nach Shannon|see{Abtaster}}
+\index{Shannontheorem|see{Abtaster}}
+\index{Nyquist-Abtasttheorem|see{Abtaster}}
+
+Für die höchste in dieser Funktion enthaltene Frequenz \(\omega_{\max}\) und die Abtastfrequenz \(\omega_s\) gilt:\footnote{Umdruck S. 380.}
+
+% Shannon/Nyquist-Abtasttheorem (in Kreisfrequenzen)
+\[
+2\,\omega_{\max} < \omega_s
+\]
+\[
+\omega_s = \frac{2\pi}{T}, \qquad \omega_{\max} = \frac{2\pi}{T_{\min}}
+\]
+
+% Einsetzen
+\[
+2\cdot \frac{2\pi}{T_{\min}} < \frac{2\pi}{T}
+\]
+
+% Kürzen von 2\pi
+\[
+\frac{2}{T_{\min}} < \frac{1}{T}
+\]
+
+% Invertieren (alles positiv) und umstellen
+\[
+T < \frac{T_{\min}}{2}
+\]
+
+
 \subsubsection{Verschaltung zu hybriden Systemen}
 \subsection{Einführung in Differenzengleichungen}
 \subsection{Autonome zeitdiskrete Systeme}
 \subsection{Umrechnen von Differenzen- und Differentialgleichungen}
 \subsubsection{Rückwärtsdifferenzen}
+\begin{enumerate}[label=\arabic*.]
+	\item Es dürfen nur Terme wie \(x_k, y_k, u_k\) hinzugefügt werden.
+	\item Es dürfen KEINE! Terme wie \(x_{k-1}, y_{k-2}, u_{k-1}\) hinzugefügt werden.
+	\item \(y(t) \approx y_k\)
+	\item \(\dot{y}(t) \approx \dfrac{y_k - y_{k-1}}{T}\)
+	\item \(\ddot{y}(t) \approx \dfrac{y_k - 2y_{k-1} + y_{k-2}}{T^2}\)
+	\item \(y(t-T_t) \approx y_{k-d}\) mit \(d = \dfrac{T_t}{T}\).
+	
+	\textbf{Hinweis:} In den meisten Fällen wird der Term \(y_{k-d}\) als Totzeitglied angenommen. Besonders ist bei einem Koeffizientenvergleich darauf zu achten, ob ein Totzeitglied in der vorgegebenen Gleichung vorhanden ist.
+	\\
+	Wenn ein Totzeitglied \(K\,e^{-sT_t}\) vorhanden ist, dann \(y_{k-d}\) als Totzeitglied annehmen.
+	\\
+	Wenn kein Totzeitglied vorhanden ist, dann in den meisten Fällen \(\dot{y}(t)\) oder selten \(\ddot{y}(t)\).
+\end{enumerate}
+
 \subsubsection{Analytische Lösung}
 \subsection{Quasikontinuierlicher Reglerentwurf}
 \subsection{Zeitdiskreter Bildbereich}
@@ -992,93 +1164,6 @@ m=-p.
 \subsection{Limitierungen und Erweiterungen}
 
 \subsubsection{Allgemein}
-\begin{enumerate}[label=\arabic*.]
-	\item Es dürfen nur Terme wie \(x_k, y_k, u_k\) hinzugefügt werden.
-	\item Es dürfen KEINE! Terme wie \(x_{k-1}, y_{k-2}, u_{k-1}\) hinzugefügt werden.
-	\item \(y(t) \approx y_k\)
-	\item \(\dot{y}(t) \approx \dfrac{y_k - y_{k-1}}{T}\)
-	\item \(\ddot{y}(t) \approx \dfrac{y_k - 2y_{k-1} + y_{k-2}}{T^2}\)
-	\item \(y(t-T_t) \approx y_{k-d}\) mit \(d = \dfrac{T_t}{T}\).
-	
-	\textbf{Hinweis:} In den meisten Fällen wird der Term \(y_{k-d}\) als Totzeitglied angenommen. Besonders ist bei einem Koeffizientenvergleich darauf zu achten, ob ein Totzeitglied in der vorgegebenen Gleichung vorhanden ist.
-	\\
-	Wenn ein Totzeitglied \(K\,e^{-sT_t}\) vorhanden ist, dann \(y_{k-d}\) als Totzeitglied annehmen.
-	\\
-	Wenn kein Totzeitglied vorhanden ist, dann in den meisten Fällen \(\dot{y}(t)\) oder selten \(\ddot{y}(t)\).
-\end{enumerate}
-
-\section{Zustandsraum}
-\subsection{Zustandsregelung}
-In Figur 1 ist eine Zustandsregelung mit Proportionalgliedern zu sehen.
-
-\begin{figure}
-    \centering
-\includegraphics[width=0.5\linewidth]{images/Zustandsregelung F23 (1).png}
-    \caption{Zustandsregelung mit \(k^T = (x_1, x_2,x_3)\)}
-    \label{fig:enter-label}
-\end{figure}
-
-\subsection{Zustandsregler \(\mathbf{k}^T = [k_1 \quad k_2]\) bestimmen.}
-
-\(\mathbf{A} = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}, \mathbf{b}= \begin{pmatrix} b_{1} \\ b_{2}\end{pmatrix}\)
-
-\begin{enumerate}[label=\arabic*.]
-    \item \(\mathbf{A_k}\) bestimmen.
-
-    \[
-    \mathbf{A}_k = \mathbf{A} - \mathbf{B}\mathbf{K} \quad \text{oder} \quad \mathbf{A}_k = \mathbf{A} - \mathbf{b}\,\mathbf{k}^T
-    \]
-
-    \begin{equation}\mathbf{A}_k=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}-\begin{pmatrix} b_{1} \\ b_{2} \end{pmatrix}\begin{pmatrix} k_{1} & k_{2} \end{pmatrix}=\begin{pmatrix} a_{11} - b_1 k_1 & a_{12} - b_1 k_2 \\ a_{21} - b_2 k_1 & a_{22} - b_2 k_2 \end{pmatrix}.\end{equation}
-    \item Matrix für Determinante aufstellen.
-    \begin{equation}
-    \det\!
-    \left(s\mathbf{I}-\mathbf{A}_k\right)
-    =
-    \begin{vmatrix}
-    s-(a_{11} - b_1 k_1) & -(a_{12} - b_1 k_2) \\
-    -(a_{21} - b_2 k_1) & s-(a_{22} - b_2 k_2)
-    \end{vmatrix}.
-    \end{equation}
-    \item Determinante ausrechnen und \(p(s) \) aufstellen.
-    \item Koeffizientenvergleich mit vorgegebenen Polstellen.
-
-\end{enumerate}
-
-\section{Steuerbarkeitskriterium von Kalman}
-\index{Steuerbarkeitskriterium von Kalman}
-\index{Steuerbarkeitskriterium von Kalman!Umdruck (S. 304)}
-\index{Kalman}
-\index{Steuerbarkeitsmatrix@$Q_s$}
-\index{Q_s@\(Q_s\)|see{Steuerbarkeitsmatrix}}
-\index{Steuerbarkeitsmatrix!$Q_s$}
-\index{Qs Steuerbarkeitsmatrix@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeitsmatrix}}
-
-Das Paar \((\mathbf{A},\mathbf{B})\) ist genau dann steuerbar, wenn die sogenannte Steuerbarkeitsmatrix
-\begin{equation}
-\mathbf{Q}_s = \bigl[\mathbf{B}\;\;\mathbf{A}\mathbf{B}\;\;\mathbf{A}^2\mathbf{B}\;\;\cdots\;\;\mathbf{A}^{n-1}\mathbf{B}\bigr]
-\tag{11.47}
-\end{equation}
-vollen Rang besitzt.
-\footnotemark\footnotetext{Quelle: Umdruck S. 304}
-
-\noindent Falls \(\mathbf{Q}_s\) quadratisch ist (z.B. SISO), gilt: \emph{nicht steuerbar} \(\Leftrightarrow \det(\mathbf{Q}_s)=0\).
-
-\noindent \textbf{Hinweis:} Es ist sinnvoll, beim Rechnen konsequent \emph{Matrix $\cdot$ Vektor} zu multiplizieren, also z.B. \(\mathbf{A}(\mathbf{A}\mathbf{B})\) statt \((\mathbf{A}\mathbf{A})\mathbf{B}\).
-
-\section{Partialbruchzerlegung}
-
-\subsection{Einführung}
-Die Partialbruchzerlegung ist eine Methode, um rationale Funktionen, wie \(\frac{1 - s}{(s + 1)(s^2 + 1)}\), in einfachere Bruchterme zu zerlegen, die leichter zu integrieren oder zu analysieren sind. Dies ist besonders nützlich in der Signalverarbeitung, Regelungstechnik und bei der Lösung von Differentialgleichungen.
-
-\subsection{Beispiel: \(\frac{1 - s}{(s + 1)^2(s^2 + 1)}\)}
-Wir zerlegen den Ausdruck \(\frac{1 - s}{(s + 1)(s^2 + 1)}\) in Partialbrüche. Der Nenner besteht aus einem linearen Faktor \(s + 1\) und einem quadratischen Faktor \(s^2 + 1\). Die allgemeine Form der Partialbruchzerlegung lautet:
-
-\[
-\frac{1 - s}{(s + 1)^2(s^2 + 1)} = \frac{A}{s + 1} + \frac{B}{(s + 1)^2} + \frac{Cs + D}{s^2 + 1}
-\]
-
-wobei \(A\), \(B\) und \(C\) Konstanten sind, die wir bestimmen müssen.
 
 \section{Informationen über Ortskurven}
 Ortskurven für den aufgeschnittenen Regelkreis \(G_0\).
@@ -1232,18 +1317,6 @@ und somit:
 \begin{equation}
  h(t) = \mathcal{L}^{-1}\left\{\frac{G_s(s)}{s}\right\}
 \end{equation}
-
-\section{Merksatz / Intuition (Bode: Zeitbereich \& Frequenzbereich)}
-\index{Zeitkonstante $T$}
-\index{Periodendauer $T=\frac{2\pi}{\omega}$}
-\index{Kreisfrequenz $\omega$}
-\index{Bodediagramm}
-
-\subsection{Intuition}
-\begin{itemize}
-    \item Zeitkonstante \(T\) im Bode-Diagram: \emph{Wie schnell reagiert das System?}
-    \item Periodendauer \(T=\tfrac{2\pi}{\omega_D}\) mit \(\omega_D = \omega_0\sqrt{1-D^2}\): \emph{Wie schnell schwingt das Signal?}
-\end{itemize}
 
 \section{Mathematische Grundlagen}
 
@@ -1403,6 +1476,20 @@ A^{-1} =
 \qquad \text{für } ad - bc \neq 0
 \]
 
+\subsection{Partialbruchzerlegung}
+
+\subsubsection{Einführung}
+Die Partialbruchzerlegung ist eine Methode, um rationale Funktionen, wie \(\frac{1 - s}{(s + 1)(s^2 + 1)}\), in einfachere Bruchterme zu zerlegen, die leichter zu integrieren oder zu analysieren sind. Dies ist besonders nützlich in der Signalverarbeitung, Regelungstechnik und bei der Lösung von Differentialgleichungen.
+
+\subsubsection{Beispiel: \(\frac{1 - s}{(s + 1)^2(s^2 + 1)}\)}
+Wir zerlegen den Ausdruck \(\frac{1 - s}{(s + 1)(s^2 + 1)}\) in Partialbrüche. Der Nenner besteht aus einem linearen Faktor \(s + 1\) und einem quadratischen Faktor \(s^2 + 1\). Die allgemeine Form der Partialbruchzerlegung lautet:
+
+\[
+\frac{1 - s}{(s + 1)^2(s^2 + 1)} = \frac{A}{s + 1} + \frac{B}{(s + 1)^2} + \frac{Cs + D}{s^2 + 1}
+\]
+
+wobei \(A\), \(B\) und \(C\) Konstanten sind, die wir bestimmen müssen.
+
 
 \subsection{ \(G(s)\) ist gegeben, Differentialgleichung bestimmen.}
 
@@ -1417,38 +1504,6 @@ DGL durch inverse Laplace-Transformation von \( G(s) =\dfrac{X(s)}{U(s)}= \dfrac
 \end{enumerate}
 
 \newpage
-
-\section{Shannon-/Nyquist-Abtasttheorem (für \(T_{\min}\)) }
-\index{Abtasttheorem}
-\index{Abtasttheorem!nach Shannon (S. 380)}
-\index{Shannontheorem!S. 380}
-\index{Nyquist-Abtasttheorem|see{Abtasttheorem}}
-
-Für die höchste in dieser Funktion enthaltene Frequenz \(\omega_{\max}\) und die Abtastfrequenz \(\omega_s\) gilt:\footnote{Umdruck S. 380.}
-
-% Shannon/Nyquist-Abtasttheorem (in Kreisfrequenzen)
-\[
-2\,\omega_{\max} < \omega_s
-\]
-\[
-\omega_s = \frac{2\pi}{T}, \qquad \omega_{\max} = \frac{2\pi}{T_{\min}}
-\]
-
-% Einsetzen
-\[
-2\cdot \frac{2\pi}{T_{\min}} < \frac{2\pi}{T}
-\]
-
-% Kürzen von 2\pi
-\[
-\frac{2}{T_{\min}} < \frac{1}{T}
-\]
-
-% Invertieren (alles positiv) und umstellen
-\[
-T < \frac{T_{\min}}{2}
-\]
-
 
 \section{Stationäre Genauigkeit}
 \subsection{Stationäre Genauigkeit im geschlossenen Regelkreis}

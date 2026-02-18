@@ -1,145 +1,171 @@
 \begin{theindex}
 
-  \item Absolutgrößen, 14
-  \item Abtasttheorem, 45
-    \subitem nach Shannon (S. 380), 45
-  \item Abweichungsgrößen, 14
-  \item akausale Systeme, 13
-  \item Anfangsbedingungen, 12
-  \item Ansprechverhalten, 39
-    \subitem Abhängigkeit von $\omega_d$, 39
+  \item Absolutgrößen, 16
+  \item Abtaster, 39
+    \subitem  Stabilität, 39
+    \subitem Abtasttheorem nach Shannon, 39
+  \item Abtasttheorem nach Shannon, \see{Abtaster}{39}
+  \item Abweichungsgrößen, 16
+  \item akausale Systeme, 15
+  \item Amplitudenreserve \(A_R\)
+    \subitem  Empfohlener Bereich, 34
+  \item Anfangsbedingungen, 14
+  \item Anfangswertsatz, 19
+  \item Ansprechverhalten, 42
+    \subitem Abhängigkeit von $\omega_d$, 42
 
   \indexspace
 
-  \item Bezeichnungen für Systeme, 8
-  \item Bodediagramm, 39, 41
+  \item Bezeichnungen für Systeme, 10
+  \item Bodediagramm, 22, 42
 
   \indexspace
 
-  \item Chien, Hrones, Reswick (CHR), 39
-  \item crossover frequency, \see{Durchtrittsfrequenz}{39}
-    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 39
+  \item Chien, Hrones, Reswick (CHR), 42
+  \item crossover frequency, \see{Durchtrittsfrequenz}{42}
+    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 42
 
   \indexspace
 
-  \item $\delta(t)$, 40
-  \item Durchgangsfrequenz, \see{Durchtrittsfrequenz}{39}
+  \item $\delta(t)$, 43
+  \item Durchgangsfrequenz, \see{Durchtrittsfrequenz}{42}
   \item Durchtrittsfrequenz
-    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 39
-  \item $\omega_d$, 39
+    \subitem Umdruck (S. 240, 248, 270, 273, 286, 363), 42
+  \item $\omega_d$, 42
 
   \indexspace
 
-  \item Eckkreisfrequenz, 14
+  \item Eckkreisfrequenz, 16
   \item Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell
-    \subitem Umdruck (S. 276), 39
+    \subitem Umdruck (S. 276), 42
+  \item Endwertsatz, 19
 
   \indexspace
 
-  \item $G(j\omega)$, 23
+  \item $G(j\omega)$, 21
 
   \indexspace
 
-  \item Geschlossener Regelkreis, 8
-  \item Gesetz der Sparsamkeit, 14
-  \item Gewichtsfunktion, 40
-  \item $g(t)$, 40
+  \item Geschlossener Regelkreis, 10
+  \item Gesetz der Sparsamkeit, 16
+  \item Gewichtsfunktion, 43
+  \item $g(t)$, 43
+  \item Grenzwertsätze, 19
+    \subitem Anwendbarkeit, 19
 
   \indexspace
 
-  \item $y(t)$, 40
+  \item Halteglied
+    \subitem  Wirkungsplan, 39
 
   \indexspace
 
-  \item Kalman, 37
-  \item Kausale Systeme, 13
-  \item Kreisfrequenz $\omega$, 41
+  \item $y(t)$, 43
 
   \indexspace
 
-  \item Lineare Systeme, 12
-  \item LTI-System, 12
+  \item Kalman, 35
+  \item Kausale Systeme, 15
+  \item Kreisfrequenz $\omega$, 22
 
   \indexspace
 
-  \item MIMO-System, 13
-  \item Minimale Realisierung, 14
-  \item Modell, 12
+  \item Lineare Systeme, 14
+  \item LTI-System, 14
 
   \indexspace
 
-  \item Nyquist-Abtasttheorem, \see{Abtasttheorem}{45}
+  \item MIMO-System, 15
+  \item Minimale Realisierung, 16
+  \item Modell, 14
 
   \indexspace
 
-  \item Offener Regelkreis, 8
+  \item Nyquist-Abtasttheorem, \see{Abtaster}{39}
 
   \indexspace
 
-  \item P-Glied, 39
-  \item Periodendauer $T=\frac{2\pi}{\omega}$, 41
-  \item \(\angle G(j\omega)\), 23
-  \item PT$_2$-Glied, 39
+  \item Offener Regelkreis, 10
 
   \indexspace
 
-  \item \(Q_s\), \see{Steuerbarkeitsmatrix}{37}
-  \item \(Q_s\) Steuerbarkeitsmatrix, \see{Steuerbarkeitsmatrix}{37}
+  \item P-Glied, 42
+  \item Periodendauer $T=\frac{2\pi}{\omega}$, 22
+  \item \(\angle G(j\omega)\), 21
+  \item Phasenreserve \(alpha_R\)
+    \subitem  Empfohlener Bereich, 34
+  \item Polvorgabe, 34
+    \subitem für Ausgangsrückführung, 34
+    \subitem für Zustandsrückführung, 34
+  \item PT$_2$-Glied, 42
 
   \indexspace
 
-  \item Regelabweichung, 39
-    \subitem Umdruck (S. 165), 39
-  \item Regelungsnormalform, 13
-  \item Relativer Grad, 8, 12
-    \subitem Umdruck (S. 26), 8
+  \item \(Q_s\) Steuerbarkeitsmatrix, \see{Steuerbarkeit}{35}
 
   \indexspace
 
-  \item Shannontheorem
-    \subitem S. 380, 45
-  \item Signale und Systeme, 8
-  \item Signale und Systeme im Regelkreis, 8
-  \item Sinusförmige Signale, 24
-    \subitem Umdruck (S. 119), 24
-  \item SISO-System, 13
-  \item $y(t)$, 40
-  \item $1(t)$, 40
-  \item stationary accuracy, \see{Stationäre Genauigkeit}{38, 39}
-    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 39
-  \item Stationäre Genauigkeit, 38, 39
-    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 39
-  \item Steuerbarkeitskriterium von Kalman, 37
-    \subitem Umdruck (S. 304), 37
-  \item Steuerbarkeitsmatrix
-    \subitem $Q_s$, 37
-  \item $Q_s$, 37
-  \item Systemantwort, 23
-  \item Systemordnung, 12
+  \item Regelabweichung, 42
+    \subitem Umdruck (S. 165), 42
+  \item Regelfaktor, 33
+    \subitem sinnvoll, 33
+    \subitem technisch Sinnvoll, 33
+  \item Regelungsnormalform, 15
+  \item Relativer Grad, 10, 14
+    \subitem Umdruck (S. 26), 10
+  \item Routh / Hurwitz Stabilitätskriterium, 30
 
   \indexspace
 
-  \item \(T_u\)--\(T_g\), 39
-    \subitem Umdruck (S. 207), 39
+  \item Shannontheorem, \see{Abtaster}{39}
+  \item Signale und Systeme, 9
+  \item Signale und Systeme im Regelkreis, 10
+  \item Sinusförmige Signale, 21
+    \subitem Umdruck (S. 119), 21
+  \item SISO-System, 15
+  \item $y(t)$, 43
+  \item $1(t)$, 43
+  \item Sprungfähigkeit, 20
+    \subitem  im Zustandsraum, 20
+    \subitem  in Abhängigkeit von rel. Grad \(r\), 20
+  \item Sprungfähigkeit im Zustandsraum, 20
+  \item Stabilität
+    \subitem  Abtaster-Halteglied, 39
+    \subitem Algebraische Stabilitätskriterien, 30
+    \subitem Allgemeine Stabilitätskriterien, 30
+    \subitem Routh / Hurwitz Stabilität, 30
+  \item stationary accuracy, \see{Stationäre Genauigkeit}{41, 42}
+    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 42
+  \item Stationäre Genauigkeit, 41, 42
+    \subitem Umdruck (S. 164, 167, 260, 348, 552, 569), 42
+  \item Steuerbarkeit, 35
+    \subitem Kriterium von Kalman, 35
+  \item Systemantwort, 21
+  \item Systemordnung, 14
 
   \indexspace
 
-  \item u(t)=$\sin(\omega t)$, 24
+  \item \(T_u\)--\(T_g\), 42
+    \subitem Umdruck (S. 207), 42
 
   \indexspace
 
-  \item Vorzeichenkonvention, 8, \see{Umdruck (S.123)}{8}
+  \item u(t)=$\sin(\omega t)$, 21
 
   \indexspace
 
-  \item Zeitinvariante Systeme, 12
-  \item Zeitkonstante, 14
-  \item Zeitkonstante $T$, 41
-  \item Zustandsraumdarstellung, 13
+  \item Vorzeichenkonvention, 10, \see{Umdruck (S.123)}{10}
 
   \indexspace
 
-  \item Übergangsfunktion, 40
-  \item $h(t)$, 40
+  \item Zeitinvariante Systeme, 14
+  \item Zeitkonstante, 16
+  \item Zeitkonstante $T$, 22
+  \item Zustandsraumdarstellung, 15
+
+  \indexspace
+
+  \item Übergangsfunktion, 43
+  \item $h(t)$, 43
 
 \end{theindex}
