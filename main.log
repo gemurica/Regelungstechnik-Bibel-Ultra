@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.9)  18 FEB 2026 22:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.9)  22 FEB 2026 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1347,18 +1347,16 @@ LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 
 [5]
 
-[6]
-
-[7])
+[6])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
 
-[8]
+[7]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 114.
-<images/Bildschirmfoto 2026-02-12 um 22.00.15.png, id=40, 644.4075pt x 653.4412
+<images/Bildschirmfoto 2026-02-12 um 22.00.15.png, id=37, 644.4075pt x 653.4412
 5pt>
 File: images/Bildschirmfoto 2026-02-12 um 22.00.15.png Graphic file (type png)
 <use images/Bildschirmfoto 2026-02-12 um 22.00.15.png>
@@ -1425,366 +1423,351 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 7.3pt on input line 126.
 
 
-[9
+[8
 
  <./images/Bildschirmfoto 2026-02-12 um 22.00.15.png>]
 
-[10]
+[9]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.6pt on input line 186.
 
+
+[10]
 
 [11]
 
 [12]
 
-[13]
-
-[14
+[13
 
 ]
+
+[14]
 
 [15]
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 12.0pt on input line 504.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 8.8pt on input line 504.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 6.6pt on input line 504.
 
-[16]
 
-[17
+[16
 
 ]
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 489.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 494.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 494.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 10.0pt on input line 564.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 7.3pt on input line 564.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 5.5pt on input line 564.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 579.
 
 
-[18
+[17]
 
-]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 549.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 12.0pt on input line 613.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 8.8pt on input line 613.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 6.6pt on input line 613.
+[18]
+Package mdframed Info: Not enough space on this page on input line 661.
 
 
 [19]
-Package mdframed Info: Not enough space on this page on input line 616.
+Package mdframed Info: Not enough space on this page on input line 661.
 
 
 [20]
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 10.0pt on input line 640.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 7.3pt on input line 640.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 5.5pt on input line 640.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 12.0pt on input line 689.
 
 
 [21
 
 ]
+Package mdframed Info: Not enough space on this page on input line 764.
+
 
 [22]
-<images/Pol-Nullstellen im Bodediagramm.png, id=91, 892.33376pt x 858.20625pt>
+Package mdframed Info: Not enough space on this page on input line 764.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 797.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 10.0pt on input line 802.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 802.
+
+
+[23]
+
+[24]
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 14.4pt on input line 871.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 10.5pt on input line 871.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 7.9pt on input line 871.
+
+
+[25]
+
+[26]
+
+[27]
+
+[28
+
+]
+
+[29]
+<images/Pol-Nullstellen im Bodediagramm.png, id=113, 892.33376pt x 858.20625pt>
+
 File: images/Pol-Nullstellen im Bodediagramm.png Graphic file (type png)
 <use images/Pol-Nullstellen im Bodediagramm.png>
 Package pdftex.def Info: images/Pol-Nullstellen im Bodediagramm.png  used on in
-put line 724.
+put line 1102.
 (pdftex.def)             Requested size: 425.41444pt x 409.14505pt.
-<images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, id=92, 597.50829pt x 845.0471
-pt>
+<images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, id=114, 597.50829pt x 845.047
+1pt>
 File: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf Graphic file (type pdf)
 <use images/TPR 5 - Appetizer und Zusatzaufgaben.pdf>
 Package pdftex.def Info: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf  used 
-on input line 748.
+on input line 1126.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, id=94, page=1, 597.50829pt x 
-845.0471pt>
+<images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, id=116, page=1, 597.50829pt x
+ 845.0471pt>
 File: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf Graphic file (type pdf)
 <use images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, page 1>
 Package pdftex.def Info: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf , page
-1 used on input line 748.
+1 used on input line 1126.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf Graphic file (type pdf)
 <use images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, page 1>
 Package pdftex.def Info: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf , page
-1 used on input line 748.
+1 used on input line 1126.
 (pdftex.def)             Requested size: 537.75249pt x 760.53537pt.
 
 
-[23
+[30
 
 ]
 File: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf Graphic file (type pdf)
 <use images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, page 1>
 Package pdftex.def Info: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf , page
-1 used on input line 748.
+1 used on input line 1126.
 (pdftex.def)             Requested size: 537.75249pt x 760.53537pt.
 File: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf Graphic file (type pdf)
 <use images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, page 1>
 Package pdftex.def Info: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf , page
-1 used on input line 748.
+1 used on input line 1126.
 (pdftex.def)             Requested size: 537.75249pt x 760.53537pt.
 
 
 File: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf Graphic file (type pdf)
 <use images/TPR 5 - Appetizer und Zusatzaufgaben.pdf, page 1>
 Package pdftex.def Info: images/TPR 5 - Appetizer und Zusatzaufgaben.pdf , page
-1 used on input line 748.
+1 used on input line 1126.
 (pdftex.def)             Requested size: 537.75249pt x 760.53537pt.
-[24
+[31
 
  <./images/TPR 5 - Appetizer und Zusatzaufgaben.pdf>]
 
-[25 <./images/Pol-Nullstellen im Bodediagramm.png>]
+[32 <./images/Pol-Nullstellen im Bodediagramm.png>]
 
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 801.
-
-
-
-[26
+[33
 
 ]
-<images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png, id=253, 
+Package mdframed Info: Not enough space on this page on input line 1200.
+
+
+[34]
+<plot_beispiel.pdf, id=278, 282.0949pt x 158.82536pt>
+File: plot_beispiel.pdf Graphic file (type pdf)
+<use plot_beispiel.pdf>
+Package pdftex.def Info: plot_beispiel.pdf  used on input line 1251.
+(pdftex.def)             Requested size: 450.43253pt x 253.60226pt.
+
+
+[35 <./plot_beispiel.pdf>]
+<images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png, id=291, 
 1180.91188pt x 637.38126pt>
 File: images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png Grap
 hic file (type png)
 <use images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png>
 Package pdftex.def Info: images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phas
-endiagramm.png  used on input line 836.
+endiagramm.png  used on input line 1272.
 (pdftex.def)             Requested size: 425.41444pt x 229.60295pt.
 
 
-[27]
-
-[28 <./images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png>]
-<images/8.3.2 TuTg Modell.png, id=261, 963.6pt x 686.565pt>
+[36 <./images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png>]
+<images/8.3.2 TuTg Modell.png, id=296, 963.6pt x 686.565pt>
 File: images/8.3.2 TuTg Modell.png Graphic file (type png)
 <use images/8.3.2 TuTg Modell.png>
-Package pdftex.def Info: images/8.3.2 TuTg Modell.png  used on input line 860.
+Package pdftex.def Info: images/8.3.2 TuTg Modell.png  used on input line 1296.
+
 (pdftex.def)             Requested size: 425.41444pt x 303.10571pt.
 
 
-[29
+[37
 
  <./images/8.3.2 TuTg Modell.png>]
-
-[30
-
-]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 925.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.1pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.95pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 928.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.1pt on input line 928.
-
-
-[31]
-
-[32]
-
-[33]
-
-[34
-
-]
-<images/Zustandsregelung F23 (1).png, id=282, 430.60875pt x 297.11pt>
-File: images/Zustandsregelung F23 (1).png Graphic file (type png)
-<use images/Zustandsregelung F23 (1).png>
-Package pdftex.def Info: images/Zustandsregelung F23 (1).png  used on input lin
-e 1115.
-(pdftex.def)             Requested size: 250.24199pt x 172.66393pt.
-
-
-[35
-
- <./images/Zustandsregelung F23 (1).png>]
-
-[36]
-
-[37]
 
 [38
 
 ]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1361.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.1pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.95pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1364.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.1pt on input line 1364.
 
-[39
 
-]
-<images/14.1.2 Einfache Abtastregelung.png, id=301, 1125.20375pt x 386.44376pt>
+[39]
 
-File: images/14.1.2 Einfache Abtastregelung.png Graphic file (type png)
-<use images/14.1.2 Einfache Abtastregelung.png>
-Package pdftex.def Info: images/14.1.2 Einfache Abtastregelung.png  used on inp
-ut line 1210.
-(pdftex.def)             Requested size: 250.24199pt x 85.94365pt.
-
-
-[40
-
- <./images/14.1.2 Einfache Abtastregelung.png>]
+[40]
 
 [41]
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 12.5pt on input line 1305.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 9.4pt on input line 1305.
-
 
 [42
 
 ]
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 14.4pt on input line 1380.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 10.5pt on input line 1380.
-LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 7.9pt on input line 1380.
+<images/Zustandsregelung F23 (1).png, id=317, 430.60875pt x 297.11pt>
+File: images/Zustandsregelung F23 (1).png Graphic file (type png)
+<use images/Zustandsregelung F23 (1).png>
+Package pdftex.def Info: images/Zustandsregelung F23 (1).png  used on input lin
+e 1564.
+(pdftex.def)             Requested size: 250.24199pt x 172.66393pt.
 
 
-[43]
+[43
+
+ <./images/Zustandsregelung F23 (1).png>]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1629.
+
+
 
 [44]
 
 [45]
+<images/12.2 Vorsteuerung.png, id=330, 1199.48125pt x 580.1675pt>
+File: images/12.2 Vorsteuerung.png Graphic file (type png)
+<use images/12.2 Vorsteuerung.png>
+Package pdftex.def Info: images/12.2 Vorsteuerung.png  used on input line 1651.
 
-[46]
-
-[47]
-
-[48]
-<plot_beispiel.pdf, id=331, 282.0949pt x 158.82536pt>
-File: plot_beispiel.pdf Graphic file (type pdf)
-<use plot_beispiel.pdf>
-Package pdftex.def Info: plot_beispiel.pdf  used on input line 1649.
-(pdftex.def)             Requested size: 450.43253pt x 253.60226pt.
-
-
-[49]
-
-[50 <./plot_beispiel.pdf>]
-
-[51] (./main.ind
+(pdftex.def)             Requested size: 425.41444pt x 205.7617pt.
+<images/12.2 Aufschaltung der Ableitungen der Führungsgröße.png, id=331, 1
+170.3725pt x 714.67pt>
+File: images/12.2 Aufschaltung der Ableitungen der Führungsgröße.png Graph
+ic file (type png)
+<use images/12.2 Aufschaltung der Ableitungen der Führungsgröße.png>
+Package pdftex.def Info: images/12.2 Aufschaltung der Ableitungen der Führung
+sgröße.png  used on input line 1667.
+(pdftex.def)             Requested size: 425.41444pt x 259.77823pt.
 
 
+[46
 
-[52
+ <./images/12.2 Vorsteuerung.png>]
+
+[47 <./images/12.2 Aufschaltung der Ableitungen der Führungsgröße.png>]
+
+[48
+
+]
+<images/14.1.2 Einfache Abtastregelung.png, id=343, 1125.20375pt x 386.44376pt>
+
+File: images/14.1.2 Einfache Abtastregelung.png Graphic file (type png)
+<use images/14.1.2 Einfache Abtastregelung.png>
+Package pdftex.def Info: images/14.1.2 Einfache Abtastregelung.png  used on inp
+ut line 1698.
+(pdftex.def)             Requested size: 250.24199pt x 85.94365pt.
+
+
+[49
+
+ <./images/14.1.2 Einfache Abtastregelung.png>]
+
+[50]
+
+[51
+
+]
+
+[52]
+
+[53]
+
+[54]
+
+[55]
+
+[56] (./main.ind
+
+
+
+[57
 
 ]
 
 
 
-[53
+[58
 
 ]) (./main.aux)
  ***********
@@ -1793,11 +1776,11 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 28100 strings out of 473190
- 561848 string characters out of 5715801
- 985422 words of memory out of 5000000
- 50776 multiletter control sequences out of 15000+600000
- 740306 words of font info for 341 fonts, out of 8000000 for 9000
+ 28081 strings out of 473190
+ 562181 string characters out of 5715801
+ 989422 words of memory out of 5000000
+ 50765 multiletter control sequences out of 15000+600000
+ 724393 words of font info for 304 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,93p,711b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></us
@@ -1819,10 +1802,10 @@ lic/newtx/txsym.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newt
 x/txsys.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmb.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on main.pdf (53 pages, 1748849 bytes).
+Output written on main.pdf (58 pages, 2105258 bytes).
 PDF statistics:
- 426 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
+ 446 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

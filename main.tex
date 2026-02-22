@@ -464,22 +464,330 @@ Normalerweise werden alle Signale mit Kleinbuchstaben geschrieben. Treten in der
 \clearpage
 \section{Autonome Systeme}
 \subsection{Arbeitspunkte und Ruhelagen}
+\begin{definition}
+\textbf{Arbeitspunkt}\par
+Ein Tupel \((u_0(t),y_0(t))\) heißt Arbeitspunkt eines Systems, wenn bei einer passenden Anfangsbedingung für die Lösung der Differentialgleichung des Systems gilt:
+\[
+u_0(t)\mapsto y_0(t).
+\]
+\footnote{Quelle: RT-Umdruck S. 52}
+\end{definition}
+\begin{definition}
+\textbf{Autonome Systeme}\par
+Ein autonomes System folgt der Zustandsgleichung
+\[
+\dot{x}=f(x),\qquad x(t=0)={}^0x.
+\]
+Der Verlauf der Zustandsgrößen ist also nur vom Anfangszustand \({}^0x\) abhängig.\footnote{Quelle: RT-Umdruck S. 53}
+\end{definition}
+\begin{definition}
+\textbf{Ruhelage}\par
+Der Punkt \(x_0\) heißt Ruhelage des autonomen Systems
+\[
+\dot{x}=f(x,u_0),
+\]
+wenn die Zustandsgleichung für \(x=x_0\) verschwindet:
+\[
+\dot{x}=f(x_0,u_0)=0.
+\]
+\footnote{Quelle: RT-Umdruck S. 53}
+\end{definition}
+\subsubsection{System mit nichtlinearer DGL 2. Ordnung als Sammlung von DGL 1. Ordnung beschreiben ODER DGL in nichtlinearen Zustandsraum überführen}
+\noindent Gegeben sei die nichtlineare Differentialgleichung
+\[
+\ddot{Y}(t)=k_1-k_2\frac{U^2(t)}{Y^2(t)}-k_3\dot{Y}^{\,3}(t),
+\]
+mit \(k_1,k_2,k_3>0\).
+\begin{enumerate}[label=\arabic*.]
+    \item Zustände wählen; in der obigen DGL treten \(\ddot{Y}\), \(\dot{Y}\) und \(Y\) auf. Daher:
+    \[
+    \mathbf{X}=
+    \begin{pmatrix}
+    X_1\\
+    X_2
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    Y\\
+    \dot{Y}
+    \end{pmatrix}.
+    \]
+    \item Daraus folgt:
+    \[
+    \dot{\mathbf{X}}=
+    \begin{pmatrix}
+    \dot{X}_1\\
+    \dot{X}_2
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    \dot{Y}\\
+    \ddot{Y}
+    \end{pmatrix}.
+    \]
+    \item Für \(\dot{\mathbf{X}}\) gibt es zwei Gleichungen:
+    \begin{enumerate}[label=\arabic*.]
+        \item \(\dot{X}_1=\dot{Y}=X_2\)
+        \item \(\dot{X}_2=k_1-k_2\frac{U^2(t)}{X_1^2}-k_3X_2^3\)
+    \end{enumerate}
+    Zusammengefasst ergibt sich die nichtlineare Zustandsraumdarstellung:
+    \[
+    \dot{\mathbf{X}}=
+    \begin{pmatrix}
+    \dot{X}_1\\
+    \dot{X}_2
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    X_2\\
+    k_1-k_2\frac{U^2(t)}{X_1^2}-k_3X_2^3
+    \end{pmatrix}.
+    \]
+\end{enumerate}
+    \noindent\textbf{Hinweis:} Diese Darstellung kann noch nicht in der Form
+    \[
+    \dot{x}=Ax+Bu,\qquad y=Cx+Du
+    \]
+    geschrieben werden, da noch nichtlineare Zusammenhänge enthalten sind. Erst wenn das System LTI (linear-time-invariant), also \textbf{linearisiert} (siehe 3.3, insbesonders 3.3.2), ist, gilt diese lineare Form.
+
 \subsection{Stabilität}
+\begin{definition}
+\textbf{Asymptotische Stabilität}\par
+Eine Ruhelage \(x_0\) heißt asymptotisch stabil, wenn alle Systemtrajektorien, welche in der Nähe der Ruhelage starten, in deren Nähe bleiben und letztlich gegen diese Ruhelage streben:
+\[
+\forall \epsilon>0,\ \exists \delta>0:\ \|x(0)-x_0\|<\delta \Rightarrow \|x(t)-x_0\|<\epsilon\ \forall t\ge 0
+\]
+und
+\[
+\lim_{t\to\infty}x(t)=x_0.
+\]
+\footnote{Quelle: RT-Umdruck S. 56}
+\end{definition}
+\begin{definition}
+\textbf{Grenzstabilität und Instabilität}\par
+Erfüllt eine Ruhelage nur die Stabilitätsbedingung, nicht aber die Konvergenzbedingung, so heißt diese Ruhelage grenzstabil. Erfüllt eine Ruhelage die Stabilitätsbedingung nicht, so heißt sie instabil.\footnote{Quelle: RT-Umdruck S. 57}
+\end{definition}
 \subsection{Linearisierung}
 \subsubsection{Linearisierung einer Funktion}
+\begin{definition}
+\textbf{Taylorreihe}\par
+Sei \(f:\mathbb{R}\to\mathbb{R}\) eine glatte Funktion. Dann heißt die unendliche Reihe
+\[
+T(U)=\sum_{n=0}^{\infty}\frac{1}{n!}\left.\frac{\partial^n f}{\partial U^n}\right|_{U_0}(U-U_0)^n
+\]
+Taylorreihe von \(f\) im Punkt \(U_0\).\footnote{Quelle: RT-Umdruck S. 60}
+\end{definition}
+\begin{definition}
+\textbf{Linearisierung einer Funktion}\par
+Sei \(f:\mathbb{R}^n\to\mathbb{R}^m\) differenzierbar und \(U_0\in\mathbb{R}^n,\ Y_0=f(U_0)\in\mathbb{R}^m\) ein Arbeitspunkt. Mit den Abweichungsgrößen \(u=U-U_0\) und \(y=Y-Y_0\) ergibt sich
+\[
+y=\left.\frac{\partial f}{\partial U}\right|_{U_0}\,u,
+\]
+wobei \(\frac{\partial f}{\partial U}\) die Jacobi-Matrix ist.\footnote{Quelle: RT-Umdruck S. 61}
+\end{definition}
 \subsubsection{Linearisierung einer Differentialgleichung}
 \subsubsection{Linearisierung im Kennlinienfeld}
 \subsection{Charakteristisches Polynom}
+\begin{definition}
+\textbf{Charakteristisches Polynom}\par
+Jede Differentialgleichung eines autonomen Systems der Ordnung \(n\),
+\[
+a_n y^{(n)}+\dots+a_1\dot{y}+a_0y=0,
+\]
+besitzt das charakteristische Polynom
+\[
+p(\lambda)=a_n\lambda^n+\dots+a_1\lambda+a_0.
+\]
+\footnote{Quelle: RT-Umdruck S. 68}
+\end{definition}
+\begin{definition}
+\textbf{Schwingungsfähige Systeme}\par
+Besitzt das charakteristische Polynom Wurzeln mit nicht verschwindendem Imaginärteil, so heißt das System schwingungsfähig, da die homogene Lösung sinusförmige Anteile enthält.\footnote{Quelle: RT-Umdruck S. 69}
+\end{definition}
+\begin{definition}
+\textbf{Eigenkreisfrequenz}\par
+Die Frequenz der Schwingung eines schwingungsfähigen Systems wird durch den Imaginärteil der komplex konjugierten Wurzeln vorgegeben. Diese Frequenz wird Eigenkreisfrequenz genannt und häufig mit \(\omega_D\) bezeichnet.\footnote{Quelle: RT-Umdruck S. 69}
+\end{definition}
+\begin{definition}
+\textbf{Stabilität von LTI-Systemen}\par
+Für autonome LTI-Systeme hängt die Stabilität von den Wurzeln \(\lambda_i\) des charakteristischen Polynoms ab:
+\[
+\Re(\lambda_i)<0\ \Rightarrow\ \text{stabil},\quad \exists\,\Re(\lambda_i)>0\ \Rightarrow\ \text{instabil}.
+\]
+Mehrfache Wurzeln mit \(\Re(\lambda_i)=0\) führen zur Instabilität, einfache Wurzeln mit \(\Re(\lambda_i)=0\) zur Grenzstabilität.\footnote{Quelle: RT-Umdruck S. 71}
+\end{definition}
+\begin{definition}
+\textbf{Stabilitätsrand}\par
+Die imaginäre Achse wird als Stabilitätsrand bezeichnet. Ein LTI-System befindet sich genau dann am Stabilitätsrand, wenn eine oder mehrere Wurzeln des charakteristischen Polynoms auf dem Stabilitätsrand liegen und alle anderen Wurzeln im stabilen Bereich liegen.\footnote{Quelle: RT-Umdruck S. 71}
+\end{definition}
 \subsection{Linearisierungstheorem}
+\begin{definition}
+\textbf{Linearisierungstheorem}\par
+Für ein nichtlineares System mit Ruhelage \(X_0\) und dessen Linearisierung gilt: Sind alle Wurzeln der linearen Approximation mit negativem Realteil, so ist \(X_0\) stabil. Gibt es mindestens eine Wurzel mit positivem Realteil, so ist \(X_0\) instabil. Für Wurzeln auf dem Stabilitätsrand ist keine Aussage möglich.\footnote{Quelle: RT-Umdruck S. 72}
+\end{definition}
 \subsection{Analyse im Zustandsraum}
+\begin{definition}
+\textbf{Zustandstransformation}\par
+Unter der linearen Zustandstransformation \(\tilde{x}=Tx\) ergeben sich die transformierten Gleichungen
+\[
+\dot{\tilde{x}}=TAT^{-1}\tilde{x}+TBu,\qquad y=CT^{-1}\tilde{x}+Du.
+\]
+\footnote{Quelle: RT-Umdruck S. 76}
+\end{definition}
+\begin{definition}
+\textbf{Stabilität im Zustandsraum}\par
+Für ein autonomes LTI-System \(\dot{x}=Ax\) gilt
+\[
+p(\lambda)=\det(\lambda I-A).
+\]
+Die Wurzeln dieses Polynoms entsprechen den Eigenwerten von \(A\).\footnote{Quelle: RT-Umdruck S. 77}
+\end{definition}
+\begin{definition}
+\textbf{Transitionsmatrix}\par
+Sei \(A\) eine \((n\times n)\)-Matrix. Dann heißt
+\[
+e^A=\sum_{k=0}^{\infty}\frac{1}{k!}A^k
+\]
+Matrixexponential. Die Matrix \(e^{At}\) wird Transitionsmatrix genannt.\footnote{Quelle: RT-Umdruck S. 78}
+\end{definition}
+\begin{definition}
+\textbf{Diagonale Normalform}\par
+Besitzt das charakteristische Polynom einfache Wurzeln \(\lambda_i\), kann der Zustand so gewählt werden, dass
+\[
+\dot{x}=\mathrm{diag}(\lambda_i)\,x+\begin{bmatrix}1&\dots&1\end{bmatrix}^T u,\qquad
+y=\begin{bmatrix}r_1&\dots&r_n\end{bmatrix}x.
+\]
+\footnote{Quelle: RT-Umdruck S. 80}
+\end{definition}
+\begin{definition}
+\textbf{Jordansche Normalform}\par
+Hat ein LTI-System mehrfache Eigenwerte, kann die Systemmatrix in Jordan-Blockstruktur dargestellt werden. Für mehrfache Eigenwerte enthält diese Form Einsen auf der ersten Nebendiagonalen der zugehörigen Blöcke.\footnote{Quelle: RT-Umdruck S. 82}
+\end{definition}
 
 \clearpage
 \section{Verhalten bei allgemeiner Anregung}
 \subsection{Homogene und partikuläre Lösung}
+\begin{definition}
+\textbf{Homogene Lösung}\par
+Genügt die Funktion \(x_h(t)\) der Gleichung
+\[
+\dot{x}_h=A\,x_h+B\cdot 0,\qquad x(0)={}^0x,
+\]
+so heißt \(x_h(t)\) homogene Lösung. Sie beschreibt die Auswirkungen der Anfangsbedingung für \(u=0\).\footnote{Quelle: RT-Umdruck S. 85}
+\end{definition}
+\begin{definition}
+\textbf{Partikuläre Lösung}\par
+Genügt die Funktion \(x_p(t)\) der Gleichung
+\[
+\dot{x}_p=A\,x_p+B\,u,\qquad x(0)=0,
+\]
+so heißt \(x_p(t)\) partikuläre Lösung. Sie beschreibt den Einfluss des Eingangs \(u\) bei verschwindenden Anfangsbedingungen.\footnote{Quelle: RT-Umdruck S. 85}
+\end{definition}
 \subsection{Übergangsfunktion}
+\begin{definition}
+\textbf{Sprungantwort, Impulsantwort, Übergangsfunktion, Gewichtsfunktion}\par
+Die sich als Folge einer sprung- beziehungsweise impulsförmigen Eingangsgröße ergebenden Verläufe der Ausgangsgröße werden \textit{Sprungantwort} beziehungsweise \textit{Impulsantwort} genannt. Durch Normieren auf die Sprunghöhe \(u_0\) beziehungsweise die Impulsfläche \(\int u\,dt\) erhält man die \textit{Übergangsfunktion} \(h(t)\) beziehungsweise die \textit{Gewichtsfunktion} \(g(t)\).
+\[
+h(t)=\frac{y(t)}{u_0}=\frac{\text{Sprungantwort}}{\text{Sprunghöhe}}
+\]
+\[
+g(t)=\frac{y(t)}{\int u\,dt}=\frac{\text{Impulsantwort}}{\text{Impulsfläche}}
+\]
+\footnote{Quelle: RT-Umdruck S. 89}
+\end{definition}
+
+\subsubsection{Gewichts \(g(t)\)- und Übergangsfunktion \(h(t)\) aus \(G(s)\)}
+\index{Gewichtsfunktion}\index{Übergangsfunktion}\index{Dirac-Impuls@$\delta(t)$}\index{Sprungfunktion@$1(t)$}
+\index{Sprungantwort@$y(t)$}\index{Impulsantwort@$y(t)$}\index{Übergangsfunktion@$h(t)$}\index{Gewichtsfunktion@$g(t)$}
+
+Sei:
+\begin{equation}
+	Y(s) = G_s(s)\,U(s)
+\end{equation}
+mit Zusammenhang \(g(t)\) und \(h(t)\)\footnotemark
+\footnotetext{Quelle: Umdruck S. 91}:
+\begin{equation}
+	g(t)=\dot{h}(t)=\frac{\mathrm{d}}{\mathrm{d}t}h(t)
+\end{equation}
+
+\paragraph{Gewichtsfunktion \(g(t)\)}
+Für die Gewichtsfunktion gilt \(u(t)=\delta(t)\), also:
+\begin{equation}
+	U(s) = \mathcal{L}\{\delta(t)\} = 1
+\end{equation}
+Damit folgt:
+\begin{equation}
+	Y(s) = G_s(s)\,U(s) = G_s(s)
+\end{equation}
+und somit:
+\begin{equation}
+	g(t) = \mathcal{L}^{-1}\{G_s(s)\}
+\end{equation}
+
+\paragraph{ \(G(s)\) ist gegeben, Gewichtsfunktion \(g(t)\) bestimmen.}
+
+Gewichtsfunktion \( g(t) \) durch inverse Laplace-Transformation von \( G(s) = \frac{K}{(1 + Ts)^2} \).
+
+\begin{enumerate}[label=\arabic*.]
+	\item \( C\frac{1}{(s - s_p)^n} \).
+	\item Gewichtsfunktion \(g(t) \rightarrow U(s) = 1\)
+	\item \( G(s) = \frac{K}{(1 + Ts)^2} = \dfrac{K}{T^2 \left( s + \dfrac{1}{T} \right)^2}\).
+	\item \(Y(s) = G(s)U(s)\)
+	\item \(g(t) = \mathcal{L}^{-1} \left\{ \frac{1}{\left( s + \frac{1}{T} \right)^2} \right\}\).
+	\item \(s_p = -\dfrac{1}{T}, n = 2, C = \dfrac{K}{T^2}\)
+	\item \(g(t) = \dfrac{K}{T^2} t e^{-\dfrac{1}{T} t}\)
+\end{enumerate}
+
+
+\paragraph{Übergangsfunktion \(h(t)\)}
+Für die Übergangsfunktion gilt \(u(t)=1(t)\), also:
+\begin{equation}
+	U(s) = \mathcal{L}\{1(t)\} = \frac{1}{s}
+\end{equation}
+Damit folgt:
+\begin{equation}
+	Y(s) = G_s(s)\,U(s) = \frac{G_s(s)}{s}
+\end{equation}
+und somit:
+\begin{equation}
+	h(t) = \mathcal{L}^{-1}\left\{\frac{G_s(s)}{s}\right\}
+\end{equation}
+
 \subsection{Faltung}
+\begin{definition}
+\textbf{Faltung}\par
+Seien \(a(t)\) und \(b(t)\) zwei Signale mit \(a(t)=b(t)=0\) für \(t<0\). Dann ist die Faltung definiert als
+\[
+a(t)*b(t)=\int_{-0}^{t}a(t-\tau)\,b(\tau)\,d\tau.
+\]
+\footnote{Quelle: RT-Umdruck S. 91}
+\end{definition}
+\begin{definition}
+\textbf{BIBO-Stabilität}\par
+Ein lineares System heißt übertragungsstabil (BIBO-stabil), wenn aus jedem beschränkten Eingangssignal \(\lvert u(t)\rvert\le M_u<\infty\) ein beschränktes Ausgangssignal \(\lvert y(t)\rvert\le M_y<\infty\) folgt. Dies ist erfüllt, wenn die Impulsantwort \(g(t)\) absolut integrierbar ist.\footnote{Quelle: RT-Umdruck S. 94}
+\end{definition}
+\begin{definition}
+\textbf{BIBO-Stabilität und Stabilität}\par
+Für jede minimale Realisierung sind BIBO-Stabilität und (asymptotische) Stabilität gleichbedeutend.\footnote{Quelle: RT-Umdruck S. 95}
+\end{definition}
+\begin{definition}
+\textbf{Statische Verstärkung}\par
+Für ein stabiles System wird der existente stationäre Endwert der Übergangsfunktion
+\[
+K=\lim_{t\to\infty}h(t)
+\]
+als statische Verstärkung bezeichnet.\footnote{Quelle: RT-Umdruck S. 96}
+\end{definition}
 \subsection{Laplace-Transformation}
 \subsubsection{Laplace-Transformation von Zeitfunktionen}
+\begin{definition}
+\textbf{Laplace-Transformation}\par
+Die Laplace-Transformation ordnet \(f(t)\) eine Funktion \(F(s)\) zu:
+\[
+F(s)=\int_{-0}^{\infty}f(t)e^{-st}dt=\mathcal{L}\{f(t)\}.
+\]
+\footnote{Quelle: RT-Umdruck S. 97}
+\end{definition}
 \noindent\footnotesize
 \setlength{\tabcolsep}{6pt}
 \setlength{\extrarowheight}{2pt}
@@ -528,7 +836,31 @@ Normalerweise werden alle Signale mit Kleinbuchstaben geschrieben. Treten in der
 
 
 \subsubsection{Laplace-Transformation von Operationen}
+\begin{definition}
+\textbf{Linearität der Laplace-Transformation}\par
+Die Laplace-Transformation ist linear:
+\[
+a_1f_1(t)+a_2f_2(t)\ \circ\!\!-\!\!\bullet\ a_1F_1(s)+a_2F_2(s).
+\]
+\footnote{Quelle: RT-Umdruck S. 101}
+\end{definition}
+\begin{definition}
+\textbf{Laplace-Transformation von Ableitungen}\par
+Die Differentiation im Zeitbereich entspricht einer Multiplikation mit \(s\) im Bildbereich:
+\[
+\mathcal{L}\{\dot{f}(t)\}=-f(-0)+s\,\mathcal{L}\{f(t)\}.
+\]
+\footnote{Quelle: RT-Umdruck S. 102}
+\end{definition}
 \subsubsection{Bestimmung des Zeitverlaufes linearer Systeme}
+\begin{definition}
+\textbf{Partialbruchzerlegung, Residuum}\par
+Eine Funktion \(F(s)\) mit einfachen Polstellen \(\lambda_i\) lässt sich darstellen als
+\[
+F(s)=P(s)+\sum_{i=1}^{n}\frac{r_i}{s-\lambda_i},
+\]
+wobei \(r_i\) das Residuum der Polstelle \(\lambda_i\) ist.\footnote{Quelle: RT-Umdruck S. 105}
+\end{definition}
 \subsubsection{Beispiele für Laplace Transformationen}
 \paragraph{\(f(t)=t^2\)}
 \[
@@ -537,6 +869,30 @@ t^2 = 2\cdot \frac{1}{2!}\,t^2\,e^{0\cdot t}
 F(s)=\frac{1}{(s-0)^3}
 \]
 \subsection{Übertragungsfunktion \(G(s)\)}
+\begin{definition}
+\textbf{Übertragungsfunktion}\par
+Durch Laplace-Transformation der Differentialgleichung erhält man
+\[
+G(s)=\frac{Y(s)}{U(s)}=\frac{b_m s^m+\dots+b_0}{a_n s^n+\dots+a_0}.
+\]
+\footnote{Quelle: RT-Umdruck S. 108}
+\end{definition}
+\begin{definition}
+\textbf{Laplace-Transformation der Faltung}\par
+Die Faltung im Zeitbereich entspricht einer Multiplikation im Bildbereich:
+\[
+Y(s)=G(s)\,U(s)\ \circ\!\!-\!\!\bullet\ y(t)=g(t)*u(t).
+\]
+\footnote{Quelle: RT-Umdruck S. 109}
+\end{definition}
+\begin{definition}
+\textbf{Stabilität im Bildbereich}\par
+Die Wurzeln des charakteristischen Polynoms (Nenner von \(G(s)\)) entsprechen den Polstellen. Für Stabilität müssen alle Polstellen einen negativen Realteil besitzen.\footnote{Quelle: RT-Umdruck S. 110}
+\end{definition}
+\begin{definition}
+\textbf{Pol-Nullstellen-Diagramm}\par
+Die graphische Darstellung der Polstellen (Kreuze) und Nullstellen (Kreise) in der komplexen \(s\)-Ebene beschreibt \(G(s)\) bis auf den Vorfaktor \(K\) eindeutig.\footnote{Quelle: RT-Umdruck S. 111}
+\end{definition}
 \begin{quote}
 \textbf{Stabilität im Bildbereich:} 
 
@@ -553,7 +909,15 @@ Für Stabilität muss gelten:
 Die Polstellen  \(\lambda_i\) müssen in der linken offenen \(s\)-Halbebene liegen für Stabilität.
 \end{quote}
 \subsection{Grenzwertsätze} \index{Grenzwertsätze}
-\subsubsection{Anwenbarkeit der Grenzwertsätze} \index{Grenzwertsätze!Anwendbarkeit}
+\begin{definition}
+\textbf{Berechnung der statischen Verstärkung}\par
+Für stabile Systeme gilt
+\[
+K=\lim_{t\to\infty}h(t)=\lim_{s\to 0}G(s)=G(0).
+\]
+\footnote{Quelle: RT-Umdruck S. 113}
+\end{definition}
+\subsubsection{Anwendbarkeit der Grenzwertsätze} \index{Grenzwertsätze!Anwendbarkeit}
 \noindent Die Grenzwerte sind nur dann anwendbar, wenn die zugehörigen Grenzwerte
 existieren (insbesondere endlich sind) und gezeigt wurde, dass der
 Frequenzgang bzw. die Übertragungsfunktion \(G(s)\) stabil ist.
@@ -614,6 +978,10 @@ Für den Anfangswert der Gewichtsfunktion \(g(t) = \dot{h}(t)\) mit der Übertra
     \item Wenn \(r = n - m = 1\) springt die Gewichtsfunktion \(g(t) = \dot{h}(t)\) in \(t=0\) auf einen endlichen Wert. \index{Sprungfähigkeit! in Abhängigkeit von rel. Grad \(r\)}
 \end{itemize}
 \end{defbar}
+\begin{definition}
+\textbf{Relativer Grad und Anfangswert}\par
+Die \(r\)-te Zeitableitung der Übergangsfunktion eines Systems mit relativem Grad \(r\) ändert sich in \(t=0\) sprungförmig.\footnote{Quelle: RT-Umdruck S. 114}
+\end{definition}
 
 Damit lassen sich Anfangswert und (für stabile Systeme) Endwert der
 Übergangsfunktion direkt bestimmen.
@@ -685,6 +1053,16 @@ Die Phasenverschiebung beim in 14.2.1 bestimmten \(\omega\) ermitteln:
 	\item Ortskurve: Winkel bei \(\omega\) messen.
 \end{enumerate}
 \subsection{Ortskurve}
+Ortskurven für den aufgeschnittenen Regelkreis \(G_0\).
+\begin{enumerate}[label=\arabic*.]
+	\item Phase \(\varphi\) der Ortskurve läuft für \(\omega \rightarrow \infty \) gegen \(\ - \infty\) \\
+	\(\rightarrow\) \(G_0\) enthält Totzeit. (S. 13, I)
+	\item Ortskurve startet mit einer Phase \(\varphi = -90 ^\circ \) im Unendlichen, also \(\lim_{\omega \to 0}|G_0(j \omega)| = \infty\) \\ \(\rightarrow\) \(G_0\) hat integrierendes Verhalten. (S. 13, II)
+	\item Ortskurve startet im Ursprung, also \(\lim_{\omega \to 0}|G_0(j \omega)| = 0\) \\ \(\rightarrow\) \(G_0\) hat differenzierendes Verhalten. (S. 13, III)
+	\item Betrag der Ortskurve steigt und sinkt.
+	\\ \(\rightarrow\) \(G_0\) enthält ein Verzögerungsglied mit Resonanzüberhöhung (z.B. \(PT_2\)). (S. 13, IV)
+	
+\end{enumerate}
 \subsection{Bode-Diagramm}
 \paragraph{Unterschied Zeitkonstante und Periodendauer}
 \index{Zeitkonstante $T$}
@@ -781,6 +1159,37 @@ y_{\infty}=\lim_{s\to 0} G(s)
 
 \textbf{Wichtig:} Die Bedingung gilt für die Übertragungsfunktion des \emph{geschlossenen} Regelkreises.
 
+\index{Stationäre Genauigkeit}
+\index{stationary accuracy|see{Stationäre Genauigkeit}}
+
+\paragraph{Aussagen über Übergangsfunktion \(h(t)\)}
+\noindent Damit ein Regelkreis stationär genau arbeitet, muss der Ausgang genau der Referenz folgen. Dies bedeutet, dass der Führungsgrößenfilter so ausgelegt werden muss, dass der stationäre Endwert des geschlossenen Regelkreises genau 1 ist.
+
+Außerdem gilt:
+\[
+\lim_{s \to 0} G(s) = \frac{\lim_{s \to 0} Y(s)}{\lim_{s \to 0} U(s)} = 1
+\]
+
+Daraus ergibt sich:
+\[
+\lim_{s \to 0} G(s)
+= \lim_{s \to 0}\left(\frac{G_F \cdot G_R \cdot G_{PT2}}{1 + G_R \cdot G_{PT2}}\right)
+= 1
+\]
+
+\begin{enumerate}[label=\arabic*.]
+	\item \(\lim_{t \to \infty} h(t) =  \lim_{s \to 0} G(s) = 0\), siehe Grenzwertsätze (S. 112)
+	\\ \(\rightarrow\) \(G\) hat differenzierendes Verhalten und eine Nullstelle im Ursprung.
+	\\ \(\rightarrow\) \(G_0\) hat die selben Nullstellen wie \(G\). \(G_0\) hat also auch differenzierendes Verhalten.
+	\item \(\lim_{t \to \infty} h(t) =  \lim_{s \to 0} G(s) =1\), siehe Grenzwertsätze (S. 112)
+	\\ \(\rightarrow\) Sprungantwort \(y(t)\) besitzt keine Regelabweichung (S. 165).
+	\\ \index{Regelabweichung}\index{Regelabweichung!Umdruck (S. 165)}
+	\\ \(\rightarrow\) \(G(s)\) arbeitet stationär genau (S. 165).
+	\\ \index{Stationäre Genauigkeit}\index{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}\index{stationary accuracy|see{Stationäre Genauigkeit}}\index{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}
+	
+\end{enumerate}
+
+
 \begin{defbar}
 \textbf{Bleibende Regelabweichung}\par
 Für einen stabilen geschlossenen Regelkreis mit der Führungsübertragungsfunktion \(w \mapsto y\) ergibt sich für jedes konvergente \(w(t)\) ein Grenzwert
@@ -791,7 +1200,9 @@ der als bleibende Regelabweichung bezeichnet wird. Ist das System \(w \mapsto y\
 \end{defbar}
 \begin{defbar}
 \textbf{Integrierender Anteil und integrierendes Verhalten}\par
-Ein LTI-System besitzt genau dann einen integrierenden Anteil, wenn es eine Polstelle in \(s=0\) besitzt.
+\index{Integrierender Anteil}
+\index{Integrierendes Verhalten}
+Ein LTI(linear-time-invariant)-System besitzt genau dann einen integrierenden Anteil, wenn es eine Polstelle in \(s=0\) besitzt.
 
 Haben zusätzlich alle weiteren Polstellen des Systems einen negativen Realteil, so gilt
 \[
@@ -816,6 +1227,31 @@ Die Führungsübertragungsfunktion des geschlossenen Standard-Regelkreises ist g
 \subsubsection{PT\(_n\)}
 \subsection{Kombinationen}
 \subsubsection{IT\(_1\)}
+\paragraph{Grafische Darstellung der Übergangsfunktion \(h(t)\) des \(IT_1\) Gliedes}
+\noindent Beispiel:\footnotemark \(y(t)=m(t-n)+a\,e^{-\lambda t}\) (hier: \(m=0.5\), \(n=1\), \(a=\tfrac{1}{2}\), \(\lambda=1\)).
+\footnotetext{Quelle: TPR 1, Aufgabe 2(a).}
+
+\paragraph{Erläuterung der Terme}
+Addition aus einer Geraden \(m(t-n)\) und Exponentialfunktion \(a\,e^{-\lambda t}\).
+\begin{itemize}
+	\item \(m\): Steigung der Geraden
+	\item \(n\): \(x\)-Achsenverschiebung
+	\item \(a\): Vorfaktor der Exponentialfunktion
+\end{itemize}
+
+\paragraph{Werte bestimmen}
+\begin{itemize}
+	\item Steigung \(m\) der Asymptote.
+	\item \(x\)-Achsenverschiebung der Geraden: \(y(t=1)=0=m(1-n)\Rightarrow n=1\).
+	\item \(a\) und \(\lambda\) können mit \(y(t=0)=0\) und \(y'(t=0)=0\) bestimmt werden.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{plot_beispiel.pdf}
+	\caption{Plot der Beispiel-Funktion.}
+\end{figure}
+
 \subsubsection{DT\(_1\)}
 \subsubsection{PIT}
 \subsubsection{PPT\(_1\) und PDT\(_1\)}
@@ -1007,6 +1443,8 @@ m=-p.
 \subsubsection{Beispiele}
 \subsubsection{Anwendung bei Polen am Stabilitätsrand}
 \subsubsection{Vereinfachtes Nyquist-Kriterium}
+
+
 \subsubsection{Amplituden- und Phasenreserve}
 \begin{defbar}
 \textbf{Amplituden- und Phasenreserve; Durchtrittsfrequenz \(\omega_d\)}\par
@@ -1036,6 +1474,17 @@ mit der Durchtrittsfrequenz \(\omega_d\) definiert durch
 Ein gutes Ansprechverhalten und kurze Anschwingzeiten werden durch große \(\omega_d\) erreicht. Da aus Stabilitätsgründen \(\omega_d < \omega_{\pi}\) gelten muss, ist der Frequenzbereich, in dem große Reglerverstärkungen möglich sind, beim I-Regler stark limitiert.
 
 Durch große \(K\) bei einem \(P\)-Glied wird der Verlauf des \(PT_2\)-Gliedes im Bodediagramm nach oben verschoben. Dadurch wird \(\omega_d\) nach rechts verschoben und somit größer. Weil \(\omega_{\pi} = \infty\) in dem Fall, ist die Ungleichung \(\omega_d < \omega_{\pi}\) erfüllt.
+
+\paragraph{Berechnung maximal zulässige Totzeit \(T_t\)}\par
+Die von der Totzeit hervorgerufene Phasenverschiebung \(\varphi_t\) darf maximal der Phasenreserve \(\alpha_R\) von \(G^{'}_{0} (j \omega)\) entsprechen, um die Stabilität nicht zu gefähren.
+\begin{enumerate}[label=\arabic*.]
+	\item Durchtrittsfrequenz \(\omega_d\) von \(G^{'}_{0} (j \omega)\) ermitteln.
+	\item Phase \(\varphi^{'}_{0} (\omega_d)\) ablesen.
+	\item Phasenreserve \(\alpha_R = 180^\circ + \varphi^{'}_{0} (\omega_d)\).
+	\item Phasenverschiebung Totzeitglied \(\varphi_t = -\omega \cdot T_t \overset{!}{=} -\alpha_R\)
+	\item Totzeit \(T_t = \dfrac{\alpha_R}{\omega_d} = \dfrac{\dfrac{\alpha_R}{180^\circ}\cdot \pi}{\omega_d}\)
+\end{enumerate}
+
 
 \subsection{Sonderfälle}
 \subsubsection{Pol-Nullstellen-Kürzungen}
@@ -1149,6 +1598,24 @@ definiert. Sein konkreter Wert ist im Fall stabiler linearer Systeme unabhängig
 		=
 		\underbrace{(\lambda - \lambda_1)(\lambda - \lambda_2)\cdots(\lambda - \lambda_n)}_{\text{vorgegebene Polstellen}}
 	\end{equation}
+	\paragraph{Möglichkeiten der Polvorgabe}
+	\begin{enumerate}[label=\Roman*.]
+		\item \(\lambda_i\) sind direkt gegeben, z.\,B. ,,Pole sollen bei \(-2\) liegen'':
+		\[
+		p(s)=(s+2)^2
+		\]
+		\item \(\omega_0\) und \(D\) sind gegeben:
+		\[
+		p(s)=s^2+2D\omega_0 s+\omega_0^2
+		\]
+		\item Zeitkonstanten sind gegeben, z.\,B. \(T_1=T_2=0{,}5\,\mathrm{s}\):
+		\[
+		(1+T_1s)=0,\quad (1+T_2s)=0
+		\]
+		\[
+		s_{1,2}=-2 \;\Rightarrow\; p(s)=(s+2)^2
+		\]
+	\end{enumerate}
 	
 \end{enumerate}
 \subsubsection{Steuerbarkeit}\index{Steuerbarkeit}
@@ -1179,6 +1646,27 @@ vollen Rang besitzt\footnote{Quelle: Umdruck S. 304}.
 \section{Vermaschte Regelkreise}
 \subsection{Erweiterung des Einfachregelkreises}
 \subsection{Vorsteuerung}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/12.2 Vorsteuerung.png}
+    \caption{Bild 12-1: Vorsteuerung.}
+\end{figure}
+
+\begin{definition}
+\textbf{Perfekte Steuerung}\par
+Die Steuerung, die ein perfektes Fuehrungsverhalten umsetzt, fuehrt auf eine Invertierung der Regelstrecke.\footnote{Quelle: Umdruck S. xxx}
+\end{definition}
+
+\begin{definition}
+\textbf{Modellbasierter Steuerungsentwurf}\par
+Der modellbasierte Steuerungsentwurf basiert auf einer Invertierung der Regelstrecke, wobei nur der minimalphasige Teil der Regelstrecke invertiert wird und die Steuerung anschliessend durch einen Tiefpassfilter kausalisiert wird.\footnote{Quelle: Umdruck S. xxx}
+\end{definition}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/12.2 Aufschaltung der Ableitungen der Führungsgröße.png}
+    \caption{Bild 12-2: Aufschaltung der Ableitungen der Fuehrungsgroesse.}
+\end{figure}
 \subsection{Führungsgrößenfilter}
 \subsection{Störgrößenaufschaltung}
 \subsection{Kaskadenregelung}
@@ -1204,7 +1692,7 @@ vollen Rang besitzt\footnote{Quelle: Umdruck S. 304}.
 \subsubsection{Abtaster und Halteglied}
 \index{Abtaster}
 \index{Halteglied! Wirkungsplan}
-\noindent Aufbau einer einfachen Abtastregelung\footnote{Quelle: Umdruck S. 377}googoogogog
+\noindent Aufbau einer einfachen Abtastregelung\footnote{Quelle: Umdruck S. 377}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/14.1.2 Einfache Abtastregelung.png}
@@ -1289,136 +1777,6 @@ T < \frac{T_{\min}}{2}
 \subsection{Limitierungen und Erweiterungen}
 
 \subsubsection{Allgemein}
-
-\section{Informationen über Ortskurven}
-Ortskurven für den aufgeschnittenen Regelkreis \(G_0\).
-\begin{enumerate}[label=\arabic*.]
-    \item Phase \(\varphi\) der Ortskurve läuft für \(\omega \rightarrow \infty \) gegen \(\ - \infty\) \\
-    \(\rightarrow\) \(G_0\) enthält Totzeit. (S. 13, I)
-    \item Ortskurve startet mit einer Phase \(\varphi = -90 ^\circ \) im Unendlichen, also \(\lim_{\omega \to 0}|G_0(j \omega)| = \infty\) \\ \(\rightarrow\) \(G_0\) hat integrierendes Verhalten. (S. 13, II)
-    \item Ortskurve startet im Ursprung, also \(\lim_{\omega \to 0}|G_0(j \omega)| = 0\) \\ \(\rightarrow\) \(G_0\) hat differenzierendes Verhalten. (S. 13, III)
-    \item Betrag der Ortskurve steigt und sinkt.
-    \\ \(\rightarrow\) \(G_0\) enthält ein Verzögerungsglied mit Resonanzüberhöhung (z.B. \(PT_2\)). (S. 13, IV)
-
-\end{enumerate}
-
-\section[Informationen über Übergangsfunktionen \(h(t)\)]{Informationen über Übergangsfunktionen \(h(t)\) des geschlossenen Regelkreises}
-    Für die Übergangsfunktion \(h(t)\) ist der Eingang \(u(t)=1(t)\).
-    Stationäre Genauigkeit gilt dann, weil \(\lim_{t \to \infty} u(t) = \lim_{t \to \infty} y(t)\).
-    Wenn \(u_0 = 1(t)\), dann ist die Sprungantwort \(y(t)\) gleich der Übertragungsfunktion \(h(t)\).
-
-\subsection{Stationäre Genauigkeit}
-\index{Stationäre Genauigkeit}
-\index{stationary accuracy|see{Stationäre Genauigkeit}}
-Damit ein Regelkreis stationär genau arbeitet, muss der Ausgang genau der Referenz folgen. Dies bedeutet, dass der Führungsgrößenfilter so ausgelegt werden muss, dass der stationäre Endwert des geschlossenen Regelkreises genau 1 ist.
-
-Außerdem gilt:
-\[
-\lim_{s \to 0} G(s) = \frac{\lim_{s \to 0} Y(s)}{\lim_{s \to 0} U(s)} = 1
-\]
-
-Daraus ergibt sich:
-\[
-\lim_{s \to 0} G(s)
-= \lim_{s \to 0}\left(\frac{G_F \cdot G_R \cdot G_{PT2}}{1 + G_R \cdot G_{PT2}}\right)
-= 1
-\]
-
-\begin{enumerate}[label=\arabic*.]
-    \item \(\lim_{t \to \infty} h(t) =  \lim_{s \to 0} G(s) = 0\), siehe Grenzwertsätze (S. 112)
-    \\ \(\rightarrow\) \(G\) hat differenzierendes Verhalten und eine Nullstelle im Ursprung.
-    \\ \(\rightarrow\) \(G_0\) hat die selben Nullstellen wie \(G\). \(G_0\) hat also auch differenzierendes Verhalten.
-    \item \(\lim_{t \to \infty} h(t) =  \lim_{s \to 0} G(s) =1\), siehe Grenzwertsätze (S. 112)
-    \\ \(\rightarrow\) Sprungantwort \(y(t)\) besitzt keine Regelabweichung (S. 165).
-    \\ \index{Regelabweichung}\index{Regelabweichung!Umdruck (S. 165)}
-    \\ \(\rightarrow\) \(G(s)\) arbeitet stationär genau (S. 165).
-    \\ \index{Stationäre Genauigkeit}\index{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}\index{stationary accuracy|see{Stationäre Genauigkeit}}\index{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}
-
-\end{enumerate}
-
-\section{Berechnung maximal zulässige Totzeit \(T_t\)}
-Die von der Totzeit hervorgerufene Phasenverschiebung \(\varphi_t\) darf maximal der Phasenreserve \(\alpha_R\) von \(G^{'}_{0} (j \omega)\) entsprechen, um die Stabilität nicht zu gefähren.
-\begin{enumerate}[label=\arabic*.]
-    \item Durchtrittsfrequenz \(\omega_d\) von \(G^{'}_{0} (j \omega)\) ermitteln.
-    \item Phase \(\varphi^{'}_{0} (\omega_d)\) ablesen.
-    \item Phasenreserve \(\alpha_R = 180^\circ + \varphi^{'}_{0} (\omega_d)\).
-    \item Phasenverschiebung Totzeitglied \(\varphi_t = -\omega \cdot T_t \overset{!}{=} -\alpha_R\)
-    \item Totzeit \(T_t = \dfrac{\alpha_R}{\omega_d} = \dfrac{\dfrac{\alpha_R}{180^\circ}\cdot \pi}{\omega_d}\)
-\end{enumerate}
-
-\section{Durchtrittsfrequenz \(\omega_d\)}
-\index{Durchtrittsfrequenz@$\omega_d$}
-\index{Durchtrittsfrequenz!Umdruck (S. 240, 248, 270, 273, 286, 363)}
-\index{crossover frequency|see{Durchtrittsfrequenz}}
-\index{crossover frequency!Umdruck (S. 240, 248, 270, 273, 286, 363)}
-\index{Durchgangsfrequenz|see{Durchtrittsfrequenz}}
-
-\section{Gewichts- und Übergangsfunktion aus \(G_s(s)\)}
-\index{Gewichtsfunktion}\index{Übergangsfunktion}\index{Dirac-Impuls@$\delta(t)$}\index{Sprungfunktion@$1(t)$}
-\index{Sprungantwort@$y(t)$}\index{Impulsantwort@$y(t)$}\index{Übergangsfunktion@$h(t)$}\index{Gewichtsfunktion@$g(t)$}
-
-Gegeben sei:
-\begin{equation}
-Y(s) = G_s(s)\,U(s)
-\end{equation}
-\subsection{Zusammenhänge:}
-\noindent Übergangsfunktion \(h(t)\)\footnotemark
-\footnotetext{Quelle: Umdruck S. 89}:
-\begin{equation}
-h(t)=\frac{y_{\text{Sprung}}(t)}{u_0}=\frac{\text{Sprungantwort}}{\text{Sprunghöhe}}
-\end{equation}
-\noindent Gewichtsfunktion \(g(t)\):
-\begin{equation}
-g(t)=\frac{y_{\text{Impuls}}(t)}{\int u\,\mathrm{d}t}=\frac{\text{Impulsantwort}}{\text{Impulsfläche}}
-\end{equation}
-\noindent Zusammenhang \(g(t)\) und \(h(t)\)\footnotemark
-\footnotetext{Quelle: Umdruck S. 91}:
-\begin{equation}
-g(t)=\dot{h}(t)=\frac{\mathrm{d}}{\mathrm{d}t}h(t)
-\end{equation}
-
-\subsection{Gewichtsfunktion \(g(t)\)}
-Für die Gewichtsfunktion gilt \(u(t)=\delta(t)\), also:
-\begin{equation}
-U(s) = \mathcal{L}\{\delta(t)\} = 1
-\end{equation}
-Damit folgt:
-\begin{equation}
-Y(s) = G_s(s)\,U(s) = G_s(s)
-\end{equation}
-und somit:
-\begin{equation}
- g(t) = \mathcal{L}^{-1}\{G_s(s)\}
-\end{equation}
-
-\subsubsection{ \(G(s)\) ist gegeben, Gewichtsfunktion \(g(t)\) bestimmen.}
-
-Gewichtsfunktion \( g(t) \) durch inverse Laplace-Transformation von \( G(s) = \frac{K}{(1 + Ts)^2} \).
-
-\begin{enumerate}[label=\arabic*.]
-	\item \( C\frac{1}{(s - s_p)^n} \).
-	\item Gewichtsfunktion \(g(t) \rightarrow U(s) = 1\)
-	\item \( G(s) = \frac{K}{(1 + Ts)^2} = \dfrac{K}{T^2 \left( s + \dfrac{1}{T} \right)^2}\).
-	\item \(Y(s) = G(s)U(s)\)
-	\item \(g(t) = \mathcal{L}^{-1} \left\{ \frac{1}{\left( s + \frac{1}{T} \right)^2} \right\}\).
-	\item \(s_p = -\dfrac{1}{T}, n = 2, C = \dfrac{K}{T^2}\)
-	\item \(g(t) = \dfrac{K}{T^2} t e^{-\dfrac{1}{T} t}\)
-\end{enumerate}
-
-
-\subsection{Übergangsfunktion \(h(t)\)}
-Für die Übergangsfunktion gilt \(u(t)=1(t)\), also:
-\begin{equation}
-U(s) = \mathcal{L}\{1(t)\} = \frac{1}{s}
-\end{equation}
-Damit folgt:
-\begin{equation}
-Y(s) = G_s(s)\,U(s) = \frac{G_s(s)}{s}
-\end{equation}
-und somit:
-\begin{equation}
- h(t) = \mathcal{L}^{-1}\left\{\frac{G_s(s)}{s}\right\}
-\end{equation}
 
 \section{Mathematische Grundlagen}
 
@@ -1606,50 +1964,14 @@ DGL durch inverse Laplace-Transformation von \( G(s) =\dfrac{X(s)}{U(s)}= \dfrac
 \end{enumerate}
 
 \newpage
+\section{Begrifflichkeiten}
+\subsection{Begriffsdefinitionen (alphabetisch)}
+\begin{definition}
+\textbf{Definition: Analytischer Ausdruck}\par
+Eine explizite, geschlossene Darstellung \(x(t)=f(t)\), bei der rechts kein \(x(t)\), keine Ableitungen oder Integrale von \(x(t)\) mehr vorkommen.
+\end{definition}
 
-\section{Stationäre Genauigkeit}
-\subsection{Stationäre Genauigkeit im geschlossenen Regelkreis}
-Die Führungsübertragungsfunktion des geschlossenen Standard-Regelkreises ist genau dann stationär genau, wenn\footnotemark
-\begin{enumerate}[label=\arabic*.]
-    \item der geschlossene Regelkreis stabil ist und
-    \item der aufgeschnittene Regelkreis \(G_0\) einen integrierenden Anteil besitzt.
-\end{enumerate}
-\footnotetext{Quelle: Umdruck S. 167}
-
-\section{Integrierender Anteil und integrierendes Verhalten}
-Ein LTI-System besitzt genau dann einen integrierenden Anteil, wenn es eine Polstelle in \(s=0\) besitzt.\footnotemark
-Haben zusätzlich alle weiteren Polstellen des Systems einen negativen Realteil, so gilt
-\begin{equation}
-\lim_{t\to\infty} g(t)=\text{konstant} \neq 0
-\end{equation}
-und das System besitzt integrierendes Verhalten.
-\footnotetext{Quelle: Umdruck S. 166}
-
-\section{Grafische Darstellung der Übergangsfunktion \(h(t)\) des \(IT_1\) Gliedes}
-\noindent Beispiel:\footnotemark \(y(t)=m(t-n)+a\,e^{-\lambda t}\) (hier: \(m=0.5\), \(n=1\), \(a=\tfrac{1}{2}\), \(\lambda=1\)).
-\footnotetext{Quelle: TPR 1, Aufgabe 2(a).}
-
-\subsection{Erläuterung der Terme}
-Addition aus einer Geraden \(m(t-n)\) und Exponentialfunktion \(a\,e^{-\lambda t}\).
-\begin{itemize}
-    \item \(m\): Steigung der Geraden
-    \item \(n\): \(x\)-Achsenverschiebung
-    \item \(a\): Vorfaktor der Exponentialfunktion
-\end{itemize}
-
-\subsection{Werte bestimmen}
-\begin{itemize}
-    \item Steigung \(m\) der Asymptote.
-    \item \(x\)-Achsenverschiebung der Geraden: \(y(t=1)=0=m(1-n)\Rightarrow n=1\).
-    \item \(a\) und \(\lambda\) können mit \(y(t=0)=0\) und \(y'(t=0)=0\) bestimmt werden.
-\end{itemize}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.9\linewidth]{plot_beispiel.pdf}
-    \caption{Plot der Beispiel-Funktion.}
-\end{figure}
-
+\newpage
 \section{Korrekturtabellen und Skalierung}
 \subsection{Korrekturtabelle (log/Phase)}
 \noindent\footnotesize

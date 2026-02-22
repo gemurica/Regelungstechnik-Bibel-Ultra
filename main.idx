@@ -1,103 +1,100 @@
-\indexentry{Signale und Systeme}{9}
-\indexentry{Bezeichnungen für Systeme}{10}
-\indexentry{Signale und Systeme im Regelkreis}{10}
-\indexentry{Offener Regelkreis}{10}
-\indexentry{Geschlossener Regelkreis}{10}
-\indexentry{Vorzeichenkonvention}{10}
-\indexentry{Vorzeichenkonvention!Umdruck (S. 123)}{10}
-\indexentry{Relativer Grad}{10}
-\indexentry{Relativer Grad!Umdruck (S. 26)}{10}
-\indexentry{Modell}{14}
-\indexentry{Systemordnung}{14}
-\indexentry{Anfangsbedingungen}{14}
-\indexentry{Zeitinvariante Systeme}{14}
-\indexentry{Lineare Systeme}{14}
-\indexentry{LTI-System}{14}
-\indexentry{Relativer Grad}{14}
-\indexentry{Kausale Systeme}{15}
-\indexentry{akausale Systeme}{15}
-\indexentry{Zustandsraumdarstellung}{15}
-\indexentry{SISO-System}{15}
-\indexentry{MIMO-System}{15}
-\indexentry{Regelungsnormalform}{15}
-\indexentry{Minimale Realisierung}{16}
-\indexentry{Gesetz der Sparsamkeit}{16}
-\indexentry{Zeitkonstante}{16}
-\indexentry{Eckkreisfrequenz}{16}
-\indexentry{Absolutgrößen}{16}
-\indexentry{Abweichungsgrößen}{16}
-\indexentry{Grenzwertsätze}{19}
-\indexentry{Grenzwertsätze!Anwendbarkeit}{19}
-\indexentry{Anfangswertsatz}{19}
-\indexentry{Endwertsatz}{19}
-\indexentry{Sprungfähigkeit}{20}
-\indexentry{Sprungfähigkeit! im Zustandsraum}{20}
-\indexentry{Sprungfähigkeit im Zustandsraum}{20}
-\indexentry{Sprungfähigkeit! in Abhängigkeit von rel. Grad \(r\)}{20}
-\indexentry{Systemantwort}{21}
-\indexentry{Frequenzgang@$G(j\omega)$}{21}
-\indexentry{Betrag@$\lvert G(j\omega)\rvert$}{21}
-\indexentry{Phase@\(\angle G(j\omega)\)}{21}
-\indexentry{Sinusförmige Signale}{21}
-\indexentry{Sinusförmige Signale!Umdruck (S. 119)}{21}
-\indexentry{u(t)=$\sin(\omega t)$}{21}
-\indexentry{Zeitkonstante $T$}{22}
-\indexentry{Periodendauer $T=\frac{2\pi}{\omega}$}{22}
-\indexentry{Kreisfrequenz $\omega$}{22}
-\indexentry{Bodediagramm}{22}
-\indexentry{Führungsübertragungsfunktion \(T(s)\)}{23}
-\indexentry{Störungsübertragungsfunktion \(S(s)\)}{23}
-\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Modell für Parameter \(T_u\)-\(T_g\) }{29}
-\indexentry{Stabilität!Allgemeine Stabilitätskriterien}{30}
-\indexentry{Stabilität!Algebraische Stabilitätskriterien}{30}
-\indexentry{Stabilität!Routh / Hurwitz Stabilität}{30}
-\indexentry{Routh / Hurwitz Stabilitätskriterium}{30}
-\indexentry{Amplitudenreserve \(A_R\)}{32}
-\indexentry{Phasenreserve \(\alpha_R\)}{32}
-\indexentry{Durchtrittsfrequenz \(\omega_d\)}{32}
-\indexentry{Ansprechverhalten}{33}
-\indexentry{Ansprechverhalten!Abhängigkeit von $\omega_d$}{33}
-\indexentry{Regelfaktor}{34}
-\indexentry{Regelfaktor!sinnvoll}{34}
-\indexentry{Regelfaktor!technisch Sinnvoll}{34}
-\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Einstellregeln für P, PI, PID Regler}{34}
-\indexentry{Chien, Hrones, Reswick (CHR)}{34}
-\indexentry{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}{34}
-\indexentry{Amplitudenreserve \(A_R\)! Empfohlener Bereich}{35}
-\indexentry{Phasenreserve \(alpha_R\)! Empfohlener Bereich}{35}
-\indexentry{Polvorgabe}{35}
-\indexentry{Polvorgabe!für Ausgangsrückführung}{35}
-\indexentry{Polvorgabe!für Zustandsrückführung}{35}
-\indexentry{Steuerbarkeit}{36}
-\indexentry{Steuerbarkeit!Kriterium von Kalman}{36}
-\indexentry{Kalman}{36}
-\indexentry{Qs@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeit}}{36}
-\indexentry{Abtaster}{40}
-\indexentry{Halteglied! Wirkungsplan}{40}
-\indexentry{Abtaster! Stabilität}{40}
-\indexentry{Stabilität! Abtaster-Halteglied}{40}
-\indexentry{Abtaster!Abtasttheorem nach Shannon}{40}
-\indexentry{Abtasttheorem nach Shannon|see{Abtaster}}{40}
-\indexentry{Shannontheorem|see{Abtaster}}{40}
-\indexentry{Nyquist-Abtasttheorem|see{Abtaster}}{40}
-\indexentry{Stationäre Genauigkeit}{42}
-\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{42}
-\indexentry{Regelabweichung}{43}
-\indexentry{Regelabweichung!Umdruck (S. 165)}{43}
-\indexentry{Stationäre Genauigkeit}{43}
-\indexentry{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}{43}
-\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{43}
-\indexentry{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}{43}
-\indexentry{Durchtrittsfrequenz@$\omega_d$}{43}
-\indexentry{Durchtrittsfrequenz!Umdruck (S. 240, 248, 270, 273, 286, 363)}{43}
-\indexentry{crossover frequency|see{Durchtrittsfrequenz}}{43}
-\indexentry{crossover frequency!Umdruck (S. 240, 248, 270, 273, 286, 363)}{43}
-\indexentry{Durchgangsfrequenz|see{Durchtrittsfrequenz}}{43}
-\indexentry{Gewichtsfunktion}{43}
-\indexentry{Übergangsfunktion}{43}
-\indexentry{Dirac-Impuls@$\delta(t)$}{43}
-\indexentry{Sprungfunktion@$1(t)$}{43}
-\indexentry{Sprungantwort@$y(t)$}{43}
-\indexentry{Impulsantwort@$y(t)$}{43}
-\indexentry{Übergangsfunktion@$h(t)$}{43}
-\indexentry{Gewichtsfunktion@$g(t)$}{43}
+\indexentry{Signale und Systeme}{8}
+\indexentry{Bezeichnungen für Systeme}{9}
+\indexentry{Signale und Systeme im Regelkreis}{9}
+\indexentry{Offener Regelkreis}{9}
+\indexentry{Geschlossener Regelkreis}{9}
+\indexentry{Vorzeichenkonvention}{9}
+\indexentry{Vorzeichenkonvention!Umdruck (S. 123)}{9}
+\indexentry{Relativer Grad}{9}
+\indexentry{Relativer Grad!Umdruck (S. 26)}{9}
+\indexentry{Modell}{13}
+\indexentry{Systemordnung}{13}
+\indexentry{Anfangsbedingungen}{13}
+\indexentry{Zeitinvariante Systeme}{13}
+\indexentry{Lineare Systeme}{13}
+\indexentry{LTI-System}{13}
+\indexentry{Relativer Grad}{13}
+\indexentry{Kausale Systeme}{14}
+\indexentry{akausale Systeme}{14}
+\indexentry{Zustandsraumdarstellung}{14}
+\indexentry{SISO-System}{14}
+\indexentry{MIMO-System}{14}
+\indexentry{Regelungsnormalform}{14}
+\indexentry{Minimale Realisierung}{15}
+\indexentry{Gesetz der Sparsamkeit}{15}
+\indexentry{Zeitkonstante}{15}
+\indexentry{Eckkreisfrequenz}{15}
+\indexentry{Absolutgrößen}{15}
+\indexentry{Abweichungsgrößen}{15}
+\indexentry{Gewichtsfunktion}{21}
+\indexentry{Übergangsfunktion}{21}
+\indexentry{Dirac-Impuls@$\delta(t)$}{21}
+\indexentry{Sprungfunktion@$1(t)$}{21}
+\indexentry{Sprungantwort@$y(t)$}{21}
+\indexentry{Impulsantwort@$y(t)$}{21}
+\indexentry{Übergangsfunktion@$h(t)$}{21}
+\indexentry{Gewichtsfunktion@$g(t)$}{21}
+\indexentry{Grenzwertsätze}{26}
+\indexentry{Grenzwertsätze!Anwendbarkeit}{26}
+\indexentry{Anfangswertsatz}{26}
+\indexentry{Endwertsatz}{26}
+\indexentry{Sprungfähigkeit}{27}
+\indexentry{Sprungfähigkeit! im Zustandsraum}{27}
+\indexentry{Sprungfähigkeit im Zustandsraum}{27}
+\indexentry{Sprungfähigkeit! in Abhängigkeit von rel. Grad \(r\)}{27}
+\indexentry{Systemantwort}{28}
+\indexentry{Frequenzgang@$G(j\omega)$}{28}
+\indexentry{Betrag@$\lvert G(j\omega)\rvert$}{28}
+\indexentry{Phase@\(\angle G(j\omega)\)}{28}
+\indexentry{Sinusförmige Signale}{28}
+\indexentry{Sinusförmige Signale!Umdruck (S. 119)}{28}
+\indexentry{u(t)=$\sin(\omega t)$}{28}
+\indexentry{Zeitkonstante $T$}{29}
+\indexentry{Periodendauer $T=\frac{2\pi}{\omega}$}{29}
+\indexentry{Kreisfrequenz $\omega$}{29}
+\indexentry{Bodediagramm}{29}
+\indexentry{Führungsübertragungsfunktion \(T(s)\)}{30}
+\indexentry{Störungsübertragungsfunktion \(S(s)\)}{30}
+\indexentry{Stationäre Genauigkeit}{33}
+\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{33}
+\indexentry{Regelabweichung}{33}
+\indexentry{Regelabweichung!Umdruck (S. 165)}{33}
+\indexentry{Stationäre Genauigkeit}{33}
+\indexentry{Stationäre Genauigkeit!Umdruck (S. 164, 167, 260, 348, 552, 569)}{33}
+\indexentry{stationary accuracy|see{Stationäre Genauigkeit}}{33}
+\indexentry{stationary accuracy!Umdruck (S. 164, 167, 260, 348, 552, 569)}{33}
+\indexentry{Integrierender Anteil}{34}
+\indexentry{Integrierendes Verhalten}{34}
+\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Modell für Parameter \(T_u\)-\(T_g\) }{37}
+\indexentry{Stabilität!Allgemeine Stabilitätskriterien}{38}
+\indexentry{Stabilität!Algebraische Stabilitätskriterien}{38}
+\indexentry{Stabilität!Routh / Hurwitz Stabilität}{38}
+\indexentry{Routh / Hurwitz Stabilitätskriterium}{38}
+\indexentry{Amplitudenreserve \(A_R\)}{40}
+\indexentry{Phasenreserve \(\alpha_R\)}{40}
+\indexentry{Durchtrittsfrequenz \(\omega_d\)}{40}
+\indexentry{Ansprechverhalten}{41}
+\indexentry{Ansprechverhalten!Abhängigkeit von $\omega_d$}{41}
+\indexentry{Regelfaktor}{42}
+\indexentry{Regelfaktor!sinnvoll}{42}
+\indexentry{Regelfaktor!technisch Sinnvoll}{42}
+\indexentry{T_u-T_g@\(T_u\)--\(T_g\)!Einstellregeln für P, PI, PID Regler}{42}
+\indexentry{Chien, Hrones, Reswick (CHR)}{42}
+\indexentry{Einstellung mittels \(T_u\)--\(T_g\) Ersatzmodell!Umdruck (S. 276)}{42}
+\indexentry{Amplitudenreserve \(A_R\)! Empfohlener Bereich}{43}
+\indexentry{Phasenreserve \(alpha_R\)! Empfohlener Bereich}{43}
+\indexentry{Polvorgabe}{43}
+\indexentry{Polvorgabe!für Ausgangsrückführung}{43}
+\indexentry{Polvorgabe!für Zustandsrückführung}{43}
+\indexentry{Steuerbarkeit}{44}
+\indexentry{Steuerbarkeit!Kriterium von Kalman}{44}
+\indexentry{Kalman}{44}
+\indexentry{Qs@\(Q_s\) Steuerbarkeitsmatrix|see{Steuerbarkeit}}{44}
+\indexentry{Abtaster}{49}
+\indexentry{Halteglied! Wirkungsplan}{49}
+\indexentry{Abtaster! Stabilität}{49}
+\indexentry{Stabilität! Abtaster-Halteglied}{49}
+\indexentry{Abtaster!Abtasttheorem nach Shannon}{49}
+\indexentry{Abtasttheorem nach Shannon|see{Abtaster}}{49}
+\indexentry{Shannontheorem|see{Abtaster}}{49}
+\indexentry{Nyquist-Abtasttheorem|see{Abtaster}}{49}

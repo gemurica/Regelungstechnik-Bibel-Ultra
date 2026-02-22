@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex main.idx"] 1771448645.82469 "main.idx" "main.ind" "main" 1771448647.99299 0
-  "main.idx" 1771448647.88827 4606 ab1b26d2847f35be9e9b19bda4721b08 "pdflatex"
+["makeindex main.idx"] 1771533750.06863 "main.idx" "main.ind" "main" 1771533752.95461 0
+  "main.idx" 1771533752.84117 4480 2df14273c647c941e50c35b0c4b517f3 "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1771448645.88797 "main.tex" "main.pdf" "main" 1771448647.99307 0
+["pdflatex"] 1771533750.1579 "main.tex" "main.pdf" "main" 1771533752.95475 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1529098226 3124 3813fd4c981d99822890a2861b0d274c ""
@@ -247,6 +247,8 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1770670164 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1770670078 3345732 46a916794f43469f4fb291b2511aaed0 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
+  "images/12.2 Aufschaltung der Ableitungen der Führungsgröße.png" 1771533426.72891 838461 a4ebd2c57ccdafd231781fa35d2949cc ""
+  "images/12.2 Vorsteuerung.png" 1771533365.4648 661956 5c3b9edf04da620bad0157d31096d848 ""
   "images/14.1.2 Einfache Abtastregelung.png" 1771344859.44255 455198 218436ad9d994bc2a8115ba93e04d800 ""
   "images/24 H Aufgabe 2a - Totzeit bestimmen anhand Phasendiagramm.png" 1771340161 171883 85d3d04bba7cfd3a2416ec237e30b6fb ""
   "images/8.3.2 TuTg Modell.png" 1771447064.51912 738991 35e57f2b312a0063cdb9b913f4203577 ""
@@ -254,10 +256,10 @@
   "images/Pol-Nullstellen im Bodediagramm.png" 1770983827.87774 1271214 d4f5fd795035e43c0c73a19462e7b264 ""
   "images/TPR 5 - Appetizer und Zusatzaufgaben.pdf" 1770983904.48911 213960 66dc434e235736dc8f481bd3a0e2e98e ""
   "images/Zustandsregelung F23 (1).png" 1770670294.56147 15895 61759d38618f50904c11be6b5460521b ""
-  "main.aux" 1771448647.8862 30820 69dc5c73622bf7b353d2eac5cf180b58 "pdflatex"
-  "main.ind" 1771448645.88527 4062 b24762a6d1ee606e5616efbd965bb7be "makeindex main.idx"
-  "main.tex" 1771448636.42223 67284 301a75756fd91e5bd05771743b9c5eeb ""
-  "main.toc" 1771448647.88837 19588 9ab2e60895e00019521ed2f32b3a4650 "pdflatex"
+  "main.aux" 1771533752.83873 30455 a9988468672c8322cd1aeebe1318d22b "pdflatex"
+  "main.ind" 1771533750.1549 3951 0316534718d1ac8ca3969bb58821d78b "makeindex main.idx"
+  "main.tex" 1771533727.48745 82435 a344bc01bd82b0c96079a2be9f51e3d3 ""
+  "main.toc" 1771533752.84132 19135 0ad8e6eca04f7bb28f1bcd68887d1155 "pdflatex"
   "plot_beispiel.pdf" 1771156822.20965 21983 6e1a2b6238b3191e7bb698e84c508683 ""
   (generated)
   "main.aux"

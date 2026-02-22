@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{table}[ht]
+\centering
+\setlength{\tabcolsep}{5pt}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{||>{\centering\arraybackslash}p{7mm}||
+c|
+c|c|c|c||
+c|c|c|c||}
+
+% ==========================================
+% Doppelter oberer Rahmen
+\hhline{|t:==:t:==:t|}
+% ==========================================
+
+% ===== Kopfzeile 1 =====
+\multicolumn{2}{||c||}{} &
+\multicolumn{4}{c||}{Korrekturwerte f\"ur Betrag} &
+\multicolumn{4}{c||}{Korrekturwerte f\"ur Phasenwinkel} \\
+
+% Nur unter den 8 rechten Spalten Linie
+\hhline{||~~|----||----||}
+
+% ===== Kopfzeile 2 =====
+\multicolumn{2}{||c||}{} &
+\multicolumn{4}{c||}{$\lg(|G|)-\lg(|G|_{\text{Asymptote}})$} &
+\multicolumn{4}{c||}{$|\varphi-\varphi_{\text{Asymptote}}|$} \\
+
+\hhline{||~~|----||----||}
+
+% ===== Kopfzeile 3 =====
+ & $D$ &
+$\omega/\omega_0=0.5$ & $1$ & $2$ & $5$ &
+$\omega/\omega_0=0.5$ & $1$ & $2$ & $5$ \\
+
+% Doppelte Trennlinie unter Kopf
+\hhline{|t:==:t:==:t|}
+
+% ======================================================
+% ===================== PT1 ============================
+% ======================================================
+
+\multirow{4}{*}{\rotatebox{90}{PT1}} 
+& 0.1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+
+% Linie nur ab Spalte 2
+\hhline{||~|----||----||}
+
+& 0.3 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hhline{||~|----||----||}
+
+& 0.5 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hhline{||~|----||----||}
+
+& 1.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+
+% Doppeltrennung zwischen PT1 und PT2
+\hhline{|t:==:t:==:t|}
+
+% ======================================================
+% ===================== PT2 ============================
+% ======================================================
+
+\multirow{5}{*}{\rotatebox{90}{PT2}} 
+& 0.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+
+\hhline{||~|----||----||}
+
+& 0.2 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hhline{||~|----||----||}
+
+& 0.4 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hhline{||~|----||----||}
+
+& 0.7 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hhline{||~|----||----||}
+
+& 1.0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+
+% Unterer doppelter Rahmen
+\hhline{|b:==:b:==:b|}
+
+\end{tabular}
+}
+\caption{Tabelle 7-4 (Struktur mit hhline exakt kontrolliert)}
+\end{table}
+
+\end{document}
